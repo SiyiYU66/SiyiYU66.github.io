@@ -16,6 +16,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
+      - name: Install the locked build dependencies
+        run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Check the portfolio
         run: node scripts/check.mjs
       - uses: actions/configure-pages@v5

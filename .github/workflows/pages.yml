@@ -1,0 +1,57 @@
+name: Publish Listening Room
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Import the verified portfolio source once
+        shell: bash
+        run: |
+          if [ -f .portfolio-bootstrap.zip ]; then
+            python3 -c "from pathlib import Path; import hashlib; assert hashlib.sha256(Path('.portfolio-bootstrap.zip').read_bytes()).hexdigest() == Path('.portfolio-bootstrap.sha256').read_text().split()[0], 'Portfolio source checksum mismatch'"
+            unzip -o -q .portfolio-bootstrap.zip
+            node scripts/materialize-source-assets.mjs
+            rm .portfolio-bootstrap.zip .portfolio-bootstrap.sha256
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add --all
+            git commit -m "Import verified Listening Room source and original assets"
+            git push
+          fi
+      - name: Check the portfolio
+        run: node scripts/check.mjs
+      - uses: actions/configure-pages@v5
+      - name: Build the static frontend
+        run: node scripts/build-github-pages.mjs
+      - name: Prepare verified downloads and online game connection
+        run: node scripts/export-github-pages.mjs
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: .pages-output
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish
+        id: deployment
+        uses: actions/deploy-pages@v4

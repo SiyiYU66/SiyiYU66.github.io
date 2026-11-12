@@ -1,0 +1,3423 @@
+{
+  "source_commit": "ec3b258a9a4d2eef65f54b3979d4decf3207ad76",
+  "release": 28,
+  "assets": [
+    {
+      "url": "/assets/disc-surfaces/README.md",
+      "sha256": "a06154998065a30aa69fa80dcd757fe241aecfb481df96779b5490429fa89fb1",
+      "size": 2502,
+      "paths": [
+        "assets/disc-surfaces/README.md",
+        "dist/assets/disc-surfaces/README.md"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/a-quiet-place/coat-roughness.png",
+      "sha256": "cb6b73b0baf265d724434659c63cabbfc591274b2bc3057de0aaa3b546965221",
+      "size": 434336,
+      "paths": [
+        "assets/disc-surfaces/a-quiet-place/coat-roughness.png",
+        "dist/assets/disc-surfaces/a-quiet-place/coat-roughness.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/a-quiet-place/normal.png",
+      "sha256": "9756f980efbcb4e1e81096e2e4fbc77863811a87caf81f0f078b996aa82a36db",
+      "size": 743154,
+      "paths": [
+        "assets/disc-surfaces/a-quiet-place/normal.png",
+        "dist/assets/disc-surfaces/a-quiet-place/normal.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/a-quiet-place/roughness.png",
+      "sha256": "a347e8d5f1236e96c03ef8f9a9a4f61e3c35f397a498a5afa9e29e9a0fe42ebb",
+      "size": 406556,
+      "paths": [
+        "assets/disc-surfaces/a-quiet-place/roughness.png",
+        "dist/assets/disc-surfaces/a-quiet-place/roughness.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/balancing-segway/coat-roughness.png",
+      "sha256": "3c3ad924fbb7e998bb7a7ac78cc1f811f2dfcc239c5735de269cd468fec0f7c9",
+      "size": 434741,
+      "paths": [
+        "assets/disc-surfaces/balancing-segway/coat-roughness.png",
+        "dist/assets/disc-surfaces/balancing-segway/coat-roughness.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/balancing-segway/normal.png",
+      "sha256": "1a1ed2a89fcac8e39c3ebcff60e1b8336d620e36f4aaa50346908634d495d92c",
+      "size": 743954,
+      "paths": [
+        "assets/disc-surfaces/balancing-segway/normal.png",
+        "dist/assets/disc-surfaces/balancing-segway/normal.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/balancing-segway/roughness.png",
+      "sha256": "3be34b78d31844f04f7111099a62a4e84c46929c38143dd827261675f98126cd",
+      "size": 406714,
+      "paths": [
+        "assets/disc-surfaces/balancing-segway/roughness.png",
+        "dist/assets/disc-surfaces/balancing-segway/roughness.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/battleship/coat-roughness.png",
+      "sha256": "b19d1b566818fa96244a4cb7ce18754e7420827fb62a02ae8ce0e91a643e9624",
+      "size": 433933,
+      "paths": [
+        "assets/disc-surfaces/battleship/coat-roughness.png",
+        "dist/assets/disc-surfaces/battleship/coat-roughness.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/battleship/normal.png",
+      "sha256": "ab2f3b8a21f514861ca280187ea7ac12d5333bb907909478f32016ae054b4516",
+      "size": 742839,
+      "paths": [
+        "assets/disc-surfaces/battleship/normal.png",
+        "dist/assets/disc-surfaces/battleship/normal.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/battleship/roughness.png",
+      "sha256": "26ebb520ffa4e5d55a219d37a5090f2b3be63f97e9ac906da26dbe16bf2e9f65",
+      "size": 405928,
+      "paths": [
+        "assets/disc-surfaces/battleship/roughness.png",
+        "dist/assets/disc-surfaces/battleship/roughness.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/between-spaces/coat-roughness.png",
+      "sha256": "69865826a42db6c330bf1d74f85dd28aee0d4877950d746f0b805fc941d81f8c",
+      "size": 434376,
+      "paths": [
+        "assets/disc-surfaces/between-spaces/coat-roughness.png",
+        "dist/assets/disc-surfaces/between-spaces/coat-roughness.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/between-spaces/normal.png",
+      "sha256": "f6a83aa9f2fc628078d1d462953327f509d6990406449c74b37ff3e65c2daf7b",
+      "size": 743071,
+      "paths": [
+        "assets/disc-surfaces/between-spaces/normal.png",
+        "dist/assets/disc-surfaces/between-spaces/normal.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/between-spaces/roughness.png",
+      "sha256": "996451c884e64337ed59515306a4c2b0ee164d423383c98e279b18333f79f6b5",
+      "size": 406572,
+      "paths": [
+        "assets/disc-surfaces/between-spaces/roughness.png",
+        "dist/assets/disc-surfaces/between-spaces/roughness.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/common-ground/coat-roughness.png",
+      "sha256": "af212e85190ce8a2b0281b8f7a410cd8995b6f241bc693a5ba4017df0f35860c",
+      "size": 433714,
+      "paths": [
+        "assets/disc-surfaces/common-ground/coat-roughness.png",
+        "dist/assets/disc-surfaces/common-ground/coat-roughness.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/common-ground/normal.png",
+      "sha256": "b4f5c62ad4d2de1e51caa1225c9b08de9cd10164a9a8f28d460396ab0dd99336",
+      "size": 742815,
+      "paths": [
+        "assets/disc-surfaces/common-ground/normal.png",
+        "dist/assets/disc-surfaces/common-ground/normal.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/common-ground/roughness.png",
+      "sha256": "0540e67ce48a283980cfeed0c66e76c0a196a90a2dda649e31b4589a72a05857",
+      "size": 405704,
+      "paths": [
+        "assets/disc-surfaces/common-ground/roughness.png",
+        "dist/assets/disc-surfaces/common-ground/roughness.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/ichack/coat-roughness.png",
+      "sha256": "4f94401bdec1581b6758dc8dfd4d06adf4b5398b94fc78659a3a09a25b513028",
+      "size": 433578,
+      "paths": [
+        "assets/disc-surfaces/ichack/coat-roughness.png",
+        "dist/assets/disc-surfaces/ichack/coat-roughness.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/ichack/normal.png",
+      "sha256": "3bef07f9c2b97d1d21f19988b73513d34cfdd2234b22e610729c8487aa7094de",
+      "size": 742393,
+      "paths": [
+        "assets/disc-surfaces/ichack/normal.png",
+        "dist/assets/disc-surfaces/ichack/normal.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/ichack/roughness.png",
+      "sha256": "0a53e875a24dbbb842de747ec18ed84e4b42942edd1f5c1d6200ab0690f427ae",
+      "size": 405807,
+      "paths": [
+        "assets/disc-surfaces/ichack/roughness.png",
+        "dist/assets/disc-surfaces/ichack/roughness.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/in-motion/coat-roughness.png",
+      "sha256": "5f7dfdc6456ceaf700afff5d68c284db2d675a979dde35dd945d472d04143361",
+      "size": 434409,
+      "paths": [
+        "assets/disc-surfaces/in-motion/coat-roughness.png",
+        "dist/assets/disc-surfaces/in-motion/coat-roughness.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/in-motion/normal.png",
+      "sha256": "ec69c89173c67bdb2a44f85e955b7f6d7312f4acbec7fcb17350da5948c9b22b",
+      "size": 743814,
+      "paths": [
+        "assets/disc-surfaces/in-motion/normal.png",
+        "dist/assets/disc-surfaces/in-motion/normal.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/in-motion/roughness.png",
+      "sha256": "063bc8e4ea884a89aad5acd1a713b1bbe76963dce5b4b539af486a34f1b43272",
+      "size": 406592,
+      "paths": [
+        "assets/disc-surfaces/in-motion/roughness.png",
+        "dist/assets/disc-surfaces/in-motion/roughness.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/slow-forms/coat-roughness.png",
+      "sha256": "564befc8a50de4a17fe8f6cf5c56890ddc3244b9bf1e9a682f431069488688b5",
+      "size": 434878,
+      "paths": [
+        "assets/disc-surfaces/slow-forms/coat-roughness.png",
+        "dist/assets/disc-surfaces/slow-forms/coat-roughness.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/slow-forms/normal.png",
+      "sha256": "bef3a768b2ce336681abcae834e8b35d33445f1642c3b78eeff57714bd0cd7bd",
+      "size": 743138,
+      "paths": [
+        "assets/disc-surfaces/slow-forms/normal.png",
+        "dist/assets/disc-surfaces/slow-forms/normal.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/slow-forms/roughness.png",
+      "sha256": "f295e57a96990f18c0b551e2f8e7858c6863cd99b93ec98ea6f748838b16e039",
+      "size": 407076,
+      "paths": [
+        "assets/disc-surfaces/slow-forms/roughness.png",
+        "dist/assets/disc-surfaces/slow-forms/roughness.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/soft-signals/coat-roughness.png",
+      "sha256": "f52a461d647d01ae53eb6b387438fab51612a78e00278246b88565906935d67d",
+      "size": 434861,
+      "paths": [
+        "assets/disc-surfaces/soft-signals/coat-roughness.png",
+        "dist/assets/disc-surfaces/soft-signals/coat-roughness.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/soft-signals/normal.png",
+      "sha256": "63c3fa00dd12a03514b1df3cd3a74c217fadb514fe3cd11bfdd146630f0eaa6d",
+      "size": 743274,
+      "paths": [
+        "assets/disc-surfaces/soft-signals/normal.png",
+        "dist/assets/disc-surfaces/soft-signals/normal.png"
+      ]
+    },
+    {
+      "url": "/assets/disc-surfaces/soft-signals/roughness.png",
+      "sha256": "be5e0dd87854837bf37afa91706e57f6d9520da8208d76cdfa2bcab5deea9f83",
+      "size": 406967,
+      "paths": [
+        "assets/disc-surfaces/soft-signals/roughness.png",
+        "dist/assets/disc-surfaces/soft-signals/roughness.png"
+      ]
+    },
+    {
+      "url": "/assets/fonts/oswald-latin-wght-normal.woff2",
+      "sha256": "bd73278ee0c50041b91b4c03d1229e35b501637f46b6409e7da2d3a758446ea5",
+      "size": 28488,
+      "paths": [
+        "assets/fonts/oswald-latin-wght-normal.woff2",
+        "dist/assets/fonts/oswald-latin-wght-normal.woff2"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/2 Player mode selection pic.webp",
+      "sha256": "3ff1e141a9f9f36d06a840d943bcc499f6c06b4250cd2ebab502c11ab368f434",
+      "size": 27110,
+      "paths": [
+        "assets/games/battleship/assets/2 Player mode selection pic.webp",
+        "dist/assets/games/battleship/assets/2 Player mode selection pic.webp"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/Single Player mode selection pic.webp",
+      "sha256": "41129214e53566076829faf8413a812f423dc8fc0dd977a61f98ff69057c12ec",
+      "size": 29786,
+      "paths": [
+        "assets/games/battleship/assets/Single Player mode selection pic.webp",
+        "dist/assets/games/battleship/assets/Single Player mode selection pic.webp"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/background pic.webp",
+      "sha256": "cd9815fc21956f5f2ee4271c65d9b3f925da5a5581a15315d8c05014e16e8dca",
+      "size": 117160,
+      "paths": [
+        "assets/games/battleship/assets/background pic.webp",
+        "dist/assets/games/battleship/assets/background pic.webp"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/brief-icon.webp",
+      "sha256": "2ff32c28030127793cfb53c4489e87f7c907d531bf6a184ec39e9085819b2410",
+      "size": 8166,
+      "paths": [
+        "assets/games/battleship/assets/brief-icon.webp",
+        "dist/assets/games/battleship/assets/brief-icon.webp"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/player1/battleship.png",
+      "sha256": "9a527ed81c094f702ed3eb255ee6c03f7c24de25a28b0462b5655606ffdd8e3f",
+      "size": 453990,
+      "paths": [
+        "assets/games/battleship/assets/player1/battleship.png",
+        "dist/assets/games/battleship/assets/player1/battleship.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/player1/carrier.png",
+      "sha256": "754a70de5e923aca361ba1c18c563db9ef260804be9655f7d87795b60277e3e4",
+      "size": 682882,
+      "paths": [
+        "assets/games/battleship/assets/player1/carrier.png",
+        "dist/assets/games/battleship/assets/player1/carrier.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/player1/cruiser.png",
+      "sha256": "d251d3d6eb553cfc518f9d5acfc3e7a962bfe4011ecce1409cd46aa31e2b9733",
+      "size": 426261,
+      "paths": [
+        "assets/games/battleship/assets/player1/cruiser.png",
+        "dist/assets/games/battleship/assets/player1/cruiser.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/player1/destroyer.png",
+      "sha256": "e94abb274eb9804c2455cfa55cc569821f904251c3525d4d2589fe3d5b55ee1a",
+      "size": 337630,
+      "paths": [
+        "assets/games/battleship/assets/player1/destroyer.png",
+        "dist/assets/games/battleship/assets/player1/destroyer.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/player1/submarine.png",
+      "sha256": "d220c5e26f51f494c4cc7873b2e1c24d33ea3436581ee14e1c3790663a8f95cb",
+      "size": 447439,
+      "paths": [
+        "assets/games/battleship/assets/player1/submarine.png",
+        "dist/assets/games/battleship/assets/player1/submarine.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/player2/battleship.png",
+      "sha256": "4c206861b67a8c7facbcf3b3b575d5b41b7256a7074ed4b0ef2b0bca28605531",
+      "size": 472926,
+      "paths": [
+        "assets/games/battleship/assets/player2/battleship.png",
+        "dist/assets/games/battleship/assets/player2/battleship.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/player2/carrier.png",
+      "sha256": "454ef61c16d4ff27c8a1dddbdff979b784ecda8250ce11449d17424180966295",
+      "size": 656638,
+      "paths": [
+        "assets/games/battleship/assets/player2/carrier.png",
+        "dist/assets/games/battleship/assets/player2/carrier.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/player2/cruiser.png",
+      "sha256": "b517079e71162328dc8bbe8044b1474184d01d3db5eae51c91f8dff21cc6d4b7",
+      "size": 476991,
+      "paths": [
+        "assets/games/battleship/assets/player2/cruiser.png",
+        "dist/assets/games/battleship/assets/player2/cruiser.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/player2/destroyer.png",
+      "sha256": "3cdb5b736525d69d57a51ead571142e696b50596c8f0572b4011a7e7b05d0d67",
+      "size": 361172,
+      "paths": [
+        "assets/games/battleship/assets/player2/destroyer.png",
+        "dist/assets/games/battleship/assets/player2/destroyer.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/player2/submarine.png",
+      "sha256": "f2fbda77b6ce6b8cd5af44f9420d0a344b25a2ba0fec71f5f37b0109812e2d05",
+      "size": 435457,
+      "paths": [
+        "assets/games/battleship/assets/player2/submarine.png",
+        "dist/assets/games/battleship/assets/player2/submarine.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/ui/player1/battleship.png",
+      "sha256": "13705d7f72f4ec468716c9d6bf3b648b23cf50c79ebff8bdc6e4102ac8a84889",
+      "size": 15917,
+      "paths": [
+        "assets/games/battleship/assets/ui/player1/battleship.png",
+        "dist/assets/games/battleship/assets/ui/player1/battleship.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/ui/player1/carrier.png",
+      "sha256": "c10475c3677235c938d377364b2a1e59072e827272db81d11758e0f342958662",
+      "size": 23372,
+      "paths": [
+        "assets/games/battleship/assets/ui/player1/carrier.png",
+        "dist/assets/games/battleship/assets/ui/player1/carrier.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/ui/player1/cruiser.png",
+      "sha256": "2b703fa6e1fa7780a1b38c0dbac827e1911d95bc33c03039149a2e1c647413bb",
+      "size": 13039,
+      "paths": [
+        "assets/games/battleship/assets/ui/player1/cruiser.png",
+        "dist/assets/games/battleship/assets/ui/player1/cruiser.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/ui/player1/destroyer.png",
+      "sha256": "9d55888a0eb9612c8e37b0cfe88f15f611c002a024dd1c932ee692f05f58cdb5",
+      "size": 11230,
+      "paths": [
+        "assets/games/battleship/assets/ui/player1/destroyer.png",
+        "dist/assets/games/battleship/assets/ui/player1/destroyer.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/ui/player1/submarine.png",
+      "sha256": "afe20bd2c05cf83771be92871dc3022c9f7f7578566885e1f505b9bd05cee796",
+      "size": 14368,
+      "paths": [
+        "assets/games/battleship/assets/ui/player1/submarine.png",
+        "dist/assets/games/battleship/assets/ui/player1/submarine.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/ui/player2/battleship.png",
+      "sha256": "5096f3b74e355bff65b14c711801692ba9e43de51817a68c1e6959076d50f8d1",
+      "size": 16222,
+      "paths": [
+        "assets/games/battleship/assets/ui/player2/battleship.png",
+        "dist/assets/games/battleship/assets/ui/player2/battleship.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/ui/player2/carrier.png",
+      "sha256": "cb65db64528589f6e082fd341642d786ac36d8d03c11a21b474349c9b7647b3a",
+      "size": 23187,
+      "paths": [
+        "assets/games/battleship/assets/ui/player2/carrier.png",
+        "dist/assets/games/battleship/assets/ui/player2/carrier.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/ui/player2/cruiser.png",
+      "sha256": "9d80631c4e335a39874ddc5335db243861653a975f87a8fa0c89c5c433aa2f0b",
+      "size": 14796,
+      "paths": [
+        "assets/games/battleship/assets/ui/player2/cruiser.png",
+        "dist/assets/games/battleship/assets/ui/player2/cruiser.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/ui/player2/destroyer.png",
+      "sha256": "93d9a46547c2c71d6ff5a7b3394f05e24900841864739aa5f1c542b7f951d79d",
+      "size": 11763,
+      "paths": [
+        "assets/games/battleship/assets/ui/player2/destroyer.png",
+        "dist/assets/games/battleship/assets/ui/player2/destroyer.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/ui/player2/submarine.png",
+      "sha256": "7c834f44b49ba2d8254334e5a2e1de8235f2118b0d4fd6c0b556f372adfa960c",
+      "size": 13910,
+      "paths": [
+        "assets/games/battleship/assets/ui/player2/submarine.png",
+        "dist/assets/games/battleship/assets/ui/player2/submarine.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/ui/silhouettes/battleship.png",
+      "sha256": "1ec0436122f259456f0b408bbfdf89281e592039be6419bde1e6042cd6b233d4",
+      "size": 9920,
+      "paths": [
+        "assets/games/battleship/assets/ui/silhouettes/battleship.png",
+        "dist/assets/games/battleship/assets/ui/silhouettes/battleship.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/ui/silhouettes/carrier.png",
+      "sha256": "9bc60fd5b13c2b1ad872fa00f797e3adf4e4a42ae3042f81d1eeeea33ff38422",
+      "size": 11958,
+      "paths": [
+        "assets/games/battleship/assets/ui/silhouettes/carrier.png",
+        "dist/assets/games/battleship/assets/ui/silhouettes/carrier.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/assets/ui/silhouettes/cruiser.png",
+      "sha256": "9c862aaa4115910a4a6916bc4934027effaca7928fcafa27cbad59ff647a9cf3",
+      "size": 8364,
+      "paths": [
+        "assets/games/battleship/assets/ui/silhouettes/cruiser.png",
+        "dist/assets/games/battleship/assets/ui/silhouettes/cruiser.png"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/fonts/chakra-petch-400.woff2",
+      "sha256": "7d75be85dd1627e27ec151e9a3701e661bc4f8c2a93611bdd92f3a05d6bbd942",
+      "size": 9756,
+      "paths": [
+        "assets/games/battleship/fonts/chakra-petch-400.woff2",
+        "dist/assets/games/battleship/fonts/chakra-petch-400.woff2"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/fonts/chakra-petch-500.woff2",
+      "sha256": "36ad966cb653de70ba37355c41003b02de8940b2df6cbcd46480a6ad8cadd65d",
+      "size": 9956,
+      "paths": [
+        "assets/games/battleship/fonts/chakra-petch-500.woff2",
+        "dist/assets/games/battleship/fonts/chakra-petch-500.woff2"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/fonts/chakra-petch-600.woff2",
+      "sha256": "a5888696e9eb1b4bbbecc8eb3922b8369f49d4bddb72263e033cbd17f399be76",
+      "size": 9968,
+      "paths": [
+        "assets/games/battleship/fonts/chakra-petch-600.woff2",
+        "dist/assets/games/battleship/fonts/chakra-petch-600.woff2"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/fonts/chakra-petch-700.woff2",
+      "sha256": "ce5095dc1cb200aaa939e38067a0677018d10e9f26ec38cdcf1557ac524fc775",
+      "size": 9900,
+      "paths": [
+        "assets/games/battleship/fonts/chakra-petch-700.woff2",
+        "dist/assets/games/battleship/fonts/chakra-petch-700.woff2"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/fonts/orbitron-500.woff2",
+      "sha256": "c25a9f9da5d9f3db1bf2a01474722dc9b377675b7bbab6d0dfda6902794fd1ed",
+      "size": 11800,
+      "paths": [
+        "assets/games/battleship/fonts/orbitron-500.woff2",
+        "dist/assets/games/battleship/fonts/orbitron-500.woff2"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/fonts/orbitron-700.woff2",
+      "sha256": "c25a9f9da5d9f3db1bf2a01474722dc9b377675b7bbab6d0dfda6902794fd1ed",
+      "size": 11800,
+      "paths": [
+        "assets/games/battleship/fonts/orbitron-700.woff2",
+        "dist/assets/games/battleship/fonts/orbitron-700.woff2"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/fonts/orbitron-800.woff2",
+      "sha256": "c25a9f9da5d9f3db1bf2a01474722dc9b377675b7bbab6d0dfda6902794fd1ed",
+      "size": 11800,
+      "paths": [
+        "assets/games/battleship/fonts/orbitron-800.woff2",
+        "dist/assets/games/battleship/fonts/orbitron-800.woff2"
+      ]
+    },
+    {
+      "url": "/assets/games/battleship/fonts/orbitron-900.woff2",
+      "sha256": "c25a9f9da5d9f3db1bf2a01474722dc9b377675b7bbab6d0dfda6902794fd1ed",
+      "size": 11800,
+      "paths": [
+        "assets/games/battleship/fonts/orbitron-900.woff2",
+        "dist/assets/games/battleship/fonts/orbitron-900.woff2"
+      ]
+    },
+    {
+      "url": "/assets/opening/README.md",
+      "sha256": "62a34a2f385dad099ca01d382cc09325468ec4b6fdfa3da1bd13d5a08d2079e2",
+      "size": 343,
+      "paths": [
+        "assets/opening/README.md",
+        "dist/assets/opening/README.md"
+      ]
+    },
+    {
+      "url": "/assets/opening/siyi-yu-sketch.png",
+      "sha256": "b28f5495330c78a3e76c915b206849700a3e9c831ad163b7feeb66555c3a9418",
+      "size": 1393476,
+      "paths": [
+        "assets/opening/siyi-yu-sketch.png",
+        "dist/assets/opening/siyi-yu-sketch.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/cover.png",
+      "sha256": "337ea99517b4e8bfab89e3f0843dd65f79c669305ae2277363ae469477271579",
+      "size": 588005,
+      "paths": [
+        "assets/projects/a-quiet-place/cover.png",
+        "dist/assets/projects/a-quiet-place/cover.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-01-small.webp",
+      "sha256": "2ec6acb217e3166048f8a982529864cea47ebee65ea6c8258d9cfd4d8b317665",
+      "size": 70124,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-01-small.webp",
+        "dist/assets/projects/a-quiet-place/report/page-01-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-01.webp",
+      "sha256": "2fcaacb8f1037b23c91c4b6b2910c7d588ae1872e36ec157e19e71175888a352",
+      "size": 200152,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-01.webp",
+        "dist/assets/projects/a-quiet-place/report/page-01.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-02-small.webp",
+      "sha256": "67ee7a5c1263b5fc0ae2105c60673a77640f5beefc6dc9ac60c7d3c77bd2ff04",
+      "size": 69864,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-02-small.webp",
+        "dist/assets/projects/a-quiet-place/report/page-02-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-02.webp",
+      "sha256": "01f90c9dbada11fe7084af868a6af68a6cc79fd158ff14fd98217f032e31e94e",
+      "size": 198190,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-02.webp",
+        "dist/assets/projects/a-quiet-place/report/page-02.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-03-small.webp",
+      "sha256": "4180e6436f1aa441437462e1ea29ef9e93ccd15b63027e470ca8bf43002f61e1",
+      "size": 49890,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-03-small.webp",
+        "dist/assets/projects/a-quiet-place/report/page-03-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-03.webp",
+      "sha256": "ef9b3366a89e03bf5e7355567d7ba81902e5fbacd3578b5dade291f43c549660",
+      "size": 136090,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-03.webp",
+        "dist/assets/projects/a-quiet-place/report/page-03.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-04-small.webp",
+      "sha256": "cef1a71d783161411aaafeac8d02d4a4123b002c4146eda5fa5bd1ada305922f",
+      "size": 62166,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-04-small.webp",
+        "dist/assets/projects/a-quiet-place/report/page-04-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-04.webp",
+      "sha256": "1031bffc9b75aa90a09ae23a250bdef9f3d645898491cac474b3b35e176061db",
+      "size": 166496,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-04.webp",
+        "dist/assets/projects/a-quiet-place/report/page-04.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-05-small.webp",
+      "sha256": "9b55398e33d22e9bef0ae8e73f15af8b5e773c6b00360c05362f01c7074a04f5",
+      "size": 70886,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-05-small.webp",
+        "dist/assets/projects/a-quiet-place/report/page-05-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-05.webp",
+      "sha256": "21564ee5ca91e529ad0d1d78bc5810cd0bff46a1401de7207bec92efd65408c8",
+      "size": 211774,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-05.webp",
+        "dist/assets/projects/a-quiet-place/report/page-05.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-06-small.webp",
+      "sha256": "9b538ff74ab55b349cd4411c92ea18114016fffad8a51242d1053e285b3f135f",
+      "size": 66112,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-06-small.webp",
+        "dist/assets/projects/a-quiet-place/report/page-06-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-06.webp",
+      "sha256": "663cd7fbc3b23d498318ce10f4acaf0a925e5dc00f37bcb619db791485459e30",
+      "size": 193996,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-06.webp",
+        "dist/assets/projects/a-quiet-place/report/page-06.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-07-small.webp",
+      "sha256": "dbdab6ace2d134ed25e225713504851c5aea4175a2b7bd44756a4e598057eaa9",
+      "size": 71376,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-07-small.webp",
+        "dist/assets/projects/a-quiet-place/report/page-07-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-07.webp",
+      "sha256": "6d05670d122c7973992533f58dd2d9ec73a47f8406444ad8490c4d89ce0990c6",
+      "size": 200872,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-07.webp",
+        "dist/assets/projects/a-quiet-place/report/page-07.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-08-small.webp",
+      "sha256": "a80c6baf4a721cc8ce7f56b2f00340d288759fed279e0354fb4d951169e6f9d9",
+      "size": 64880,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-08-small.webp",
+        "dist/assets/projects/a-quiet-place/report/page-08-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-08.webp",
+      "sha256": "8bb1a3be80a646d9c5bff5663b14a15d1fad04b1b4a2306b5fd59ffe746657e9",
+      "size": 183460,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-08.webp",
+        "dist/assets/projects/a-quiet-place/report/page-08.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-09-small.webp",
+      "sha256": "ee99f5a904f3c0be5092d5be928c12f77324b1fcc3cdd85443bd1b47ad1a4536",
+      "size": 57824,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-09-small.webp",
+        "dist/assets/projects/a-quiet-place/report/page-09-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-09.webp",
+      "sha256": "ab28c0bc0e31e22d620fa4fe42e77538912ffba10a9baaa28e298c9c91063ee3",
+      "size": 169048,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-09.webp",
+        "dist/assets/projects/a-quiet-place/report/page-09.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-10-small.webp",
+      "sha256": "fc825408c95aa1772f434e466db907c43fe466d80a3c04a2a11a5f90872c6ffc",
+      "size": 55478,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-10-small.webp",
+        "dist/assets/projects/a-quiet-place/report/page-10-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-10.webp",
+      "sha256": "f52f2e6885f64925c02a834068f92e5b53fd378bb18389723ce423da7badb5b9",
+      "size": 150684,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-10.webp",
+        "dist/assets/projects/a-quiet-place/report/page-10.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-11-small.webp",
+      "sha256": "6d1c1412d719caf11f20a90acc95602db314b33638947a636b09774b4dbcb868",
+      "size": 76918,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-11-small.webp",
+        "dist/assets/projects/a-quiet-place/report/page-11-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-11.webp",
+      "sha256": "3becfbff0cf9690d98ab224ef4c2e9a47315344727688ff7b111538c5e9d3d7a",
+      "size": 218062,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-11.webp",
+        "dist/assets/projects/a-quiet-place/report/page-11.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-12-small.webp",
+      "sha256": "4de2d58bb1478e25d65d138877ed3f34898703c7eb5484de2266114ca235f24e",
+      "size": 77150,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-12-small.webp",
+        "dist/assets/projects/a-quiet-place/report/page-12-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-12.webp",
+      "sha256": "198d25fce5ea8d70736a876a88e5fb6fb0213860f86881013a60c185609f60c1",
+      "size": 220468,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-12.webp",
+        "dist/assets/projects/a-quiet-place/report/page-12.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-13-small.webp",
+      "sha256": "01aa03cd6510f515bfc4e53c9865bd81a34cb05bc344008c43e926ee3951fdb7",
+      "size": 97792,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-13-small.webp",
+        "dist/assets/projects/a-quiet-place/report/page-13-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/page-13.webp",
+      "sha256": "871cc1523ba06469233bf5c24b5e4c0597f606f274a6fdf6ff055222ea315f4a",
+      "size": 301834,
+      "paths": [
+        "assets/projects/a-quiet-place/report/page-13.webp",
+        "dist/assets/projects/a-quiet-place/report/page-13.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/parts/part-01.bin",
+      "sha256": "c9888eacc8da0628ec89f005a06b0a1edcbf9ca2b23537a7ed91eca9844796de",
+      "size": 8388608,
+      "paths": [
+        "assets/projects/a-quiet-place/report/parts/part-01.bin",
+        "dist/assets/projects/a-quiet-place/report/parts/part-01.bin"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/parts/part-02.bin",
+      "sha256": "d030bd4571e0d825f37f8924bde274de6c4fa11fec2e524098adc8e7d55ff483",
+      "size": 8388608,
+      "paths": [
+        "assets/projects/a-quiet-place/report/parts/part-02.bin",
+        "dist/assets/projects/a-quiet-place/report/parts/part-02.bin"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/parts/part-03.bin",
+      "sha256": "41543b87432fbd7fbbdc4dce65935a4718482e1d24ff57c4c58dcdd52877fbfe",
+      "size": 8388608,
+      "paths": [
+        "assets/projects/a-quiet-place/report/parts/part-03.bin",
+        "dist/assets/projects/a-quiet-place/report/parts/part-03.bin"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/report/parts/part-04.bin",
+      "sha256": "6cd351e78d58fd3c5280b75f7a0b9704f89ec5074fcfbd33a8e3ed9c24ef5c2a",
+      "size": 6993657,
+      "paths": [
+        "assets/projects/a-quiet-place/report/parts/part-04.bin",
+        "dist/assets/projects/a-quiet-place/report/parts/part-04.bin"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/study/hero.png",
+      "sha256": "143ad779145e1a1d7b1053700b0fc7af13c3eea6275668072965e9e4f386734b",
+      "size": 152265,
+      "paths": [
+        "assets/projects/a-quiet-place/study/hero.png",
+        "dist/assets/projects/a-quiet-place/study/hero.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/study/initial-02.png",
+      "sha256": "d96b58f11eee93b1640a0208643a82aad78b6695b51643a652fa6427f7f86c5b",
+      "size": 35816,
+      "paths": [
+        "assets/projects/a-quiet-place/study/initial-02.png",
+        "dist/assets/projects/a-quiet-place/study/initial-02.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/study/initial-03.png",
+      "sha256": "456d0c5f81e856dab28d888937de514ba5ca3f9d06595f109308e867d2856bb6",
+      "size": 38450,
+      "paths": [
+        "assets/projects/a-quiet-place/study/initial-03.png",
+        "dist/assets/projects/a-quiet-place/study/initial-03.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/study/initial-05.png",
+      "sha256": "02d7c1bfde417cf60c5188281a8d762443ed3b35e7d7df227101dbf84b0fc0fa",
+      "size": 22052,
+      "paths": [
+        "assets/projects/a-quiet-place/study/initial-05.png",
+        "dist/assets/projects/a-quiet-place/study/initial-05.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/study/initial-07.png",
+      "sha256": "ea94d750ec05d6c179f31b03b0659119dadfd7d04e209c9887254fb58cb1b1af",
+      "size": 62970,
+      "paths": [
+        "assets/projects/a-quiet-place/study/initial-07.png",
+        "dist/assets/projects/a-quiet-place/study/initial-07.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/study/initial-design.png",
+      "sha256": "dbbbd0b9418d74e8e096e7871e573aa947226d467c2c76a98b4c6ba33674a01f",
+      "size": 18250,
+      "paths": [
+        "assets/projects/a-quiet-place/study/initial-design.png",
+        "dist/assets/projects/a-quiet-place/study/initial-design.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/study/refined-02.png",
+      "sha256": "119a0f75bd606f90788485abb8a76b376a1f142a0df1defb320ac904ea10d772",
+      "size": 47007,
+      "paths": [
+        "assets/projects/a-quiet-place/study/refined-02.png",
+        "dist/assets/projects/a-quiet-place/study/refined-02.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/study/refined-03.png",
+      "sha256": "d4612e3d8b6022e95674cc4292fde7af3ecbf2a21ed711422a099112638aa417",
+      "size": 48433,
+      "paths": [
+        "assets/projects/a-quiet-place/study/refined-03.png",
+        "dist/assets/projects/a-quiet-place/study/refined-03.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/study/refined-05.png",
+      "sha256": "05aea63e35768f00a6a1e81b2900362c671810a37aff2c39139b895872611e53",
+      "size": 23228,
+      "paths": [
+        "assets/projects/a-quiet-place/study/refined-05.png",
+        "dist/assets/projects/a-quiet-place/study/refined-05.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/study/refined-07.png",
+      "sha256": "e8b160322080d8de233e475620fb868b64f27f58191732851e5946536f0d07e1",
+      "size": 47692,
+      "paths": [
+        "assets/projects/a-quiet-place/study/refined-07.png",
+        "dist/assets/projects/a-quiet-place/study/refined-07.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/a-quiet-place/study/refined-design.png",
+      "sha256": "3cc6046a6245d4895a2ae7b4944a98e44a47e3989fd38f5e77f47cd5e84ac0d4",
+      "size": 32343,
+      "paths": [
+        "assets/projects/a-quiet-place/study/refined-design.png",
+        "dist/assets/projects/a-quiet-place/study/refined-design.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/balancing-segway/balancing.mp4",
+      "sha256": "de589601c30a9e2bb9bd400bbb4417c72189526a5cbc38537bddeead3b5cb23b",
+      "size": 2782775,
+      "paths": [
+        "assets/projects/balancing-segway/balancing.mp4",
+        "dist/assets/projects/balancing-segway/balancing.mp4"
+      ]
+    },
+    {
+      "url": "/assets/projects/balancing-segway/media-notes.md",
+      "sha256": "7e336ca5d696f8874c6ce8f37e91627259b007326a3af6ec019b95e1ccc6939a",
+      "size": 867,
+      "paths": [
+        "assets/projects/balancing-segway/media-notes.md",
+        "dist/assets/projects/balancing-segway/media-notes.md"
+      ]
+    },
+    {
+      "url": "/assets/projects/balancing-segway/poster.webp",
+      "sha256": "768ea685ef10366b4503004d98a1701eac3d2c583d2950258636414b7e4b4dda",
+      "size": 100622,
+      "paths": [
+        "assets/projects/balancing-segway/poster.webp",
+        "dist/assets/projects/balancing-segway/poster.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/balancing-segway/pybench.webp",
+      "sha256": "782fad1c1d2748d0589890744790e52b93a4b3da2818a505f933d30d480ff283",
+      "size": 201278,
+      "paths": [
+        "assets/projects/balancing-segway/pybench.webp",
+        "dist/assets/projects/balancing-segway/pybench.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-01-small.webp",
+      "sha256": "6d0a413839961348c87b1254906da2cddde85e5b1c86debc222dedfb1ec922f3",
+      "size": 9040,
+      "paths": [
+        "assets/projects/common-ground/report/page-01-small.webp",
+        "dist/assets/projects/common-ground/report/page-01-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-01.webp",
+      "sha256": "73bbb82b228d2c05478967ed22dc64773737b3eed470e6a6a296d99493906930",
+      "size": 21146,
+      "paths": [
+        "assets/projects/common-ground/report/page-01.webp",
+        "dist/assets/projects/common-ground/report/page-01.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-02-small.webp",
+      "sha256": "e5ff86d313b78c34cf2a6b40f1f639d8373eea1bcc4e17c301414900657c2ea1",
+      "size": 45208,
+      "paths": [
+        "assets/projects/common-ground/report/page-02-small.webp",
+        "dist/assets/projects/common-ground/report/page-02-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-02.webp",
+      "sha256": "78d2633c9bd85f582fdd6fa966ea7325fafd4fb79a744c45dd3e8103b48bcd0c",
+      "size": 115536,
+      "paths": [
+        "assets/projects/common-ground/report/page-02.webp",
+        "dist/assets/projects/common-ground/report/page-02.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-03-small.webp",
+      "sha256": "9be2b518e2b2d83d3d8fb176b8fc47e707c879b848ac7d350a06d808a624d595",
+      "size": 62772,
+      "paths": [
+        "assets/projects/common-ground/report/page-03-small.webp",
+        "dist/assets/projects/common-ground/report/page-03-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-03.webp",
+      "sha256": "8f3c1ef4959616f02b6f490e2d93d7a84443ef84a25dd845b9d195f13ef89fe1",
+      "size": 156306,
+      "paths": [
+        "assets/projects/common-ground/report/page-03.webp",
+        "dist/assets/projects/common-ground/report/page-03.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-04-small.webp",
+      "sha256": "793fd2ab54d0a26f006c578a786f8244a2b392a8520cfb80c23f8b28f850a1e0",
+      "size": 62772,
+      "paths": [
+        "assets/projects/common-ground/report/page-04-small.webp",
+        "dist/assets/projects/common-ground/report/page-04-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-04.webp",
+      "sha256": "70deda955f178c43fdfbcdf380177f91f75a99d74518c74aae62bf10b75cf97b",
+      "size": 164826,
+      "paths": [
+        "assets/projects/common-ground/report/page-04.webp",
+        "dist/assets/projects/common-ground/report/page-04.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-05-small.webp",
+      "sha256": "00ddc6efd3e4ff2beca6f298f24371e3c96461699bc3aba366b5156e97a4bcba",
+      "size": 61818,
+      "paths": [
+        "assets/projects/common-ground/report/page-05-small.webp",
+        "dist/assets/projects/common-ground/report/page-05-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-05.webp",
+      "sha256": "45795da5cca8eb16e2e2c5b305d772e8e61eed29cf38e0d0502ad8ff92137e71",
+      "size": 156068,
+      "paths": [
+        "assets/projects/common-ground/report/page-05.webp",
+        "dist/assets/projects/common-ground/report/page-05.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-06-small.webp",
+      "sha256": "28fb219e94fd5968f0d0deb54fdf5d62c3b85e0ccdf000af5a29868b0ba79cd4",
+      "size": 53056,
+      "paths": [
+        "assets/projects/common-ground/report/page-06-small.webp",
+        "dist/assets/projects/common-ground/report/page-06-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-06.webp",
+      "sha256": "1df44c6886745e3c15564b2326d548148314d7b84b532e3964bf1550596f5105",
+      "size": 136870,
+      "paths": [
+        "assets/projects/common-ground/report/page-06.webp",
+        "dist/assets/projects/common-ground/report/page-06.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-07-small.webp",
+      "sha256": "689977e26568159c33aa889e46702150b268dc83bdf36c1d78a8f27590ec951e",
+      "size": 63404,
+      "paths": [
+        "assets/projects/common-ground/report/page-07-small.webp",
+        "dist/assets/projects/common-ground/report/page-07-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-07.webp",
+      "sha256": "1c6f3105d85d9dcf5518006008125ca8ec98ba4a341432e9a6b56e9371327819",
+      "size": 157946,
+      "paths": [
+        "assets/projects/common-ground/report/page-07.webp",
+        "dist/assets/projects/common-ground/report/page-07.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-08-small.webp",
+      "sha256": "c80672947216857696984a93af1cf6cf25997b1838c4cce400b329ab98c563e5",
+      "size": 49752,
+      "paths": [
+        "assets/projects/common-ground/report/page-08-small.webp",
+        "dist/assets/projects/common-ground/report/page-08-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-08.webp",
+      "sha256": "ea6f6a4b6c49e2efcee3bb559c4ea09a3712d112cab8bc803db3742f307fd2d6",
+      "size": 129124,
+      "paths": [
+        "assets/projects/common-ground/report/page-08.webp",
+        "dist/assets/projects/common-ground/report/page-08.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-09-small.webp",
+      "sha256": "12863ff03fa954f6a8723c62afd2e46ecbee3a444e7858705f639fbcf0944f00",
+      "size": 71230,
+      "paths": [
+        "assets/projects/common-ground/report/page-09-small.webp",
+        "dist/assets/projects/common-ground/report/page-09-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-09.webp",
+      "sha256": "ae9720633be8177cb4b21ce33b8a9057a0a4baa561b2aeb027e0aeed46718859",
+      "size": 184402,
+      "paths": [
+        "assets/projects/common-ground/report/page-09.webp",
+        "dist/assets/projects/common-ground/report/page-09.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-10-small.webp",
+      "sha256": "49c6d8c32b57ed451468776ebc1f62d7ded5d49b9b26e71d50f9b0505cbb4ee5",
+      "size": 50004,
+      "paths": [
+        "assets/projects/common-ground/report/page-10-small.webp",
+        "dist/assets/projects/common-ground/report/page-10-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-10.webp",
+      "sha256": "e32d3fabe2cb641724842ce829c0ed3bc5951ccd5afd1ec326b6bd793827ae4e",
+      "size": 127280,
+      "paths": [
+        "assets/projects/common-ground/report/page-10.webp",
+        "dist/assets/projects/common-ground/report/page-10.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-11-small.webp",
+      "sha256": "497be489020eb588c8247692a266c02dc7190415d1043dc0db8f29ff6c65ad96",
+      "size": 54042,
+      "paths": [
+        "assets/projects/common-ground/report/page-11-small.webp",
+        "dist/assets/projects/common-ground/report/page-11-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-11.webp",
+      "sha256": "7a3e9df49c7d14a5ea2ae73a96fd1a7706004e83fad83d881b9f9672283b43e6",
+      "size": 134530,
+      "paths": [
+        "assets/projects/common-ground/report/page-11.webp",
+        "dist/assets/projects/common-ground/report/page-11.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-12-small.webp",
+      "sha256": "4f9b8c1de659888039ce31974401c0fbb13a11f7ef926198144a718aded9beea",
+      "size": 60884,
+      "paths": [
+        "assets/projects/common-ground/report/page-12-small.webp",
+        "dist/assets/projects/common-ground/report/page-12-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-12.webp",
+      "sha256": "b6d868f8b668f773448718b79870a2dc02abe017f8b0e03084110344dc3d2c0e",
+      "size": 151892,
+      "paths": [
+        "assets/projects/common-ground/report/page-12.webp",
+        "dist/assets/projects/common-ground/report/page-12.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-13-small.webp",
+      "sha256": "bd55a6af845f32f1c52884711a88378e5e6cb98df4b8954d2f325ab1cb5d3ad4",
+      "size": 58336,
+      "paths": [
+        "assets/projects/common-ground/report/page-13-small.webp",
+        "dist/assets/projects/common-ground/report/page-13-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-13.webp",
+      "sha256": "9dc790ee4865964262e516e30eeb21b0e61783e085b2fccb18ba48934c71f2fb",
+      "size": 149238,
+      "paths": [
+        "assets/projects/common-ground/report/page-13.webp",
+        "dist/assets/projects/common-ground/report/page-13.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-14-small.webp",
+      "sha256": "1cab0ac3a30ace8d39777f72ed858f8b05121e7a704ff5b724ce339757b4e47b",
+      "size": 87400,
+      "paths": [
+        "assets/projects/common-ground/report/page-14-small.webp",
+        "dist/assets/projects/common-ground/report/page-14-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-14.webp",
+      "sha256": "000a4a0cf6a2ed35f445a230fe81752ba441efc0b0f2e12c4c0aa06cce36fd89",
+      "size": 220424,
+      "paths": [
+        "assets/projects/common-ground/report/page-14.webp",
+        "dist/assets/projects/common-ground/report/page-14.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-15-small.webp",
+      "sha256": "e2036f6126501deb46ae4a5b82046fcef8a50e58a2ec33aa787ff323fe4e50ca",
+      "size": 70766,
+      "paths": [
+        "assets/projects/common-ground/report/page-15-small.webp",
+        "dist/assets/projects/common-ground/report/page-15-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-15.webp",
+      "sha256": "c49b4e94761369895615faf13c97793b7ad57e04b9e7b47d66503e618860e1ec",
+      "size": 179338,
+      "paths": [
+        "assets/projects/common-ground/report/page-15.webp",
+        "dist/assets/projects/common-ground/report/page-15.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-16-small.webp",
+      "sha256": "0f4746c04a5ea4583eb77dfdf7b803223e09af1e6eafda3ac6e45b2167b46453",
+      "size": 56618,
+      "paths": [
+        "assets/projects/common-ground/report/page-16-small.webp",
+        "dist/assets/projects/common-ground/report/page-16-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-16.webp",
+      "sha256": "ce79cda09a9a856eeeb5695b66232457d6e8428baf0e648946d8018a99db68e1",
+      "size": 151440,
+      "paths": [
+        "assets/projects/common-ground/report/page-16.webp",
+        "dist/assets/projects/common-ground/report/page-16.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-17-small.webp",
+      "sha256": "09c80a51f88eeab00b65a6e7839bdf8c238d82d5c85dcef8b059d0597e11a6d1",
+      "size": 65804,
+      "paths": [
+        "assets/projects/common-ground/report/page-17-small.webp",
+        "dist/assets/projects/common-ground/report/page-17-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-17.webp",
+      "sha256": "2aed628f48c60585a28872b1d14b3789d2ec29b2ff5b522f1755934149a8dac5",
+      "size": 172066,
+      "paths": [
+        "assets/projects/common-ground/report/page-17.webp",
+        "dist/assets/projects/common-ground/report/page-17.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-18-small.webp",
+      "sha256": "aec9a8800bb9dcfa018dc748c8eb935805e1127f59e71b74e2d8ee506ec54192",
+      "size": 26182,
+      "paths": [
+        "assets/projects/common-ground/report/page-18-small.webp",
+        "dist/assets/projects/common-ground/report/page-18-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/page-18.webp",
+      "sha256": "8e99520444dc38e3d3b64159540a137ca4e9685ab38e9059e8fd4b4a946d7a70",
+      "size": 70612,
+      "paths": [
+        "assets/projects/common-ground/report/page-18.webp",
+        "dist/assets/projects/common-ground/report/page-18.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/report/parts/part-01.bin",
+      "sha256": "7dc9f17be0220d6cddf0770c5bd4caad850489721b9e476ba28c7f5b0e1e3e7f",
+      "size": 1094054,
+      "paths": [
+        "assets/projects/common-ground/report/parts/part-01.bin",
+        "dist/assets/projects/common-ground/report/parts/part-01.bin"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/figure-p11-0.webp",
+      "sha256": "d24afa12a0589c9122e7f3bf249f388df0e3a323b3f4c26fbed62a6032fe0d87",
+      "size": 56414,
+      "paths": [
+        "assets/projects/common-ground/study/figure-p11-0.webp",
+        "dist/assets/projects/common-ground/study/figure-p11-0.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/figure-p11-1.webp",
+      "sha256": "162782fba90643814286af290e6a72febae38fc21288c56ff2fff9e0103ab318",
+      "size": 26634,
+      "paths": [
+        "assets/projects/common-ground/study/figure-p11-1.webp",
+        "dist/assets/projects/common-ground/study/figure-p11-1.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/figure-p11-2.webp",
+      "sha256": "d8354388221bef59232ad6e7f3b9a013f96b91f95ecaedf1e27a22a21d3d2043",
+      "size": 25444,
+      "paths": [
+        "assets/projects/common-ground/study/figure-p11-2.webp",
+        "dist/assets/projects/common-ground/study/figure-p11-2.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/figure-p12-0.webp",
+      "sha256": "8e4028d77cfa44b8a6566d330d0b4360ac555b2f1091f7d28f0afa3841a8bc13",
+      "size": 22586,
+      "paths": [
+        "assets/projects/common-ground/study/figure-p12-0.webp",
+        "dist/assets/projects/common-ground/study/figure-p12-0.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/figure-p12-1.webp",
+      "sha256": "e79ef0a2f8d2003bfdeae36a74d4696e95ea02c0de683cb66402ff53439c4a26",
+      "size": 21498,
+      "paths": [
+        "assets/projects/common-ground/study/figure-p12-1.webp",
+        "dist/assets/projects/common-ground/study/figure-p12-1.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/figure-p12-2.webp",
+      "sha256": "d773105ad0e290f26242ca0a98f0261b45461cfb631f1f749174c95022c39ab2",
+      "size": 26108,
+      "paths": [
+        "assets/projects/common-ground/study/figure-p12-2.webp",
+        "dist/assets/projects/common-ground/study/figure-p12-2.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/figure-p12-3.webp",
+      "sha256": "376fc716892e35acaa0796e830befbdff0409ab2b52ded25dfef6bc31419c11e",
+      "size": 21856,
+      "paths": [
+        "assets/projects/common-ground/study/figure-p12-3.webp",
+        "dist/assets/projects/common-ground/study/figure-p12-3.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/figure-p12-4.webp",
+      "sha256": "e50b1db151e99e1904455cbea1b39682c71bb9dc8002b02c607c312e79c14b8d",
+      "size": 21832,
+      "paths": [
+        "assets/projects/common-ground/study/figure-p12-4.webp",
+        "dist/assets/projects/common-ground/study/figure-p12-4.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/figure-p12-5.webp",
+      "sha256": "d58d0a775a9d14e1b94f2103ec2d9e9f58f0c9925c0b4fe7b6c163a6b215c855",
+      "size": 23328,
+      "paths": [
+        "assets/projects/common-ground/study/figure-p12-5.webp",
+        "dist/assets/projects/common-ground/study/figure-p12-5.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/figure-p4-0.webp",
+      "sha256": "c2a30b1982c70ddce0adc4d2e78258346a62bf499bc814b4a73790b063335609",
+      "size": 13122,
+      "paths": [
+        "assets/projects/common-ground/study/figure-p4-0.webp",
+        "dist/assets/projects/common-ground/study/figure-p4-0.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/figure-p4-1.webp",
+      "sha256": "6e74c368d9373f8e51e4031024d03ed0313a2c0129ec79240d066e4085d04498",
+      "size": 13148,
+      "paths": [
+        "assets/projects/common-ground/study/figure-p4-1.webp",
+        "dist/assets/projects/common-ground/study/figure-p4-1.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/figure-p4-2.webp",
+      "sha256": "01f2c7465d8f76d8640addf66cd3012a15cc4723c69c593a31fb0b5252397d26",
+      "size": 30834,
+      "paths": [
+        "assets/projects/common-ground/study/figure-p4-2.webp",
+        "dist/assets/projects/common-ground/study/figure-p4-2.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/figure-p4-3.webp",
+      "sha256": "b5a9eb657978e517b0edb7d5acf6fb9ac03c1afa3a06febdac895f9c50c87b16",
+      "size": 38518,
+      "paths": [
+        "assets/projects/common-ground/study/figure-p4-3.webp",
+        "dist/assets/projects/common-ground/study/figure-p4-3.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/figure-p4-4.webp",
+      "sha256": "1804e53e5cd4fc77997f50a7360026f961c063fbdd672bf08059d3fc9b318972",
+      "size": 38180,
+      "paths": [
+        "assets/projects/common-ground/study/figure-p4-4.webp",
+        "dist/assets/projects/common-ground/study/figure-p4-4.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/figure-p8-0.webp",
+      "sha256": "ab7963a81a2b2f6f961adda33f07898f49c6fa339d3688ba3ca99a27402123e1",
+      "size": 16862,
+      "paths": [
+        "assets/projects/common-ground/study/figure-p8-0.webp",
+        "dist/assets/projects/common-ground/study/figure-p8-0.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/figure-p8-1.webp",
+      "sha256": "3bf9c0691f1b2c1560434258b0579e9abe572530993aa779ad574c3e89616155",
+      "size": 26456,
+      "paths": [
+        "assets/projects/common-ground/study/figure-p8-1.webp",
+        "dist/assets/projects/common-ground/study/figure-p8-1.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/page-02.webp",
+      "sha256": "7e30bc7fbdd0bc203b61889e3c6060bec26982d22b222e44043354100da485de",
+      "size": 65388,
+      "paths": [
+        "assets/projects/common-ground/study/page-02.webp",
+        "dist/assets/projects/common-ground/study/page-02.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/page-03.webp",
+      "sha256": "e91599b22b94ea49b9dc89abd09d946a99538d8bb907baa611faeb7bb45ed649",
+      "size": 90920,
+      "paths": [
+        "assets/projects/common-ground/study/page-03.webp",
+        "dist/assets/projects/common-ground/study/page-03.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/page-04.webp",
+      "sha256": "71d3c9ace5e7cfc79591ce1d995f774a5c5b39008835b9a54c9160a113fe5535",
+      "size": 95640,
+      "paths": [
+        "assets/projects/common-ground/study/page-04.webp",
+        "dist/assets/projects/common-ground/study/page-04.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/page-05.webp",
+      "sha256": "140b2a9560662b90ed8f730d60b281f584972d8fb15abf6a1fb105bb23972030",
+      "size": 92612,
+      "paths": [
+        "assets/projects/common-ground/study/page-05.webp",
+        "dist/assets/projects/common-ground/study/page-05.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/page-06.webp",
+      "sha256": "e15bd3c62142cc092eaa55873275a2e81bfbd125d49ddfbfaa7a59f75c548dbc",
+      "size": 79880,
+      "paths": [
+        "assets/projects/common-ground/study/page-06.webp",
+        "dist/assets/projects/common-ground/study/page-06.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/page-07.webp",
+      "sha256": "3b82c9c12a434c7d352f8f1e34ba0acdf9371042560f5dbe22840fd293504b8e",
+      "size": 92648,
+      "paths": [
+        "assets/projects/common-ground/study/page-07.webp",
+        "dist/assets/projects/common-ground/study/page-07.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/page-08.webp",
+      "sha256": "8deb12c8fa20ce53a1ac908785d5fa41357c79fd4165a81c74293ddf96edf4c2",
+      "size": 74462,
+      "paths": [
+        "assets/projects/common-ground/study/page-08.webp",
+        "dist/assets/projects/common-ground/study/page-08.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/page-09.webp",
+      "sha256": "6f0907aeb981ca1c74e67a0c64f952aab28d8bcce09e307daf6eeaafdabc5d9d",
+      "size": 107906,
+      "paths": [
+        "assets/projects/common-ground/study/page-09.webp",
+        "dist/assets/projects/common-ground/study/page-09.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/page-10.webp",
+      "sha256": "b32e6e9aa49177d3a1e191d761b362bfbacd8bdc89cd417272a95b63bf1b4755",
+      "size": 74960,
+      "paths": [
+        "assets/projects/common-ground/study/page-10.webp",
+        "dist/assets/projects/common-ground/study/page-10.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/page-11.webp",
+      "sha256": "add4eda018f9e26bd4585dce97d32952aa32a25bb194940dcef00a4f8704e017",
+      "size": 78220,
+      "paths": [
+        "assets/projects/common-ground/study/page-11.webp",
+        "dist/assets/projects/common-ground/study/page-11.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/page-12.webp",
+      "sha256": "6a9ac71621d8dd9bf3086a6b17a5e2a637347eb6d0ed16d353b4cf0405a9f50b",
+      "size": 88060,
+      "paths": [
+        "assets/projects/common-ground/study/page-12.webp",
+        "dist/assets/projects/common-ground/study/page-12.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/page-13.webp",
+      "sha256": "199336189ee32c47ebbf4ab8a1167482ef24688558728ef8e523cdc67b9919bb",
+      "size": 87768,
+      "paths": [
+        "assets/projects/common-ground/study/page-13.webp",
+        "dist/assets/projects/common-ground/study/page-13.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/page-14.webp",
+      "sha256": "e26caa07377398fe258e7fb54701998f19e955ae6e6463a46147910cc63af0cb",
+      "size": 131142,
+      "paths": [
+        "assets/projects/common-ground/study/page-14.webp",
+        "dist/assets/projects/common-ground/study/page-14.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/page-15.webp",
+      "sha256": "afb7bc0a544b8e65800c9f3645caf698c0044cea61667b18cef6c089ae9ae70e",
+      "size": 104248,
+      "paths": [
+        "assets/projects/common-ground/study/page-15.webp",
+        "dist/assets/projects/common-ground/study/page-15.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/page-16.webp",
+      "sha256": "8c8d2c5b2390ae19c336015904c744ebbd7608680e8199e571eef28ce8fe3c46",
+      "size": 85062,
+      "paths": [
+        "assets/projects/common-ground/study/page-16.webp",
+        "dist/assets/projects/common-ground/study/page-16.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/page-17.webp",
+      "sha256": "c8150bd74c525e5171f32782e98ba68c6840d3353b8101774ecc4675c9d327f2",
+      "size": 100380,
+      "paths": [
+        "assets/projects/common-ground/study/page-17.webp",
+        "dist/assets/projects/common-ground/study/page-17.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/common-ground/study/page-18.webp",
+      "sha256": "c56729ab82995ddabd1b041aeea5d4d8f7ff7eb9de62fb109466f785f98e8784",
+      "size": 39522,
+      "paths": [
+        "assets/projects/common-ground/study/page-18.webp",
+        "dist/assets/projects/common-ground/study/page-18.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/ichack/cover-1600.avif",
+      "sha256": "e44b4f609ef77b241247a32cfc32600b0f24bc2524dd15bff0e21ffbff33ff42",
+      "size": 94810,
+      "paths": [
+        "assets/projects/ichack/cover-1600.avif",
+        "dist/assets/projects/ichack/cover-1600.avif"
+      ]
+    },
+    {
+      "url": "/assets/projects/ichack/cupcakes-1600.avif",
+      "sha256": "466730a2f15017bd96dd428619f31730fe23a2fcefd5a86fa2a5980a6471e61f",
+      "size": 99615,
+      "paths": [
+        "assets/projects/ichack/cupcakes-1600.avif",
+        "dist/assets/projects/ichack/cupcakes-1600.avif"
+      ]
+    },
+    {
+      "url": "/assets/projects/ichack/group-photo-1600.avif",
+      "sha256": "18fa32b3beeabfc9555c7f34bd5da962f98c7f087c0e81d167f7e8481afbb507",
+      "size": 221397,
+      "paths": [
+        "assets/projects/ichack/group-photo-1600.avif",
+        "dist/assets/projects/ichack/group-photo-1600.avif"
+      ]
+    },
+    {
+      "url": "/assets/projects/ichack/in-environment-1600.avif",
+      "sha256": "e49f50f9ec2f0caa57213b56bfea0319e05bbc661468bc1aa1315ee25b97b17f",
+      "size": 65010,
+      "paths": [
+        "assets/projects/ichack/in-environment-1600.avif",
+        "dist/assets/projects/ichack/in-environment-1600.avif"
+      ]
+    },
+    {
+      "url": "/assets/projects/ichack/lanyards-1600.avif",
+      "sha256": "7ca07a142d31d67a7d6e0f0b44139ade4280eb349125b40e2e487987ef825022",
+      "size": 70834,
+      "paths": [
+        "assets/projects/ichack/lanyards-1600.avif",
+        "dist/assets/projects/ichack/lanyards-1600.avif"
+      ]
+    },
+    {
+      "url": "/assets/projects/ichack/logo-1600.avif",
+      "sha256": "e3a1a7725acd80c441bcf0ff96986676dd5b1785d5c67a85802a7e3851b23cb3",
+      "size": 51318,
+      "paths": [
+        "assets/projects/ichack/logo-1600.avif",
+        "dist/assets/projects/ichack/logo-1600.avif"
+      ]
+    },
+    {
+      "url": "/assets/projects/ichack/tshirtgraphics-1600.avif",
+      "sha256": "18bf8ef933d41366a778d5baff9f83dad21e6181e0ced9335ac3066ee64f887b",
+      "size": 58630,
+      "paths": [
+        "assets/projects/ichack/tshirtgraphics-1600.avif",
+        "dist/assets/projects/ichack/tshirtgraphics-1600.avif"
+      ]
+    },
+    {
+      "url": "/assets/projects/ichack/tshirts-give-out-1600.avif",
+      "sha256": "3a7db8e3a1d355ded6330607f5e6ce9af88f6705607f199605a649712d59e9b0",
+      "size": 124245,
+      "paths": [
+        "assets/projects/ichack/tshirts-give-out-1600.avif",
+        "dist/assets/projects/ichack/tshirts-give-out-1600.avif"
+      ]
+    },
+    {
+      "url": "/assets/projects/ichack/tshirts-photo-1-1600.avif",
+      "sha256": "30502ac8ac3a72f2b54e215ba43e31348f96d1830abfcb3a11426008c0d64ca9",
+      "size": 50742,
+      "paths": [
+        "assets/projects/ichack/tshirts-photo-1-1600.avif",
+        "dist/assets/projects/ichack/tshirts-photo-1-1600.avif"
+      ]
+    },
+    {
+      "url": "/assets/projects/ichack/tshirts-photo-2-1600.avif",
+      "sha256": "1749638ab4906ec0d76faf0f9828a0ebc91bc9113325f790a9eb13858bcc7815",
+      "size": 38828,
+      "paths": [
+        "assets/projects/ichack/tshirts-photo-2-1600.avif",
+        "dist/assets/projects/ichack/tshirts-photo-2-1600.avif"
+      ]
+    },
+    {
+      "url": "/assets/projects/ichack/tshirts-photo-3-1600.avif",
+      "sha256": "c49d9c365d554720146f0c2e7a02e4a917b10c042e129f12339a33eb52bb1b6d",
+      "size": 37214,
+      "paths": [
+        "assets/projects/ichack/tshirts-photo-3-1600.avif",
+        "dist/assets/projects/ichack/tshirts-photo-3-1600.avif"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/README.md",
+      "sha256": "13e7afd6eaa48234ddee22e540f59ddde52761b29f1c07e07f85c5f1d9b183c8",
+      "size": 4444,
+      "paths": [
+        "assets/projects/in-motion/study/README.md",
+        "dist/assets/projects/in-motion/study/README.md"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/base-prototypes.webp",
+      "sha256": "30cd53750583c3f0668a7a30e4b8e071adf410fb3f1cb218c08170b315cb34f2",
+      "size": 563036,
+      "paths": [
+        "assets/projects/in-motion/study/base-prototypes.webp",
+        "dist/assets/projects/in-motion/study/base-prototypes.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/bell-sketch.webp",
+      "sha256": "9a85fb122c3cab99e513b121f01038a1e48f325840658242de5abb79b2b01721",
+      "size": 115332,
+      "paths": [
+        "assets/projects/in-motion/study/bell-sketch.webp",
+        "dist/assets/projects/in-motion/study/bell-sketch.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/blue-switch.webp",
+      "sha256": "f3e4b6b9baaf23e8e25d44c7128b78a5b64351644a4eb7798b436b440dae5195",
+      "size": 12186,
+      "paths": [
+        "assets/projects/in-motion/study/blue-switch.webp",
+        "dist/assets/projects/in-motion/study/blue-switch.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/brown-switch.webp",
+      "sha256": "69e9366d61c26a682c74665932903b55aee09780cc06dfb0de526ec451c9db68",
+      "size": 35076,
+      "paths": [
+        "assets/projects/in-motion/study/brown-switch.webp",
+        "dist/assets/projects/in-motion/study/brown-switch.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/button-shapes.webp",
+      "sha256": "a94a77fdeb94e856a043a7577399adc56c8463071fc8f76c0cf5df1ac91466eb",
+      "size": 199664,
+      "paths": [
+        "assets/projects/in-motion/study/button-shapes.webp",
+        "dist/assets/projects/in-motion/study/button-shapes.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/cap-colours.webp",
+      "sha256": "e56e0d561512c9a61e98ba8262c65b36183304e8f6d1ecb21e631017daad0fda",
+      "size": 35994,
+      "paths": [
+        "assets/projects/in-motion/study/cap-colours.webp",
+        "dist/assets/projects/in-motion/study/cap-colours.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/cap-textures.webp",
+      "sha256": "3df63103ab1e69d0e7fa3332a003ef5cd25ec11d0243ce2f8b1f6f5061241eaf",
+      "size": 32814,
+      "paths": [
+        "assets/projects/in-motion/study/cap-textures.webp",
+        "dist/assets/projects/in-motion/study/cap-textures.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/categorical-layout.webp",
+      "sha256": "297dbe244ec6928c0f78802fcf49a3a3234a698d6c75ee95806ac7f10b54879d",
+      "size": 35092,
+      "paths": [
+        "assets/projects/in-motion/study/categorical-layout.webp",
+        "dist/assets/projects/in-motion/study/categorical-layout.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/co-design.webp",
+      "sha256": "11849f262af95c91cf28e8b254c02127476955df7dd629d663c2c49cb987804a",
+      "size": 397090,
+      "paths": [
+        "assets/projects/in-motion/study/co-design.webp",
+        "dist/assets/projects/in-motion/study/co-design.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/concept-01.webp",
+      "sha256": "c4a2354a39e0b89477160b647f149da75275b062ea13b1e8eba1011cf72250b8",
+      "size": 167560,
+      "paths": [
+        "assets/projects/in-motion/study/concept-01.webp",
+        "dist/assets/projects/in-motion/study/concept-01.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/concept-02.webp",
+      "sha256": "65f4bc5f16afe4d5b540cc35cd410b2ac04f7e4addfe3c11b26dc5a713b23d57",
+      "size": 132082,
+      "paths": [
+        "assets/projects/in-motion/study/concept-02.webp",
+        "dist/assets/projects/in-motion/study/concept-02.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/concept-03.webp",
+      "sha256": "a82ddc417141c7538aecfa1b9a735642148b70ef1aca794773db64d40a70138b",
+      "size": 164398,
+      "paths": [
+        "assets/projects/in-motion/study/concept-03.webp",
+        "dist/assets/projects/in-motion/study/concept-03.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/concept-validation.webp",
+      "sha256": "58fd8e858098f325f4a05fe2ade919614c0f01a7a94cc6d2d2bbd9b31cec1f37",
+      "size": 109358,
+      "paths": [
+        "assets/projects/in-motion/study/concept-validation.webp",
+        "dist/assets/projects/in-motion/study/concept-validation.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/cover.webp",
+      "sha256": "4d93916b92e3c7aac8d7fdc3b3c2988280472279b5913ee09ecfb55b3b2783ea",
+      "size": 119580,
+      "paths": [
+        "assets/projects/in-motion/study/cover.webp",
+        "dist/assets/projects/in-motion/study/cover.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/exploded-views.webp",
+      "sha256": "48abe36f9b6c6ced63d7ca134075236920aa982425c938dc3d9d5a9be676a6af",
+      "size": 256522,
+      "paths": [
+        "assets/projects/in-motion/study/exploded-views.webp",
+        "dist/assets/projects/in-motion/study/exploded-views.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/field-interview.webp",
+      "sha256": "45bed5a3d84148116393bb6ebf9d4093da1ea50b7d923b3a8d42ed6bccdcd797",
+      "size": 309880,
+      "paths": [
+        "assets/projects/in-motion/study/field-interview.webp",
+        "dist/assets/projects/in-motion/study/field-interview.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/final-renders.webp",
+      "sha256": "5ecb779f3f50c9e692ec1de38fd02e1be4a52786fc316d58012627c52ac6e8a3",
+      "size": 622424,
+      "paths": [
+        "assets/projects/in-motion/study/final-renders.webp",
+        "dist/assets/projects/in-motion/study/final-renders.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/identity-process.webp",
+      "sha256": "6c450eef68bfc3be550c587a7c0827bae76717aa54456aa20dd7341fb3dd3480",
+      "size": 344740,
+      "paths": [
+        "assets/projects/in-motion/study/identity-process.webp",
+        "dist/assets/projects/in-motion/study/identity-process.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/identity.webp",
+      "sha256": "29744cd0846ee5f384773ee608bdba23e4eb5b2a8ab91f9e8b254dda21ae5638",
+      "size": 77290,
+      "paths": [
+        "assets/projects/in-motion/study/identity.webp",
+        "dist/assets/projects/in-motion/study/identity.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/in-use.webp",
+      "sha256": "2351b8c5ebad306781ba78cda7b15be5721b3fef7cc48d6708f46cb493a948fd",
+      "size": 786210,
+      "paths": [
+        "assets/projects/in-motion/study/in-use.webp",
+        "dist/assets/projects/in-motion/study/in-use.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/layout-test.webp",
+      "sha256": "80fe4dbdba6a6f824fd9f2efbe56e98977cf2639748fdde683a43062f8f5ecc4",
+      "size": 91242,
+      "paths": [
+        "assets/projects/in-motion/study/layout-test.webp",
+        "dist/assets/projects/in-motion/study/layout-test.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/packaging.webp",
+      "sha256": "4de14da14cc2f8543e6e762056a2dc2f48631f3a0e0f5b5d12c35abe55e04278",
+      "size": 400560,
+      "paths": [
+        "assets/projects/in-motion/study/packaging.webp",
+        "dist/assets/projects/in-motion/study/packaging.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/posters.webp",
+      "sha256": "d24b22526ae7df7b432c9ffd9c6bda16005f6b9ea9fdf1b05d8423d608db59df",
+      "size": 386968,
+      "paths": [
+        "assets/projects/in-motion/study/posters.webp",
+        "dist/assets/projects/in-motion/study/posters.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/quantity-dial.webp",
+      "sha256": "cbb147d8346a6f4e46767c24d03f47c4c010ede03caa5dc5c20327014b684a67",
+      "size": 233974,
+      "paths": [
+        "assets/projects/in-motion/study/quantity-dial.webp",
+        "dist/assets/projects/in-motion/study/quantity-dial.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/quantity-led.webp",
+      "sha256": "e198cb3edf9e6373a551dfa3f6070e013d2286389d4b431893b0f0b9e1fe0bd1",
+      "size": 104488,
+      "paths": [
+        "assets/projects/in-motion/study/quantity-led.webp",
+        "dist/assets/projects/in-motion/study/quantity-led.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/rotary-cap.webp",
+      "sha256": "203484e4321574ed783d82e2cc498ae213adf91a53155ebd689ba6b8ae259c1f",
+      "size": 26644,
+      "paths": [
+        "assets/projects/in-motion/study/rotary-cap.webp",
+        "dist/assets/projects/in-motion/study/rotary-cap.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/single-cap.webp",
+      "sha256": "fdec9835a4587c88e04592981d95fac7d02a63f6b5e1ee0eece47bfd02e1b721",
+      "size": 51644,
+      "paths": [
+        "assets/projects/in-motion/study/single-cap.webp",
+        "dist/assets/projects/in-motion/study/single-cap.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/spatial-layout.webp",
+      "sha256": "30e8058271892ca452909599b19859111d57303428f1bb56f008a1f094f0e5ae",
+      "size": 41132,
+      "paths": [
+        "assets/projects/in-motion/study/spatial-layout.webp",
+        "dist/assets/projects/in-motion/study/spatial-layout.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/split-cap-prototype.webp",
+      "sha256": "32881ed17ece9b7cf1be6c841523388ee0790c971e57fc332fd5818266a8e1f9",
+      "size": 77644,
+      "paths": [
+        "assets/projects/in-motion/study/split-cap-prototype.webp",
+        "dist/assets/projects/in-motion/study/split-cap-prototype.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/split-cap-sketch.webp",
+      "sha256": "352d626cb2d17b821a12f2471d8a5263ea97fb9a5a2b484302dfdd9208452dba",
+      "size": 95918,
+      "paths": [
+        "assets/projects/in-motion/study/split-cap-sketch.webp",
+        "dist/assets/projects/in-motion/study/split-cap-sketch.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/stall-map.webp",
+      "sha256": "ae20602c5bc835c40a33316abdb85250ae62176909be5c21f201fd98da5cd3ce",
+      "size": 21754,
+      "paths": [
+        "assets/projects/in-motion/study/stall-map.webp",
+        "dist/assets/projects/in-motion/study/stall-map.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/sweet-beats-concept.webp",
+      "sha256": "e4ddfc72e6c88b14a5b91ff4cf218069b4d40ea7727ad4cc89adba00e4193700",
+      "size": 226218,
+      "paths": [
+        "assets/projects/in-motion/study/sweet-beats-concept.webp",
+        "dist/assets/projects/in-motion/study/sweet-beats-concept.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/system-diagram.webp",
+      "sha256": "43d1de32960d0ef410349cdb7761227335267ee95e0f5e60f3b37911d1a6591e",
+      "size": 299442,
+      "paths": [
+        "assets/projects/in-motion/study/system-diagram.webp",
+        "dist/assets/projects/in-motion/study/system-diagram.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/tally-stick.webp",
+      "sha256": "70203e00597696e5298822e2e3f4b29d2eadd6dbf0b02006a1c3e0c29a8ad44c",
+      "size": 42676,
+      "paths": [
+        "assets/projects/in-motion/study/tally-stick.webp",
+        "dist/assets/projects/in-motion/study/tally-stick.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/in-motion/study/tapered-cap.webp",
+      "sha256": "ffc60cc140c13032e1e7aac6523547d0d38f07b4d30aa0b20faccc2d035a8a54",
+      "size": 27462,
+      "paths": [
+        "assets/projects/in-motion/study/tapered-cap.webp",
+        "dist/assets/projects/in-motion/study/tapered-cap.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/cover.png",
+      "sha256": "ab3bb2978a18e05efdce6aa0ed4a35e200c36635abf0859333fca2739dd7e0b1",
+      "size": 181245,
+      "paths": [
+        "assets/projects/slow-forms/cover.png",
+        "dist/assets/projects/slow-forms/cover.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-01-small.webp",
+      "sha256": "da412d0166d0a5da55b3bc845ea1e0ba4a365febe1ca051b2ea8b6c9b92a6ea0",
+      "size": 24734,
+      "paths": [
+        "assets/projects/slow-forms/report/page-01-small.webp",
+        "dist/assets/projects/slow-forms/report/page-01-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-01.webp",
+      "sha256": "f167a6d3d73a6dbc53f707bf2e649990a6c7938501727362462d54b7ee620c0d",
+      "size": 54992,
+      "paths": [
+        "assets/projects/slow-forms/report/page-01.webp",
+        "dist/assets/projects/slow-forms/report/page-01.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-02-small.webp",
+      "sha256": "e5d0034c464c3d533bf5d986cf774227063710bdb55d96c8b2a85a8fe91f37d0",
+      "size": 61394,
+      "paths": [
+        "assets/projects/slow-forms/report/page-02-small.webp",
+        "dist/assets/projects/slow-forms/report/page-02-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-02.webp",
+      "sha256": "8a03fed3b5ba1c9dff66ff7ccf5d28788cea5b81c536339bc82cf916b9e8a163",
+      "size": 176512,
+      "paths": [
+        "assets/projects/slow-forms/report/page-02.webp",
+        "dist/assets/projects/slow-forms/report/page-02.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-03-small.webp",
+      "sha256": "665f43b59729e76ac5ff000b11ffd6a165b516fdee2cbb71663543c4800e2755",
+      "size": 80582,
+      "paths": [
+        "assets/projects/slow-forms/report/page-03-small.webp",
+        "dist/assets/projects/slow-forms/report/page-03-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-03.webp",
+      "sha256": "70d35d650af0671de01249896a8c4fcbc1de617e8ee2484480e6161361fff0b3",
+      "size": 219164,
+      "paths": [
+        "assets/projects/slow-forms/report/page-03.webp",
+        "dist/assets/projects/slow-forms/report/page-03.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-04-small.webp",
+      "sha256": "aa4a48bada3e9266ba1202d0dc648aa92cafce4cc19f82edb098dc418db94578",
+      "size": 73978,
+      "paths": [
+        "assets/projects/slow-forms/report/page-04-small.webp",
+        "dist/assets/projects/slow-forms/report/page-04-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-04.webp",
+      "sha256": "82214ba6d8147f38766ecbda895a0d0a4bf02f173b027a766a719298b2634ede",
+      "size": 200008,
+      "paths": [
+        "assets/projects/slow-forms/report/page-04.webp",
+        "dist/assets/projects/slow-forms/report/page-04.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-05-small.webp",
+      "sha256": "042c7028faa58b716d56b93d0055c6778057fa9bb1549b35f55d4b5a2dcb4eb4",
+      "size": 72944,
+      "paths": [
+        "assets/projects/slow-forms/report/page-05-small.webp",
+        "dist/assets/projects/slow-forms/report/page-05-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-05.webp",
+      "sha256": "0efb59c641a938645c1c4a8e2271aa76ed8993c289d5537ba063fc27ac6a63fe",
+      "size": 210170,
+      "paths": [
+        "assets/projects/slow-forms/report/page-05.webp",
+        "dist/assets/projects/slow-forms/report/page-05.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-06-small.webp",
+      "sha256": "866301c75f9cc1dc04a418cb1f5eef5c40ce99ec31b623b69d8c28d554a8480c",
+      "size": 81418,
+      "paths": [
+        "assets/projects/slow-forms/report/page-06-small.webp",
+        "dist/assets/projects/slow-forms/report/page-06-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-06.webp",
+      "sha256": "08d3146cffede2da703169d57fc17a32796f1bdfd4fc55187e1df81ef4bd5388",
+      "size": 230962,
+      "paths": [
+        "assets/projects/slow-forms/report/page-06.webp",
+        "dist/assets/projects/slow-forms/report/page-06.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-07-small.webp",
+      "sha256": "48df9ec2f452412ecf4b44278e321a3f64f0cd72e0401cd93b5f2dde8ad132f2",
+      "size": 68236,
+      "paths": [
+        "assets/projects/slow-forms/report/page-07-small.webp",
+        "dist/assets/projects/slow-forms/report/page-07-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-07.webp",
+      "sha256": "387e0e54db8071c397f119dd3cadfc0e6fab2dc1eae5f38a1ba93c2c678f0885",
+      "size": 194146,
+      "paths": [
+        "assets/projects/slow-forms/report/page-07.webp",
+        "dist/assets/projects/slow-forms/report/page-07.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-08-small.webp",
+      "sha256": "b30e47e46530234d0d63e6e8628b82c95e3c95a0e96eb511dd16c73d9821a11d",
+      "size": 63386,
+      "paths": [
+        "assets/projects/slow-forms/report/page-08-small.webp",
+        "dist/assets/projects/slow-forms/report/page-08-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-08.webp",
+      "sha256": "3ede04c279cbaf23d16624d34f4db9ba890679d673af8ee3b6ed006b3c85dc4f",
+      "size": 172930,
+      "paths": [
+        "assets/projects/slow-forms/report/page-08.webp",
+        "dist/assets/projects/slow-forms/report/page-08.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-09-small.webp",
+      "sha256": "cea9a2023644e624b8d37dc8431dcab109b2dfa8bb4d21760a6807d26a57f079",
+      "size": 70512,
+      "paths": [
+        "assets/projects/slow-forms/report/page-09-small.webp",
+        "dist/assets/projects/slow-forms/report/page-09-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-09.webp",
+      "sha256": "4c770580e0d939b9d368432af2594900a67e81b66dd47753e84b6b02380945e1",
+      "size": 192250,
+      "paths": [
+        "assets/projects/slow-forms/report/page-09.webp",
+        "dist/assets/projects/slow-forms/report/page-09.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-10-small.webp",
+      "sha256": "0fb673c6ebd7435edae21b7bd42336a43c8f92c3b9c221d9a3ca6df82ec08916",
+      "size": 66994,
+      "paths": [
+        "assets/projects/slow-forms/report/page-10-small.webp",
+        "dist/assets/projects/slow-forms/report/page-10-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-10.webp",
+      "sha256": "9b402007da33997066625e33372f0f118b84c231f7b20370496ffcb142117af7",
+      "size": 186964,
+      "paths": [
+        "assets/projects/slow-forms/report/page-10.webp",
+        "dist/assets/projects/slow-forms/report/page-10.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-11-small.webp",
+      "sha256": "af6cd0b0463a3aee5d24bd0ca773e832750e7d3b4263bfefd6f6b77a0a9f9584",
+      "size": 77444,
+      "paths": [
+        "assets/projects/slow-forms/report/page-11-small.webp",
+        "dist/assets/projects/slow-forms/report/page-11-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-11.webp",
+      "sha256": "5507542e388c4bf4e597e8f1093bf97c009d7cfa096c3ebffb78f05b5ea9899a",
+      "size": 233458,
+      "paths": [
+        "assets/projects/slow-forms/report/page-11.webp",
+        "dist/assets/projects/slow-forms/report/page-11.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-12-small.webp",
+      "sha256": "4ae5a57e6e364e622f2670c92990796a7b603228de5eff9cb6e8af5885e634ef",
+      "size": 70984,
+      "paths": [
+        "assets/projects/slow-forms/report/page-12-small.webp",
+        "dist/assets/projects/slow-forms/report/page-12-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-12.webp",
+      "sha256": "c4e443fc9315cdc69279fa8bbde89a8e06d75da5c0582cfe9406ad8e3a792d7d",
+      "size": 201292,
+      "paths": [
+        "assets/projects/slow-forms/report/page-12.webp",
+        "dist/assets/projects/slow-forms/report/page-12.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-13-small.webp",
+      "sha256": "8df9241ce28b5057cead3eb2323f7ecb25f0752155e32fe3d1bdcdb103e5b23e",
+      "size": 73512,
+      "paths": [
+        "assets/projects/slow-forms/report/page-13-small.webp",
+        "dist/assets/projects/slow-forms/report/page-13-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-13.webp",
+      "sha256": "0dcb8b699aece3ad0eecccf5bd0bbe4cbdcb7a89e69e198cd37d1f2a0cd69cb6",
+      "size": 205450,
+      "paths": [
+        "assets/projects/slow-forms/report/page-13.webp",
+        "dist/assets/projects/slow-forms/report/page-13.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-14-small.webp",
+      "sha256": "2724eca8fa2082dfc3d5c8dbb67f203768aa3e6f6078c82fa7d83937b9e434cd",
+      "size": 69180,
+      "paths": [
+        "assets/projects/slow-forms/report/page-14-small.webp",
+        "dist/assets/projects/slow-forms/report/page-14-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-14.webp",
+      "sha256": "b6f63d18dbd32adf0426beab0f2fc17c8e8c91c758e4c9d6eb71038512bc8e13",
+      "size": 188610,
+      "paths": [
+        "assets/projects/slow-forms/report/page-14.webp",
+        "dist/assets/projects/slow-forms/report/page-14.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-15-small.webp",
+      "sha256": "d75f8cc8f89838dcccf3e0c50c0965ded0c43724290d23dc1788b308100c3b65",
+      "size": 78994,
+      "paths": [
+        "assets/projects/slow-forms/report/page-15-small.webp",
+        "dist/assets/projects/slow-forms/report/page-15-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-15.webp",
+      "sha256": "e45f08f065d1a9d6301b96169b906563bcbbe8fdadec9604b7f2ff63dec7f568",
+      "size": 224078,
+      "paths": [
+        "assets/projects/slow-forms/report/page-15.webp",
+        "dist/assets/projects/slow-forms/report/page-15.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-16-small.webp",
+      "sha256": "a44765ec378de2158c23e3edcb3e19a996b77e63bb15e17c0f279f2e3685c332",
+      "size": 93882,
+      "paths": [
+        "assets/projects/slow-forms/report/page-16-small.webp",
+        "dist/assets/projects/slow-forms/report/page-16-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/page-16.webp",
+      "sha256": "87ad14c7a414bc58cf3d9e2b18f4040d80d1f7f12f00923ce712cdd9696b9434",
+      "size": 297556,
+      "paths": [
+        "assets/projects/slow-forms/report/page-16.webp",
+        "dist/assets/projects/slow-forms/report/page-16.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/parts/part-01.bin",
+      "sha256": "f13dc7c7ce12f3e0b9c84483eb2310aaaa324c3ccef12ab096d28e149670c011",
+      "size": 8388608,
+      "paths": [
+        "assets/projects/slow-forms/report/parts/part-01.bin",
+        "dist/assets/projects/slow-forms/report/parts/part-01.bin"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/parts/part-02.bin",
+      "sha256": "339064dc8ac42a14a79a1624becf23b4ab88df78ea8f1d61223fe8c325b34cc5",
+      "size": 8388608,
+      "paths": [
+        "assets/projects/slow-forms/report/parts/part-02.bin",
+        "dist/assets/projects/slow-forms/report/parts/part-02.bin"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/parts/part-03.bin",
+      "sha256": "50a9666f1694579fc3c82abd00d8c7cc6183de35edc17d699b843c416a216fa4",
+      "size": 8388608,
+      "paths": [
+        "assets/projects/slow-forms/report/parts/part-03.bin",
+        "dist/assets/projects/slow-forms/report/parts/part-03.bin"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/report/parts/part-04.bin",
+      "sha256": "6392c5032a641bda4c6d92fd2443b8340617df2fc0571eccd6a273e82038e509",
+      "size": 683339,
+      "paths": [
+        "assets/projects/slow-forms/report/parts/part-04.bin",
+        "dist/assets/projects/slow-forms/report/parts/part-04.bin"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/README.md",
+      "sha256": "ea030cb73781724f1c98563a4041dd9c3b3752df62a43c019808576e6f323b4c",
+      "size": 754,
+      "paths": [
+        "assets/projects/slow-forms/study/README.md",
+        "dist/assets/projects/slow-forms/study/README.md"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/baseline-01.png",
+      "sha256": "faee7bbd06b9d4995847db23e078bec1ca43a02305b0b23cf162bd15591d7506",
+      "size": 33410,
+      "paths": [
+        "assets/projects/slow-forms/study/baseline-01.png",
+        "dist/assets/projects/slow-forms/study/baseline-01.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/baseline-02.png",
+      "sha256": "9f0b1a9922e1a110ee5699257a83fc35604804b51b8cfc36ab353ec9754a6f0c",
+      "size": 23092,
+      "paths": [
+        "assets/projects/slow-forms/study/baseline-02.png",
+        "dist/assets/projects/slow-forms/study/baseline-02.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/baseline-03.png",
+      "sha256": "a783f5b564e9c57650108919f8afe8eb60363e05bf09651f84b5239a52fa5ac3",
+      "size": 43185,
+      "paths": [
+        "assets/projects/slow-forms/study/baseline-03.png",
+        "dist/assets/projects/slow-forms/study/baseline-03.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/baseline-04.png",
+      "sha256": "5f0eeb824879c4e9bffa6c6e67160962a2dac3939a870981c97f418c5b93a566",
+      "size": 53395,
+      "paths": [
+        "assets/projects/slow-forms/study/baseline-04.png",
+        "dist/assets/projects/slow-forms/study/baseline-04.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/baseline-board.png",
+      "sha256": "51926f7aa923904a57fa31bbd9af256bb000b7c04b542517cf9e68860cf0c97c",
+      "size": 323145,
+      "paths": [
+        "assets/projects/slow-forms/study/baseline-board.png",
+        "dist/assets/projects/slow-forms/study/baseline-board.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/development-01.png",
+      "sha256": "b42100a37440979feb804fa3b150460e150285f55ccd97d24670eabb93c9cb96",
+      "size": 59776,
+      "paths": [
+        "assets/projects/slow-forms/study/development-01.png",
+        "dist/assets/projects/slow-forms/study/development-01.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/development-02.png",
+      "sha256": "82d10bbbeaaa4080749237b5cf99e6a354a943cd943a92a1fb9ff0f6c6375c3e",
+      "size": 43708,
+      "paths": [
+        "assets/projects/slow-forms/study/development-02.png",
+        "dist/assets/projects/slow-forms/study/development-02.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/development-03.png",
+      "sha256": "47ca07e31d9b824fac8caaaa9519a8d6063e4b85b65676c96f333919cd7a8087",
+      "size": 35331,
+      "paths": [
+        "assets/projects/slow-forms/study/development-03.png",
+        "dist/assets/projects/slow-forms/study/development-03.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/development-04.png",
+      "sha256": "5b4d436f2eb2def0873fc2b2b1ac8b2b854f4f32791aa8b64aaf2b8f2b6fcf28",
+      "size": 32864,
+      "paths": [
+        "assets/projects/slow-forms/study/development-04.png",
+        "dist/assets/projects/slow-forms/study/development-04.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/development-05.png",
+      "sha256": "fc66b0cb4ee789cb6852435e4aaa8dd9b9093a07e1761794134d1f4eca82a04e",
+      "size": 30224,
+      "paths": [
+        "assets/projects/slow-forms/study/development-05.png",
+        "dist/assets/projects/slow-forms/study/development-05.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/development-06.png",
+      "sha256": "0ea7da069dc8a5ed4c7ccf2ae2a25f85b16a08b914457b4a1386f64d3728a41b",
+      "size": 30665,
+      "paths": [
+        "assets/projects/slow-forms/study/development-06.png",
+        "dist/assets/projects/slow-forms/study/development-06.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/development-07.png",
+      "sha256": "a8e0359e0621773cd99b71d47d0df26b33b006aff1c7ed8f8d43b6e0e9b789a3",
+      "size": 28085,
+      "paths": [
+        "assets/projects/slow-forms/study/development-07.png",
+        "dist/assets/projects/slow-forms/study/development-07.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/development-08.png",
+      "sha256": "87af3b0aba46bff263dcf22d9f235ed96c94830724aa5eba704c331a82c8414c",
+      "size": 27494,
+      "paths": [
+        "assets/projects/slow-forms/study/development-08.png",
+        "dist/assets/projects/slow-forms/study/development-08.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/development-09.png",
+      "sha256": "00121745c060ca0ea7a95073cddc9d66bee507409af52696a9e647dcaedc3c1c",
+      "size": 31668,
+      "paths": [
+        "assets/projects/slow-forms/study/development-09.png",
+        "dist/assets/projects/slow-forms/study/development-09.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/development-10.png",
+      "sha256": "65d7b6d084b9222cf88c6a60acd272fe8cd50f2b4826ccd829148f15adab0a06",
+      "size": 29748,
+      "paths": [
+        "assets/projects/slow-forms/study/development-10.png",
+        "dist/assets/projects/slow-forms/study/development-10.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/development-11.png",
+      "sha256": "2ad079b91c62704c147205a58e45bd22cf5cfd47173607cab80d732651cdb784",
+      "size": 31424,
+      "paths": [
+        "assets/projects/slow-forms/study/development-11.png",
+        "dist/assets/projects/slow-forms/study/development-11.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/hero.png",
+      "sha256": "1c556a629ffb4364615ee99f8af1ce2c8638b381ecb210c15e6079bb6c7e9921",
+      "size": 248958,
+      "paths": [
+        "assets/projects/slow-forms/study/hero.png",
+        "dist/assets/projects/slow-forms/study/hero.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/refined-01.png",
+      "sha256": "53a7bad9c104734bab00bc52a24a1429d71f28ba701cc6da64a4f9163ac20471",
+      "size": 161335,
+      "paths": [
+        "assets/projects/slow-forms/study/refined-01.png",
+        "dist/assets/projects/slow-forms/study/refined-01.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/refined-02.png",
+      "sha256": "eb201ca4e7054ca5620c8f32ced3d12cc52d3c41f2267f597af72518402da8a8",
+      "size": 24350,
+      "paths": [
+        "assets/projects/slow-forms/study/refined-02.png",
+        "dist/assets/projects/slow-forms/study/refined-02.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/refined-03.png",
+      "sha256": "dfe028eac46593d36dd9db1b0fd83b621725eee54dfe3d7e9a708cf96e2daafd",
+      "size": 82576,
+      "paths": [
+        "assets/projects/slow-forms/study/refined-03.png",
+        "dist/assets/projects/slow-forms/study/refined-03.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/refined-04.png",
+      "sha256": "00eb1da263c3161c290114b07289b982c24cd150ec19a777cb2eef5aac485f20",
+      "size": 71139,
+      "paths": [
+        "assets/projects/slow-forms/study/refined-04.png",
+        "dist/assets/projects/slow-forms/study/refined-04.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/slow-forms/study/refined-board.png",
+      "sha256": "d41bec50649a2973b732c8428664b95851a139cd6c4a86cdae7e86387405d53c",
+      "size": 315712,
+      "paths": [
+        "assets/projects/slow-forms/study/refined-board.png",
+        "dist/assets/projects/slow-forms/study/refined-board.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/aircraft-seat/accessory-details.webp",
+      "sha256": "4078f96964cd5234a2ff72cbc90827bd123df62d2f2ce02f3da7cfdb60d986f4",
+      "size": 27276,
+      "paths": [
+        "assets/projects/soft-signals/aircraft-seat/accessory-details.webp",
+        "dist/assets/projects/soft-signals/aircraft-seat/accessory-details.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/aircraft-seat/cushion-exploded.webp",
+      "sha256": "0c59156bce09c62f93153c3ba8b54b03c4855d0c77192cfe6f395c8aaffcc3e5",
+      "size": 12942,
+      "paths": [
+        "assets/projects/soft-signals/aircraft-seat/cushion-exploded.webp",
+        "dist/assets/projects/soft-signals/aircraft-seat/cushion-exploded.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/aircraft-seat/primary-frame-development.webp",
+      "sha256": "905fa424e18b065a7cb74c59ea29cce27aa5a18f1623629f454988cd910aeff4",
+      "size": 31092,
+      "paths": [
+        "assets/projects/soft-signals/aircraft-seat/primary-frame-development.webp",
+        "dist/assets/projects/soft-signals/aircraft-seat/primary-frame-development.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/aircraft-seat/primary-structure.webp",
+      "sha256": "297004941760324f9a83e78ac33971a75b6a519a9571b0b4c5df1e416544f0f7",
+      "size": 12508,
+      "paths": [
+        "assets/projects/soft-signals/aircraft-seat/primary-structure.webp",
+        "dist/assets/projects/soft-signals/aircraft-seat/primary-structure.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/aircraft-seat/seat-concept.webp",
+      "sha256": "3516786fa04206b431d5ddc8815636fcefd84daf1b7fdc2a177d8a22366e91e7",
+      "size": 15206,
+      "paths": [
+        "assets/projects/soft-signals/aircraft-seat/seat-concept.webp",
+        "dist/assets/projects/soft-signals/aircraft-seat/seat-concept.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/aircraft-seat/teardown.webp",
+      "sha256": "9d613560c7bef35d71d83ee253363befce8c81f1cbfc2eecc34d407d6d319efe",
+      "size": 36964,
+      "paths": [
+        "assets/projects/soft-signals/aircraft-seat/teardown.webp",
+        "dist/assets/projects/soft-signals/aircraft-seat/teardown.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-01-small.webp",
+      "sha256": "484efab94a32c60cc9bdc6484577415a2d0964e35a883d0dbe007822c7387c6b",
+      "size": 2238,
+      "paths": [
+        "assets/projects/soft-signals/report/page-01-small.webp",
+        "dist/assets/projects/soft-signals/report/page-01-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-01.webp",
+      "sha256": "9d05fd98ab01b8275422be943817f832c1890c7fe4477208280592ee97929ff5",
+      "size": 5716,
+      "paths": [
+        "assets/projects/soft-signals/report/page-01.webp",
+        "dist/assets/projects/soft-signals/report/page-01.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-02-small.webp",
+      "sha256": "7cd9ccfb8f39a5e6b0f97b1d2987e88570f65f040b6d8fac52dbb68dc25c9f14",
+      "size": 28558,
+      "paths": [
+        "assets/projects/soft-signals/report/page-02-small.webp",
+        "dist/assets/projects/soft-signals/report/page-02-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-02.webp",
+      "sha256": "797c3a50f2141036657647c0bcd210e549fb14a85174baa7b0fd7b073639b14f",
+      "size": 71520,
+      "paths": [
+        "assets/projects/soft-signals/report/page-02.webp",
+        "dist/assets/projects/soft-signals/report/page-02.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-03-small.webp",
+      "sha256": "d4aa5cf1eee4283ad456e09d26fb6ac65dcd63d187ac92fa32e16f9e41577701",
+      "size": 46714,
+      "paths": [
+        "assets/projects/soft-signals/report/page-03-small.webp",
+        "dist/assets/projects/soft-signals/report/page-03-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-03.webp",
+      "sha256": "685b7f78ce6ba340596582f2bd0fbf0991a98a4a704af025f8894cd4ef7075c3",
+      "size": 149026,
+      "paths": [
+        "assets/projects/soft-signals/report/page-03.webp",
+        "dist/assets/projects/soft-signals/report/page-03.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-04-small.webp",
+      "sha256": "18e336b1e5c6e140449086bc60f4443be286053e78c7287bd901f5391aacd1e7",
+      "size": 51230,
+      "paths": [
+        "assets/projects/soft-signals/report/page-04-small.webp",
+        "dist/assets/projects/soft-signals/report/page-04-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-04.webp",
+      "sha256": "53faec327c49a9b06016cf7bdd3a90901d05b80ff71c68a6802f73de387b4b90",
+      "size": 165350,
+      "paths": [
+        "assets/projects/soft-signals/report/page-04.webp",
+        "dist/assets/projects/soft-signals/report/page-04.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-05-small.webp",
+      "sha256": "38e2ad19588998fd828a18f57919236a7834e52cc1ef18e156c7e8c407da8f3f",
+      "size": 60682,
+      "paths": [
+        "assets/projects/soft-signals/report/page-05-small.webp",
+        "dist/assets/projects/soft-signals/report/page-05-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-05.webp",
+      "sha256": "ec8f9d2e23d772b94bbf104a0f859c60b9fce4d96340d8af0afef4752f1d947f",
+      "size": 202568,
+      "paths": [
+        "assets/projects/soft-signals/report/page-05.webp",
+        "dist/assets/projects/soft-signals/report/page-05.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-06-small.webp",
+      "sha256": "10bd760ee003483898bc8ecec6a9efb2232601f7965162ca344d0b2b876b900b",
+      "size": 47348,
+      "paths": [
+        "assets/projects/soft-signals/report/page-06-small.webp",
+        "dist/assets/projects/soft-signals/report/page-06-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-06.webp",
+      "sha256": "c4b56f2344edc013f073c05547acb6636b207dd2732875d37d25d511dab4dbd3",
+      "size": 145654,
+      "paths": [
+        "assets/projects/soft-signals/report/page-06.webp",
+        "dist/assets/projects/soft-signals/report/page-06.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-07-small.webp",
+      "sha256": "b6596d03d630db9662cf983b2654c846875a965afa69a1a391f6bc0ab4b22da4",
+      "size": 44314,
+      "paths": [
+        "assets/projects/soft-signals/report/page-07-small.webp",
+        "dist/assets/projects/soft-signals/report/page-07-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-07.webp",
+      "sha256": "c171326504561bdeb7c2ccff1ef4b9644c0cd48a90c6052c5f66ed906fc044a1",
+      "size": 137000,
+      "paths": [
+        "assets/projects/soft-signals/report/page-07.webp",
+        "dist/assets/projects/soft-signals/report/page-07.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-08-small.webp",
+      "sha256": "cbd54b76573f3a7e264b7c8c1d1ee1e05c70a31dc6ab1fb2566b4dc961d862bc",
+      "size": 40922,
+      "paths": [
+        "assets/projects/soft-signals/report/page-08-small.webp",
+        "dist/assets/projects/soft-signals/report/page-08-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-08.webp",
+      "sha256": "137b37dafc0ed0483e6a264abf3e6997d167738cfa959ee9c3e1919461f7d3a1",
+      "size": 114648,
+      "paths": [
+        "assets/projects/soft-signals/report/page-08.webp",
+        "dist/assets/projects/soft-signals/report/page-08.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-09-small.webp",
+      "sha256": "24d02dce8a01e448b51ee6e6b5cdf472a19ca5ab54f4552504d67c1f89246d26",
+      "size": 36300,
+      "paths": [
+        "assets/projects/soft-signals/report/page-09-small.webp",
+        "dist/assets/projects/soft-signals/report/page-09-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-09.webp",
+      "sha256": "a7260dafc252e8cce4e122131e36714ed1a57679ea4b84f07ce526841ae0dd8a",
+      "size": 108482,
+      "paths": [
+        "assets/projects/soft-signals/report/page-09.webp",
+        "dist/assets/projects/soft-signals/report/page-09.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-10-small.webp",
+      "sha256": "5f9f06e14f00d5db8030d837102e9d8f44b3d7331d22fc21c27891a660387930",
+      "size": 40902,
+      "paths": [
+        "assets/projects/soft-signals/report/page-10-small.webp",
+        "dist/assets/projects/soft-signals/report/page-10-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-10.webp",
+      "sha256": "a52368a976dbf1cb80ec1a025bcd784829f1c07175e1b9f5b84f197a3abf610a",
+      "size": 121100,
+      "paths": [
+        "assets/projects/soft-signals/report/page-10.webp",
+        "dist/assets/projects/soft-signals/report/page-10.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-11-small.webp",
+      "sha256": "fcc3416c566124d1070682b37734561696d78c37a744e091a37491708d468f01",
+      "size": 61660,
+      "paths": [
+        "assets/projects/soft-signals/report/page-11-small.webp",
+        "dist/assets/projects/soft-signals/report/page-11-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-11.webp",
+      "sha256": "f2504380434038787548e9e0d01497bea3657b7fc22952c247b1ce118994afef",
+      "size": 205612,
+      "paths": [
+        "assets/projects/soft-signals/report/page-11.webp",
+        "dist/assets/projects/soft-signals/report/page-11.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-12-small.webp",
+      "sha256": "39caa2117742fe5b334f254b4a71113173aeef3270613c10fba0bbe0d446dba6",
+      "size": 25808,
+      "paths": [
+        "assets/projects/soft-signals/report/page-12-small.webp",
+        "dist/assets/projects/soft-signals/report/page-12-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-12.webp",
+      "sha256": "6d5f0f9881c8793047319e1d1611a6c98f386aef26cf14a22f8f35c4bbe881a9",
+      "size": 62474,
+      "paths": [
+        "assets/projects/soft-signals/report/page-12.webp",
+        "dist/assets/projects/soft-signals/report/page-12.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-13-small.webp",
+      "sha256": "4c3d265bf283b14c35bd37df7123e9da290ea09c086018e574db92bebd6a49d7",
+      "size": 23534,
+      "paths": [
+        "assets/projects/soft-signals/report/page-13-small.webp",
+        "dist/assets/projects/soft-signals/report/page-13-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-13.webp",
+      "sha256": "805a08748981c61cd2a7e36e1aed54e38f49ecb530f8c9541884be59be2a3944",
+      "size": 64736,
+      "paths": [
+        "assets/projects/soft-signals/report/page-13.webp",
+        "dist/assets/projects/soft-signals/report/page-13.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-14-small.webp",
+      "sha256": "1293c88c00bfd75e4b75799c6f14530525b56995cc01eb1d8c2e184b88735f12",
+      "size": 54562,
+      "paths": [
+        "assets/projects/soft-signals/report/page-14-small.webp",
+        "dist/assets/projects/soft-signals/report/page-14-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-14.webp",
+      "sha256": "5ae748e53692c4fd0f7669f015fd0f7bd944e80ea0b5433d94adbf019d993ed8",
+      "size": 164242,
+      "paths": [
+        "assets/projects/soft-signals/report/page-14.webp",
+        "dist/assets/projects/soft-signals/report/page-14.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-15-small.webp",
+      "sha256": "4d3e5f22836c709fff5e71ba679384da0be6757d6b3a4a51d303631e96b2dd7d",
+      "size": 1868,
+      "paths": [
+        "assets/projects/soft-signals/report/page-15-small.webp",
+        "dist/assets/projects/soft-signals/report/page-15-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-15.webp",
+      "sha256": "9d2ff9a10d303cb6bbb3e46c6cfd1b352aee71218da01de14ef02e0db1e68d7d",
+      "size": 4736,
+      "paths": [
+        "assets/projects/soft-signals/report/page-15.webp",
+        "dist/assets/projects/soft-signals/report/page-15.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-16-small.webp",
+      "sha256": "bb4d86d9faab82cdbc6b3a54049f9fa4f9b16eadb3dbc3de882b04d755112308",
+      "size": 48406,
+      "paths": [
+        "assets/projects/soft-signals/report/page-16-small.webp",
+        "dist/assets/projects/soft-signals/report/page-16-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-16.webp",
+      "sha256": "4d346d239b9aefb9dc37be0cf24b4cbd4569d4437e0fa377514d5d6241ef7b35",
+      "size": 146800,
+      "paths": [
+        "assets/projects/soft-signals/report/page-16.webp",
+        "dist/assets/projects/soft-signals/report/page-16.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-17-small.webp",
+      "sha256": "9788760ea3dfc6be9277a86916abd0b65d904623e0a5f90bc2594fff02bc4bd1",
+      "size": 51718,
+      "paths": [
+        "assets/projects/soft-signals/report/page-17-small.webp",
+        "dist/assets/projects/soft-signals/report/page-17-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-17.webp",
+      "sha256": "1407694815be4bdad899d7815091231c5c2342d560e030c24e8bc6eb631ef642",
+      "size": 155766,
+      "paths": [
+        "assets/projects/soft-signals/report/page-17.webp",
+        "dist/assets/projects/soft-signals/report/page-17.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-18-small.webp",
+      "sha256": "d02003a4ad236e14bf707093606da44b74f124ea672d0814636e4b61357eb1cb",
+      "size": 43208,
+      "paths": [
+        "assets/projects/soft-signals/report/page-18-small.webp",
+        "dist/assets/projects/soft-signals/report/page-18-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-18.webp",
+      "sha256": "9afb6af510091a0a421da2f40a50884d845e86ec1ca1aa17fb315f5344a79062",
+      "size": 126390,
+      "paths": [
+        "assets/projects/soft-signals/report/page-18.webp",
+        "dist/assets/projects/soft-signals/report/page-18.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-19-small.webp",
+      "sha256": "67585df91082c622d77e3d2d62c53f22e362d4c6b633bdb789c2704f55e9cf43",
+      "size": 49752,
+      "paths": [
+        "assets/projects/soft-signals/report/page-19-small.webp",
+        "dist/assets/projects/soft-signals/report/page-19-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-19.webp",
+      "sha256": "c8c5e8cf02bfb6c96313801a65ee2a7070bfe5e9ba917dd9124d87d11dcadfaf",
+      "size": 149890,
+      "paths": [
+        "assets/projects/soft-signals/report/page-19.webp",
+        "dist/assets/projects/soft-signals/report/page-19.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-20-small.webp",
+      "sha256": "c1144d44ca82e538fadf722b11cbcb2fc08c965a7d77cbd8d1e3b79905564215",
+      "size": 41892,
+      "paths": [
+        "assets/projects/soft-signals/report/page-20-small.webp",
+        "dist/assets/projects/soft-signals/report/page-20-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-20.webp",
+      "sha256": "8e0e295ca018009eb815f38a77e0c59021272c1eebbc1ed7cee11df7c7ddcb73",
+      "size": 116980,
+      "paths": [
+        "assets/projects/soft-signals/report/page-20.webp",
+        "dist/assets/projects/soft-signals/report/page-20.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-21-small.webp",
+      "sha256": "ba7e308a1bd85c2068862dbce4993015545a4c8fba3c227c9dfc6b0e05b9c89a",
+      "size": 55404,
+      "paths": [
+        "assets/projects/soft-signals/report/page-21-small.webp",
+        "dist/assets/projects/soft-signals/report/page-21-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-21.webp",
+      "sha256": "1af46c56c2d65c9d924dbb887f76a52382d5b3a88c3a93e94e0bcbaeaf97f24b",
+      "size": 183072,
+      "paths": [
+        "assets/projects/soft-signals/report/page-21.webp",
+        "dist/assets/projects/soft-signals/report/page-21.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-22-small.webp",
+      "sha256": "e0e59d52ea58651f99bcdc8f85fdf2f40ec20c41bf5932a0ece02b7d72367fad",
+      "size": 54862,
+      "paths": [
+        "assets/projects/soft-signals/report/page-22-small.webp",
+        "dist/assets/projects/soft-signals/report/page-22-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-22.webp",
+      "sha256": "2d3a54551b2677b2af5bdb7018cb0e8f0eb58963b2f99386bcd391e1bbbc43be",
+      "size": 168766,
+      "paths": [
+        "assets/projects/soft-signals/report/page-22.webp",
+        "dist/assets/projects/soft-signals/report/page-22.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-23-small.webp",
+      "sha256": "4fb35499e4315532ab9104328a36f78137bc2dbcf242416e026e02d6ef5412a2",
+      "size": 57094,
+      "paths": [
+        "assets/projects/soft-signals/report/page-23-small.webp",
+        "dist/assets/projects/soft-signals/report/page-23-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-23.webp",
+      "sha256": "86778862cad4de9ad807f4ed884178abe6649cdc8a8297c6a71ea07e98a1ce23",
+      "size": 184168,
+      "paths": [
+        "assets/projects/soft-signals/report/page-23.webp",
+        "dist/assets/projects/soft-signals/report/page-23.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-24-small.webp",
+      "sha256": "67881961e8eb1c05b9fb2ad944dae4c581886d2062722561d40dc0b6dc7c3f58",
+      "size": 1858,
+      "paths": [
+        "assets/projects/soft-signals/report/page-24-small.webp",
+        "dist/assets/projects/soft-signals/report/page-24-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-24.webp",
+      "sha256": "247e5b0849030a0871dcb1572432ce7aa2115ef4cc3aaa048ac27b0f2dc7d0d6",
+      "size": 4708,
+      "paths": [
+        "assets/projects/soft-signals/report/page-24.webp",
+        "dist/assets/projects/soft-signals/report/page-24.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-25-small.webp",
+      "sha256": "ec1db0be699e0c7328dee46cc2ebe26f312af5dac98de8ed6163eff6bc5dd87d",
+      "size": 61448,
+      "paths": [
+        "assets/projects/soft-signals/report/page-25-small.webp",
+        "dist/assets/projects/soft-signals/report/page-25-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-25.webp",
+      "sha256": "219bb01af5ee6a3b9c78e944107b5ca3e1277c30c2c853248fe194bf565b02aa",
+      "size": 194926,
+      "paths": [
+        "assets/projects/soft-signals/report/page-25.webp",
+        "dist/assets/projects/soft-signals/report/page-25.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-26-small.webp",
+      "sha256": "b65de05875052d7bc9fc3564ec557cafcfb55b160458b22a0d86a4752a01e77c",
+      "size": 53752,
+      "paths": [
+        "assets/projects/soft-signals/report/page-26-small.webp",
+        "dist/assets/projects/soft-signals/report/page-26-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-26.webp",
+      "sha256": "a297f6746dec89b67cede01089e0c05bf3fd04511b00122cc7b90f5e4f4ae94f",
+      "size": 154028,
+      "paths": [
+        "assets/projects/soft-signals/report/page-26.webp",
+        "dist/assets/projects/soft-signals/report/page-26.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-27-small.webp",
+      "sha256": "db8c4964b5908502da3db1fd7897616002ea76cf1084c40443b66df4f36b003d",
+      "size": 60424,
+      "paths": [
+        "assets/projects/soft-signals/report/page-27-small.webp",
+        "dist/assets/projects/soft-signals/report/page-27-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-27.webp",
+      "sha256": "56569d396a49cc3bd47122789c1867cd916d3392a81d207b87222708505898c9",
+      "size": 191954,
+      "paths": [
+        "assets/projects/soft-signals/report/page-27.webp",
+        "dist/assets/projects/soft-signals/report/page-27.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-28-small.webp",
+      "sha256": "599c2220cf2d899103c9cfb0d93e28a9cfec846d1c7f6471b25774daff7491bd",
+      "size": 53932,
+      "paths": [
+        "assets/projects/soft-signals/report/page-28-small.webp",
+        "dist/assets/projects/soft-signals/report/page-28-small.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/page-28.webp",
+      "sha256": "848bbfb9afa8b0a8fe94bf3107b94640a2c1d7af3598a9b04a23416f383abe9c",
+      "size": 169238,
+      "paths": [
+        "assets/projects/soft-signals/report/page-28.webp",
+        "dist/assets/projects/soft-signals/report/page-28.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/parts/part-01.bin",
+      "sha256": "5c773f9045a7f342820a4e86d69414da8c46f88881a4072d8c4d0e40af49c2f9",
+      "size": 8388608,
+      "paths": [
+        "assets/projects/soft-signals/report/parts/part-01.bin",
+        "dist/assets/projects/soft-signals/report/parts/part-01.bin"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/report/parts/part-02.bin",
+      "sha256": "76fc557669fc561a79675c4d5c6d5c498767915916c14608e617710ee926f214",
+      "size": 375876,
+      "paths": [
+        "assets/projects/soft-signals/report/parts/part-02.bin",
+        "dist/assets/projects/soft-signals/report/parts/part-02.bin"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/study/page-02.webp",
+      "sha256": "bc242a66d4ec6f11eacad9ed1983f8a9db14f46b75f87032a856a9b6405b11b0",
+      "size": 432578,
+      "paths": [
+        "assets/projects/soft-signals/study/page-02.webp",
+        "dist/assets/projects/soft-signals/study/page-02.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/study/page-03.webp",
+      "sha256": "9d53d0f21f4f2bacce8bb0881d9c54f81a51c4b6e06ab5a0a6ceb45abc4c8fad",
+      "size": 419474,
+      "paths": [
+        "assets/projects/soft-signals/study/page-03.webp",
+        "dist/assets/projects/soft-signals/study/page-03.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/study/page-04.webp",
+      "sha256": "48560b005f4809f47759a45f03f39f22faee18411651e5e72b7695500162dcf6",
+      "size": 402138,
+      "paths": [
+        "assets/projects/soft-signals/study/page-04.webp",
+        "dist/assets/projects/soft-signals/study/page-04.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/study/page-05.webp",
+      "sha256": "4ce471e1622d56bee11ab7b24bb02c1904bf03e897cf2396a2a9f0f61b99aa47",
+      "size": 553682,
+      "paths": [
+        "assets/projects/soft-signals/study/page-05.webp",
+        "dist/assets/projects/soft-signals/study/page-05.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/study/page-06.webp",
+      "sha256": "202983083beea75bb68eea15c659e1bb469084c5ecb7adc44b872bb9a27fbb4c",
+      "size": 584994,
+      "paths": [
+        "assets/projects/soft-signals/study/page-06.webp",
+        "dist/assets/projects/soft-signals/study/page-06.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/study/page-07.webp",
+      "sha256": "c6631fac438752cb76c2d58da3af7fda219b47a4107180d13c3e32a7bf259b3d",
+      "size": 356124,
+      "paths": [
+        "assets/projects/soft-signals/study/page-07.webp",
+        "dist/assets/projects/soft-signals/study/page-07.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/study/page-08.webp",
+      "sha256": "b3feefba0b43246f050178eb59a64e897f63461896a75d3045634532b9dc547b",
+      "size": 333848,
+      "paths": [
+        "assets/projects/soft-signals/study/page-08.webp",
+        "dist/assets/projects/soft-signals/study/page-08.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/study/page-09.webp",
+      "sha256": "7942bd07a608195f927a0ba59dd1777fd93f1df836c0b5e4ade58f7b040c88fc",
+      "size": 348320,
+      "paths": [
+        "assets/projects/soft-signals/study/page-09.webp",
+        "dist/assets/projects/soft-signals/study/page-09.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/study/page-10.webp",
+      "sha256": "56b29956c6043560e167c117e7bf3963ce920747bc01deabb5d2ff8fb2b68111",
+      "size": 401050,
+      "paths": [
+        "assets/projects/soft-signals/study/page-10.webp",
+        "dist/assets/projects/soft-signals/study/page-10.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/study/page-11.webp",
+      "sha256": "a48f284acf4ca46d11565589ec049d15b050292d5d02859c18b2cd8382ea9fec",
+      "size": 186710,
+      "paths": [
+        "assets/projects/soft-signals/study/page-11.webp",
+        "dist/assets/projects/soft-signals/study/page-11.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/soft-signals/study/page-12.webp",
+      "sha256": "a49590fb12aa7c46e0f9d9eed6a8dd1ab6864de84dde491cad1c368c7eb65280",
+      "size": 549332,
+      "paths": [
+        "assets/projects/soft-signals/study/page-12.webp",
+        "dist/assets/projects/soft-signals/study/page-12.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/urop/README.md",
+      "sha256": "6f5d5ea8ff95a5fd113d02d9ec9a4151f0cc5f7aeb7e830725bcea5fc05539fc",
+      "size": 802,
+      "paths": [
+        "assets/projects/urop/README.md",
+        "dist/assets/projects/urop/README.md"
+      ]
+    },
+    {
+      "url": "/assets/projects/urop/study/SOURCES.md",
+      "sha256": "bf80690958fa8a1a9f73c69e7279170ca894f33d65bf568516aa237fa6865df5",
+      "size": 1284,
+      "paths": [
+        "assets/projects/urop/study/SOURCES.md",
+        "dist/assets/projects/urop/study/SOURCES.md"
+      ]
+    },
+    {
+      "url": "/assets/projects/urop/study/drop-rig.webp",
+      "sha256": "9d6e115e3c6ca6be9349a08e98f691bce841e7c79d0a6593390cd1ffc5618e1e",
+      "size": 213366,
+      "paths": [
+        "assets/projects/urop/study/drop-rig.webp",
+        "dist/assets/projects/urop/study/drop-rig.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/urop/study/jlr-01-overview.png",
+      "sha256": "d8cf2e5112616f3dd779b884376eff1d869afcd2a11cddd21cef82830d9657d5",
+      "size": 212307,
+      "paths": [
+        "assets/projects/urop/study/jlr-01-overview.png",
+        "dist/assets/projects/urop/study/jlr-01-overview.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/urop/study/jlr-02-window.png",
+      "sha256": "9a99eb9062a5d9cd9049e8d8dae1e4b88723323cd3ab78b7ad63d9cd0223913e",
+      "size": 263953,
+      "paths": [
+        "assets/projects/urop/study/jlr-02-window.png",
+        "dist/assets/projects/urop/study/jlr-02-window.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/urop/study/jlr-03-pulse.png",
+      "sha256": "2f817e1cde7d8ff51586464aa30a38831d4df4576dcd842681880aa4fa422dd0",
+      "size": 175906,
+      "paths": [
+        "assets/projects/urop/study/jlr-03-pulse.png",
+        "dist/assets/projects/urop/study/jlr-03-pulse.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/urop/study/jlr-04-saturation.png",
+      "sha256": "35e1f591c0525a0df539868e6e9fab29ee855dfcfdf5bc1e2cbe22a69d9aba89",
+      "size": 122245,
+      "paths": [
+        "assets/projects/urop/study/jlr-04-saturation.png",
+        "dist/assets/projects/urop/study/jlr-04-saturation.png"
+      ]
+    },
+    {
+      "url": "/assets/projects/urop/study/jlr-post-crash.jpg",
+      "sha256": "d3b743e191e1638f572045b7d5a35e5d7988d97ddfea8a4e9b732bbe2952f123",
+      "size": 571360,
+      "paths": [
+        "assets/projects/urop/study/jlr-post-crash.jpg",
+        "dist/assets/projects/urop/study/jlr-post-crash.jpg"
+      ]
+    },
+    {
+      "url": "/assets/projects/urop/study/lab-setup.webp",
+      "sha256": "ad1cbf0fdc4a101e9db654e638e0eb874da426211746ead05b055857673f7fae",
+      "size": 146076,
+      "paths": [
+        "assets/projects/urop/study/lab-setup.webp",
+        "dist/assets/projects/urop/study/lab-setup.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/urop/study/lab-testing.jpg",
+      "sha256": "07ec3846bef430004cddcd972d7ac3761a98bf00eaae753f992981cc2be9c1a2",
+      "size": 308623,
+      "paths": [
+        "assets/projects/urop/study/lab-testing.jpg",
+        "dist/assets/projects/urop/study/lab-testing.jpg"
+      ]
+    },
+    {
+      "url": "/assets/projects/urop/study/phone-recording.webp",
+      "sha256": "3ca565d1cc39ebb6087131f174d8b053ed9162515a2fb52237c32aeba33d9cc1",
+      "size": 135710,
+      "paths": [
+        "assets/projects/urop/study/phone-recording.webp",
+        "dist/assets/projects/urop/study/phone-recording.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/urop/study/siyi-in-lab.webp",
+      "sha256": "e7f214b17fcdeba315c07b6e1cc055ccd9d5f26779009c3c644cb422eb074341",
+      "size": 192856,
+      "paths": [
+        "assets/projects/urop/study/siyi-in-lab.webp",
+        "dist/assets/projects/urop/study/siyi-in-lab.webp"
+      ]
+    },
+    {
+      "url": "/assets/projects/urop/urop-cover.jpg",
+      "sha256": "b02978b9d04874750a859834cf8d077c21fbd06364b37c89aa382498fd9e8b67",
+      "size": 168756,
+      "paths": [
+        "assets/projects/urop/urop-cover.jpg",
+        "dist/assets/projects/urop/urop-cover.jpg"
+      ]
+    },
+    {
+      "url": "/assets/fonts/private-evaluation/PPEiko-Medium.otf",
+      "sha256": "89e5c1b8c7c04af8af768eab956d2878871a10baf1737872d861397101341905",
+      "size": 190108,
+      "paths": [
+        "dist/assets/fonts/private-evaluation/PPEiko-Medium.otf"
+      ]
+    },
+    {
+      "url": "/assets/fonts/private-evaluation/PPMuseum-Regular.otf",
+      "sha256": "2df87ed4532285698dd707cd973f21c5e03d464208a8465a71f94a1ac284260d",
+      "size": 95112,
+      "paths": [
+        "dist/assets/fonts/private-evaluation/PPMuseum-Regular.otf"
+      ]
+    },
+    {
+      "url": "/assets/fonts/private-evaluation/PPNeueMontrealText-Book.otf",
+      "sha256": "68326174f523318abe1353e36539668b58016be78b7c89331f2f0b4a888c6a89",
+      "size": 201240,
+      "paths": [
+        "dist/assets/fonts/private-evaluation/PPNeueMontrealText-Book.otf"
+      ]
+    }
+  ]
+}

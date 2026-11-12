@@ -1,0 +1,45 @@
+{
+  "projectId": "between-spaces",
+  "seed": 3185913536,
+  "size": 1024,
+  "ringPitchPixels": 8.5,
+  "grainCellPixels": 4,
+  "scratches": [
+    {
+      "radius": 0.8848339324544591,
+      "startDegrees": 153.7660754479959,
+      "lengthDegrees": 5.372878754938087
+    },
+    {
+      "radius": 0.896964704606779,
+      "startDegrees": 256.5114740851841,
+      "lengthDegrees": 11.223164948729163
+    }
+  ],
+  "creases": [
+    {
+      "angleDegrees": 75.31021659842004,
+      "startRadius": 0.8983930794496553,
+      "endRadius": 0.7390022002250555,
+      "bendRadians": 0.027178463295120137
+    },
+    {
+      "angleDegrees": 241.54376991057936,
+      "startRadius": 0.8826942627018327,
+      "endRadius": 0.8069234297631416,
+      "bendRadians": 0.046594968483252286
+    },
+    {
+      "angleDegrees": 303.86153589786727,
+      "startRadius": 0.9216608191827522,
+      "endRadius": 0.7542568361792027,
+      "bendRadians": -0.030907629961624876
+    }
+  ],
+  "colorArtworkModified": false,
+  "maps": [
+    "normal.png",
+    "roughness.png",
+    "coat-roughness.png"
+  ]
+}

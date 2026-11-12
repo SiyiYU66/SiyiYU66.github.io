@@ -1,0 +1,6 @@
+UROP case study: user-owned Notion notebook, W2 signal review, W3 trigger metadata implementation, W5 pilot data, W6&7 literature review and JLR eight-phone data review. Four user-supplied photographs. Existing disc cover preserved. All validation limits and proposed work remain explicitly distinguished.
+https://app.notion.com/p/UROP-Research-Notebook-Siyi-Yu-3efeb430ec0880359940c458d49ac1c8
+
+Additional source: Siyi Yu's supplied summer LinkedIn reflection and JLR follow-up email with four original Phone004 plots. These confirm completed analysis of 300 MADYMO simulations across human body models, Android crash-recorder development and real JLR crash-test recording. They supersede the earlier notebook-only classification of MADYMO as proposed work. Plot captions distinguish recorded resultant acceleration from clipped axes; no reference-instrument accuracy or unprovided cross-model numerical result is claimed. Story is grouped by capability, not week.
+
+The user supplied lab-testing.jpg and jlr-post-crash.jpg on 12 November 2026, identifying the first as lab testing and the second as the post-crash vehicle at the JLR real crash test. Both photographs are copied unchanged. The detail hero now reuses urop-cover.jpg, the same source photograph as the disc cover.

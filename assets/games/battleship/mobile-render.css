@@ -1,0 +1,55 @@
+/* Keep the original artwork, geometry, colours, borders and local feedback.
+   Touch devices avoid continuously compositing several full-screen glass planes. */
+html[data-render-profile="mobile"] *,
+html[data-render-profile="mobile"] *::before,
+html[data-render-profile="mobile"] *::after {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+html[data-render-profile="mobile"] .battlefield-env > *,
+html[data-render-profile="mobile"] .battlefield-env > *::before,
+html[data-render-profile="mobile"] .battlefield-env > *::after {
+  animation: none !important;
+  transform: none !important;
+}
+/* Retain the ocean, first fog bank, silhouettes, HUD and vignette as static art.
+   Remove the duplicate 1.5x fog surface and travelling full-screen scan band. */
+html[data-render-profile="mobile"] .env-fog-b,
+html[data-render-profile="mobile"] .env-scanline { display: none !important; }
+html[data-render-profile="mobile"] .battlefield-env .env-particles::after { content: none; }
+html[data-render-profile="mobile"] .env-silhouette-far {
+  background-image: url('./assets/ui/silhouettes/battleship.png'), url('./assets/ui/silhouettes/cruiser.png');
+  filter: none;
+}
+html[data-render-profile="mobile"] .env-silhouette-near {
+  background-image: url('./assets/ui/silhouettes/carrier.png');
+  filter: none;
+}
+html[data-render-profile="mobile"] .game_board_container::before,
+html[data-render-profile="mobile"] .game_board_container::after {
+  animation: none !important;
+  filter: none !important;
+}
+/* Avoid the finale's 14x expanding surface and animated blur on touch GPUs. */
+html[data-render-profile="mobile"] .cd-shockwave,
+html[data-render-profile="mobile"] .cd-finale-scan { display: none !important; }
+html[data-render-profile="mobile"] .cd-number,
+html[data-render-profile="mobile"] .cd-battle-start { filter: none !important; }
+/* A consistent touch budget applies to menu/lobby as well as deployment.
+   Keep the artwork and metal type; remove continuous full-area repaint passes. */
+html[data-render-profile="mobile"] .bg-embers span,
+html[data-render-profile="mobile"] .ogc-particles,
+html[data-render-profile="mobile"] .panel-p1,
+html[data-render-profile="mobile"] .panel-p2 { animation: none !important; }
+html[data-render-profile="mobile"] .game-logo,
+html[data-render-profile="mobile"] .panel-p1,
+html[data-render-profile="mobile"] .panel-p2,
+html[data-render-profile="mobile"] .ogc-title { filter: none !important; }
+html[data-render-profile="mobile"] .game-logo::after { display: none !important; }
+html[data-render-profile="mobile"] .battlefield-env .env-hud {
+  mask-image: none;
+  -webkit-mask-image: none;
+}
+html[data-game-paused="true"] *,
+html[data-game-paused="true"] *::before,
+html[data-game-paused="true"] *::after { animation-play-state: paused !important; }

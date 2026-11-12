@@ -1,0 +1,27 @@
+/* Applied only while the shared detail reveal controller is mounted. */
+.has-project-reveals .project-reveal-window {
+  display: block;
+  overflow: clip;
+}
+.has-project-reveals .project-reveal-text {
+  display: block;
+}
+.has-project-reveals .project-reveal-rule {
+  position: relative;
+  border-top-color: transparent;
+}
+.has-project-reveals .project-reveal-rule::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
+  height: 1px;
+  background: var(--rule);
+  transform: scaleX(var(--project-rule-progress, 1));
+  transform-origin: left;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .has-project-reveals .project-reveal-window { overflow: visible; }
+}

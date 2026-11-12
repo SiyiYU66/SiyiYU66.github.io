@@ -1,0 +1,31 @@
+/* PID retains Listening Room's type roles, theme colours and thin rules. */
+.pid-control{grid-column:1/-1;min-width:0}
+.pid-equation{border-block:1px solid var(--rule);padding:23px 0 20px;margin:0 0 clamp(30px,4vw,50px);text-align:center}
+.pid-equation>.case-label{display:block;margin-bottom:18px}
+.pid-equation-line{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:.25em .35em;font:var(--title-weight,400) clamp(25px,3.3vw,43px)/1.45 var(--serif);letter-spacing:-.025em;color:var(--ink)}
+.pid-equation-output,.pid-equation-term{display:inline-flex;align-items:baseline;white-space:nowrap;gap:.24em}
+.pid-gain{white-space:nowrap}.pid-gain sub{font-size:.56em;line-height:0;vertical-align:-.23em;margin-left:.01em}
+.pid-equation-times,.pid-equation-sign{font-size:.82em}
+.pid-equation-caption{font:var(--interface-weight,400) 12px/1.6 var(--sans);color:var(--muted);margin:16px auto 0;max-width:64ch;padding-inline:6px}
+.pid-layout{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(26px,4vw,60px);align-items:start}
+.pid-terms{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;min-width:0}
+.pid-term{min-width:0;margin:0;border:1px solid var(--rule);padding:20px 22px 0;color:var(--ink)}
+.pid-term-heading{display:flex;justify-content:space-between;gap:16px;align-items:baseline;margin-bottom:15px}
+.pid-term-name,.pid-tuning-title{font:var(--title-weight,400) clamp(25px,2.6vw,34px)/1.15 var(--serif);letter-spacing:-.025em;margin:0}
+.pid-term-symbol{font:var(--title-weight,400) 31px/1.2 var(--serif);flex:none}
+.pid-term-meaning{font:var(--interface-weight,400) 14px/1.65 var(--sans);color:var(--muted);margin:0 0 20px;max-width:46ch}
+.pid-term-excess{font:var(--interface-weight,400) 12px/1.55 var(--sans);border-top:1px solid var(--rule);padding:12px 0;margin:0;color:var(--ink)}
+.pid-tuning{min-width:0}.pid-tuning-title{margin:10px 0 15px}
+.pid-tuning-intro{font:var(--interface-weight,400) 14px/1.65 var(--sans);color:var(--muted);margin:0 0 22px;max-width:52ch}
+.pid-tuning .case-video-figure{width:100%;max-width:100%;margin:0;justify-self:stretch}
+.pid-tuning .case-video{width:100%;max-height:none;aspect-ratio:1}
+.pid-rate-note{border-top:1px solid var(--rule);margin:20px 0 0;padding-top:12px;font:var(--interface-weight,400) 12px/1.6 var(--sans);color:var(--muted)}
+@media(max-width:700px){
+  .pid-layout{grid-template-columns:minmax(0,1fr);gap:32px}
+  .pid-equation{padding:20px 0 17px;margin-bottom:26px}
+  .pid-equation-line{font-size:clamp(24px,6.3vw,32px);gap:.28em .3em}
+  .pid-equation-caption{font-size:11px}
+  .pid-term{padding:18px 18px 0}.pid-term-meaning{font-size:14px;max-width:none}
+  .pid-term-heading{margin-bottom:12px}.pid-term-excess{font-size:12px}
+  .pid-tuning-intro{font-size:14px;max-width:none}
+}

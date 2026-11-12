@@ -1,0 +1,120 @@
+// Cinematic 3-2-1 launch sequence, shared by Two Player and Single Player
+// modes so both feel like the same naval system booting up. Pure
+// presentation: builds an overlay, plays the sequence, then calls on_complete.
+// No game state is touched here.
+
+
+const TICK_MS = 850;
+const FINALE_MS = 1150;
+const FADE_MS = 650;
+
+
+export function run_battle_countdown(on_complete, options) {
+    const opts = options || {};
+    const mobile = document.documentElement.dataset.renderProfile === 'mobile';
+    const finale_title = opts.finaleTitle || "GAME START";
+    const finale_sub = opts.finaleSub || "";
+    const hold = opts.hold || 0;
+    const subtitle = opts.subtitle || "PREPARE FOR NAVAL ENGAGEMENT";
+    const overlay = document.createElement("div");
+    overlay.className = "screen-overlay countdown-overlay";
+
+    // Layered tactical backdrop — reuses the battlefield environment
+    // classes (ocean shimmer, HUD grid, scan band, particles, vignette).
+    (mobile ? [] : ["env-ocean", "env-hud", "env-scanline", "env-particles", "env-vignette"])
+        .forEach(function (cls) {
+            const layer = document.createElement("div");
+            layer.className = "cd-layer " + cls;
+            overlay.append(layer);
+        });
+
+    // Circular radar scope with rotating sweep and a target-lock ring that
+    // pulses on every tick.
+    const radar = document.createElement("div");
+    radar.className = "cd-radar";
+    const sweep = document.createElement("div");
+    sweep.className = "cd-radar-sweep";
+    const lock = document.createElement("div");
+    lock.className = "cd-lock";
+    radar.append(sweep, lock);
+    overlay.append(radar);
+
+    const title = document.createElement("div");
+    title.className = "cd-title";
+    title.textContent = "SYSTEM INITIALIZING";
+    overlay.append(title);
+
+    const number = document.createElement("div");
+    number.className = "cd-number";
+    number.textContent = "3";
+    overlay.append(number);
+
+    const sub = document.createElement("div");
+    sub.className = "cd-sub";
+    sub.textContent = subtitle;
+    overlay.append(sub);
+
+    document.body.append(overlay);
+
+    // Restart the number + lock-ring animations on each tick.
+    const pulse = function () {
+        number.classList.remove("cd-tick");
+        lock.classList.remove("cd-lock-pulse");
+        number.getBoundingClientRect();
+        number.classList.add("cd-tick");
+        lock.classList.add("cd-lock-pulse");
+    };
+    pulse();
+
+    let count = 3;
+    const timer = setInterval(function () {
+        count -= 1;
+        if (count > 0) {
+            number.textContent = String(count);
+            pulse();
+            return;
+        }
+        clearInterval(timer);
+
+        // Finale: configurable title (+ optional subtitle) with flash,
+        // shockwave and a tactical scanning sweep.
+        number.remove();
+        title.remove();
+        sub.remove();
+        const flash = document.createElement("div");
+        flash.className = "cd-flash";
+        const wave = document.createElement("div");
+        wave.className = "cd-shockwave";
+        const scan = document.createElement("div");
+        scan.className = "cd-finale-scan";
+        const start_text = document.createElement("div");
+        start_text.className = "cd-battle-start";
+        start_text.textContent = finale_title;
+        overlay.append(flash, wave, scan, start_text);
+        if (finale_sub) {
+            const sub_text = document.createElement("div");
+            sub_text.className = "cd-finale-sub";
+            sub_text.textContent = finale_sub;
+            overlay.append(sub_text);
+        }
+
+        setTimeout(function () {
+            // Release countdown surfaces before allocating the deployment scene
+            // on touch devices; the desktop crossfade remains unchanged.
+            if (mobile) {
+                overlay.remove();
+                if (on_complete) on_complete();
+                return;
+            }
+            // Hand over while the overlay fades, so the next screen
+            // appears underneath instead of cutting in.
+            overlay.classList.add("cd-fade-out");
+            if (on_complete) {
+                on_complete();
+            }
+            setTimeout(function () {
+                overlay.remove();
+            }, FADE_MS);
+        }, FINALE_MS + hold);
+    }, TICK_MS);
+}

@@ -1,0 +1,45 @@
+{
+  "projectId": "common-ground",
+  "seed": 3003072517,
+  "size": 1024,
+  "ringPitchPixels": 8.5,
+  "grainCellPixels": 4,
+  "scratches": [
+    {
+      "radius": 0.9175936098723709,
+      "startDegrees": 317.43771496535663,
+      "lengthDegrees": 9.824768267542709
+    },
+    {
+      "radius": 0.9353247794208475,
+      "startDegrees": 280.38009843531944,
+      "lengthDegrees": 8.890226937539106
+    }
+  ],
+  "creases": [
+    {
+      "angleDegrees": 67.44439410186473,
+      "startRadius": 0.9001017503044115,
+      "endRadius": 0.7234260349493812,
+      "bendRadians": -0.017963530582797566
+    },
+    {
+      "angleDegrees": 327.9774077696176,
+      "startRadius": 0.932673080115082,
+      "endRadius": 0.7988451382312732,
+      "bendRadians": -0.006701592692674049
+    },
+    {
+      "angleDegrees": 16.224943251716947,
+      "startRadius": 0.9134730284579489,
+      "endRadius": 0.8049599652099988,
+      "bendRadians": 0.009907424675648827
+    }
+  ],
+  "colorArtworkModified": false,
+  "maps": [
+    "normal.png",
+    "roughness.png",
+    "coat-roughness.png"
+  ]
+}

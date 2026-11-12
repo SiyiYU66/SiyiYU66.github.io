@@ -1,0 +1,45 @@
+{
+  "projectId": "battleship",
+  "seed": 3986456766,
+  "size": 1024,
+  "ringPitchPixels": 8.5,
+  "grainCellPixels": 4,
+  "scratches": [
+    {
+      "radius": 0.9208490335417403,
+      "startDegrees": 139.83651471673778,
+      "lengthDegrees": 5.641070200169676
+    },
+    {
+      "radius": 0.9193000285522942,
+      "startDegrees": 31.683922613503164,
+      "lengthDegrees": 11.61816963786812
+    }
+  ],
+  "creases": [
+    {
+      "angleDegrees": 318.6934470252168,
+      "startRadius": 0.8849027502955432,
+      "endRadius": 0.770883367519373,
+      "bendRadians": -0.016350595757940317
+    },
+    {
+      "angleDegrees": 308.5320848451919,
+      "startRadius": 0.8803985384910851,
+      "endRadius": 0.7999084222442036,
+      "bendRadians": 0.02479583484866936
+    },
+    {
+      "angleDegrees": 80.7113867202522,
+      "startRadius": 0.9109393746560571,
+      "endRadius": 0.8034494691837213,
+      "bendRadians": -0.038255607515894276
+    }
+  ],
+  "colorArtworkModified": false,
+  "maps": [
+    "normal.png",
+    "roughness.png",
+    "coat-roughness.png"
+  ]
+}

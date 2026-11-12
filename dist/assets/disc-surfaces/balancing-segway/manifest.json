@@ -1,0 +1,45 @@
+{
+  "projectId": "balancing-segway",
+  "seed": 4043155174,
+  "size": 1024,
+  "ringPitchPixels": 8.5,
+  "grainCellPixels": 4,
+  "scratches": [
+    {
+      "radius": 0.9023567688007489,
+      "startDegrees": 122.52631900696569,
+      "lengthDegrees": 9.570901162648203
+    },
+    {
+      "radius": 0.9269883405328309,
+      "startDegrees": 250.84836114842443,
+      "lengthDegrees": 5.47094424390948
+    }
+  ],
+  "creases": [
+    {
+      "angleDegrees": 204.45738588994826,
+      "startRadius": 0.9205835308092721,
+      "endRadius": 0.7202818614468994,
+      "bendRadians": 0.013768239359742196
+    },
+    {
+      "angleDegrees": 176.81155227736087,
+      "startRadius": 0.8898364910902433,
+      "endRadius": 0.7974928037868307,
+      "bendRadians": -0.043940022402090925
+    },
+    {
+      "angleDegrees": 47.363007577590366,
+      "startRadius": 0.9312474363487474,
+      "endRadius": 0.7524778837666308,
+      "bendRadians": 0.033113440374332295
+    }
+  ],
+  "colorArtworkModified": false,
+  "maps": [
+    "normal.png",
+    "roughness.png",
+    "coat-roughness.png"
+  ]
+}

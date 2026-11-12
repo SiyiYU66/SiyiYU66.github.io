@@ -1,0 +1,6 @@
+Add the portrait photo here as: siyi-yu.jpg
+The About Me page automatically uses it after reload in local development.
+For deployment, run npm run build and publish the updated Site.
+The photo address and both independent crops are configured in dist/profile.js.
+portraitCrops.sleeve uses contain by default, preserving the whole portrait.
+portraitCrops.disc uses a separate zoom / positionX / positionY to keep the face above the centre hole.

@@ -1,0 +1,45 @@
+{
+  "projectId": "in-motion",
+  "seed": 2805945394,
+  "size": 1024,
+  "ringPitchPixels": 8.5,
+  "grainCellPixels": 4,
+  "scratches": [
+    {
+      "radius": 0.9200370936398975,
+      "startDegrees": 337.5617054627115,
+      "lengthDegrees": 10.990630786511261
+    },
+    {
+      "radius": 0.8859732577224668,
+      "startDegrees": 104.57416716947981,
+      "lengthDegrees": 11.43794115738401
+    }
+  ],
+  "creases": [
+    {
+      "angleDegrees": 288.80909162281597,
+      "startRadius": 0.9333606005160971,
+      "endRadius": 0.7388839137550107,
+      "bendRadians": -0.06908178641356398
+    },
+    {
+      "angleDegrees": 117.78767085233092,
+      "startRadius": 0.8891531342630915,
+      "endRadius": 0.7211311774095479,
+      "bendRadians": 0.02610527743020749
+    },
+    {
+      "angleDegrees": 242.75215241645853,
+      "startRadius": 0.899868174431204,
+      "endRadius": 0.7993130384767508,
+      "bendRadians": -0.05663456075157485
+    }
+  ],
+  "colorArtworkModified": false,
+  "maps": [
+    "normal.png",
+    "roughness.png",
+    "coat-roughness.png"
+  ]
+}

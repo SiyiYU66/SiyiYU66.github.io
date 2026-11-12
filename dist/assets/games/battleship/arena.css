@@ -1,0 +1,31 @@
+@import url('./game-fonts.css');
+:root{color-scheme:dark;font-family:'Chakra Petch','Trebuchet MS',sans-serif;background:#040b13;color:#deedf5;-webkit-text-size-adjust:100%}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;overscroll-behavior:none}
+body{background:radial-gradient(ellipse at 50% 50%,#112a3b 0,#060f1a 54%,#030810 100%)}
+.arena-safe{position:fixed;top:max(6px,env(safe-area-inset-top));right:max(6px,env(safe-area-inset-right));bottom:max(6px,env(safe-area-inset-bottom));left:max(6px,env(safe-area-inset-left));display:flex;align-items:center;justify-content:center}
+/* Fit the occupied space separately. CSS zoom can change Safari's iframe viewport/painting;
+   a scale transform leaves its 1280 x 720 layout and hit targets intact. */
+.arena-fit{position:relative;flex:0 0 auto;width:var(--arena-width,640px);height:var(--arena-height,384px)}
+.arena-shell{position:absolute;inset:0 auto auto 0;width:1280px;height:768px;transform:scale(var(--arena-scale,.5));transform-origin:top left;isolation:isolate;background:#050b14;outline:1px solid #46748a55;box-shadow:0 16px 80px #0009;overflow:hidden}
+.arena-bar{height:48px;display:flex;align-items:center;justify-content:flex-end;padding:0 20px;background:#07131f;border-bottom:1px solid #4fe3ff22;gap:24px}
+.arena-brand{display:flex;align-items:center;gap:10px;white-space:nowrap}.arena-brand strong{font-family:Orbitron,sans-serif;font-size:15px;font-weight:800;letter-spacing:.07em}.arena-brand>span{font-size:11px;letter-spacing:.14em;color:#87a7bc;padding-left:10px;border-left:1px solid #426175}.arena-brand i{width:6px;height:6px;border-radius:50%;background:#70dfc5;box-shadow:0 0 10px #70dfc566}
+.arena-crossplay{font-size:11px;letter-spacing:.15em;color:#82acbc}.arena-bar nav{display:flex;align-items:center;gap:5px;height:100%}
+.arena-bar button{font:600 22px/1 'Chakra Petch',sans-serif;white-space:nowrap;min-height:44px;padding:8px 14px;background:none;color:#a7c2d1;border:1px solid transparent;border-radius:5px;cursor:pointer;touch-action:manipulation}
+.arena-bar button:hover,.arena-bar button:focus-visible{color:#ecfaff;border-color:#4fe3ff66;background:#4fe3ff0b;outline:0}.arena-bar button:active{background:#4fe3ff20}.arena-bar button[hidden]{display:none}
+#battle-screen{display:block;flex:none;width:1280px;min-width:1280px;max-width:none;height:720px;min-height:720px;max-height:none;border:0;background:#050b14}
+#arena-loading{position:absolute;inset:48px 0 0;display:flex;align-items:center;justify-content:center;gap:14px;background:#050b14;font-size:20px;letter-spacing:.04em;pointer-events:none;transition:opacity .2s}
+#arena-loading[hidden]{display:none}#arena-loading>span{width:20px;height:20px;border:2px solid #4fe3ff30;border-top-color:#4fe3ff;border-radius:50%;animation:prepare-spin 1s linear infinite}@keyframes prepare-spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){#arena-loading>span{animation:none}}
+#arena-rotate{position:fixed;inset:0;z-index:10;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 24px;background:radial-gradient(ellipse at 50% 40%,#103047,#040b13 75%);text-align:center;gap:18px}
+#arena-rotate[hidden]{display:none}.rotate-device{font-size:64px;line-height:1;color:#4fe3ff}#arena-rotate h1{font:700 26px/1.2 Orbitron,sans-serif;margin:0}#arena-rotate p{font-size:17px;line-height:1.5;max-width:30ch;margin:0;color:#b6cedd}#arena-rotate .rotate-help{font-size:13px;color:#7896aa}#arena-rotate button{font:600 16px 'Chakra Petch',sans-serif;min-height:48px;padding:12px 24px;border:1px solid #4fe3ff66;background:#4fe3ff0d;color:#d4efff;border-radius:6px;cursor:pointer}
+.action-confirm{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px;background:#020711e8}
+.action-confirm[hidden]{display:none}
+.action-confirm-panel{width:min(440px,100%);padding:26px;background:#081522;border:1px solid #4fe3ff55;border-radius:12px;box-shadow:0 12px 36px #0006}
+.action-confirm-title{margin:0 0 12px;font:700 22px/1.25 Orbitron,sans-serif;color:#e5f5ff}
+.action-confirm-message{margin:0;color:#a9c5d7;font:16px/1.5 'Chakra Petch',sans-serif}
+.action-confirm-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.action-confirm-actions button{min-height:48px;flex:1;padding:12px 16px;border:1px solid #4fe3ff55;border-radius:6px;background:#102a3e;color:#e5f5ff;font:600 16px/1.2 'Chakra Petch',sans-serif;cursor:pointer;touch-action:manipulation}
+.action-confirm-actions .action-confirm-approve{background:#a74d1e;border-color:#e39458}
+.action-confirm-actions button:focus-visible{outline:2px solid #4fe3ff;outline-offset:3px}
+.diagnostics-copy{position:fixed;bottom:8px;left:8px;z-index:1100;padding:8px 12px;background:#081522;color:#b9d5e5;border:1px solid #4fe3ff55;font:14px sans-serif}
+.diagnostics-report{position:fixed;z-index:1200;inset:10%;width:80%;height:80%;padding:16px;background:#081522;color:#deedf5;font:13px/1.5 monospace}

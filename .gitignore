@@ -1,0 +1,13 @@
+node_modules/
+.sites-runtime/
+.openai/
+.pages-output/
+dist/client/
+dist/server/
+dist/.openai/
+.env
+.env.*
+*.zip
+assets/fonts/personal-preview/
+game-source/
+.DS_Store

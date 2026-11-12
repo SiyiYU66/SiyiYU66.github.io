@@ -1,0 +1,84 @@
+/* Preserve the artwork and DOM. Explicit square grid tracks avoid Safari's
+   inconsistent aspect-ratio sizing on tables and automatic table rows. */
+#online-notice{position:fixed;z-index:200000;left:12px;right:12px;bottom:12px;margin:0;padding:12px 16px;background:#081a28;color:#f7d37a;border:1px solid #f7d37a;border-radius:10px;font:14px/1.4 'Chakra Petch',sans-serif;box-shadow:0 6px 30px #0008}
+#online-notice[hidden]{display:none}
+@media(max-width:1000px){
+  html{-webkit-text-size-adjust:100%;overscroll-behavior-y:contain}
+  button,a,td{touch-action:manipulation}button,.nav-home-btn{min-height:44px}input{font-size:16px!important}
+  .nav-home-btn{top:8px;left:10px;padding:10px 12px;font-size:12px;max-width:132px}
+  #battle-briefing-btn{top:8px;right:10px;padding:5px 8px;min-height:44px}.battle-briefing-icon{width:32px}
+  .deploy-keys,.deploy-tactical,.board-coords{display:none!important}
+  body:is(.placing-player-1,.placing-player-2){display:block;height:auto;min-height:100%;overflow-y:auto;overflow-x:hidden;--deploy-header-height:130px}
+  body:is(.placing-player-1,.placing-player-2)>header{position:relative;inset:auto;width:100%;height:130px;min-height:130px;padding:56px 12px 12px;display:flex;flex-direction:column;justify-content:center;gap:6px}
+  body:is(.placing-player-1,.placing-player-2) header h1{margin:0;font-size:20px;line-height:1.2;letter-spacing:.06em}
+  body:is(.placing-player-1,.placing-player-2) header h1::after{font-size:9px;letter-spacing:.22em}
+  body:is(.placing-player-1,.placing-player-2)>header::after{width:100%;margin:0;font-size:10px;line-height:1.4;letter-spacing:0}
+  body.placing-player-1>main,body.placing-player-2>aside{display:none!important}
+  body.placing-player-1>aside,body.placing-player-2>main{position:relative;inset:auto;width:100%;height:auto;min-height:0;padding:12px 12px 24px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:12px;overflow:visible}
+  body:is(.placing-player-1,.placing-player-2) .ship_container{order:0;width:100%;max-width:440px;min-height:0;height:auto;flex:0 0 auto;margin:0;padding:0;background:none;border:0;box-shadow:none}
+  body:is(.placing-player-1,.placing-player-2) .ship_container table{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;width:100%;height:auto;margin:0;padding:0}
+  body:is(.placing-player-1,.placing-player-2) .ship_container tbody{display:contents}
+  body:is(.placing-player-1,.placing-player-2) .ship_container tr{display:contents}
+  body:is(.placing-player-1,.placing-player-2) .ship_container td{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-width:0;min-height:76px;width:auto;height:auto;padding:8px 2px;border-radius:7px}
+  body:is(.placing-player-1,.placing-player-2) .ship_container img{height:20px;width:auto;max-width:100%;max-height:20px;object-fit:contain}
+  body:is(.placing-player-1,.placing-player-2) .ship-name{font-size:8px;letter-spacing:0;max-width:100%;overflow-wrap:anywhere}
+  body:is(.placing-player-1,.placing-player-2) .ship-size-count{font-size:8px}body:is(.placing-player-1,.placing-player-2) .ship-size-pip{width:4px;height:4px}
+  body:is(.placing-player-1,.placing-player-2) .button_container{order:1;flex:0 0 auto;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;width:100%;max-width:440px;min-height:44px;margin:0}
+  body:is(.placing-player-1,.placing-player-2) .button_container button{min-height:44px;max-width:100%;padding:10px 14px;font-size:11px}
+  body:is(.placing-player-1,.placing-player-2) .game_board_container{order:2;display:block;width:100%;height:auto;min-height:0;max-width:440px;margin:0;flex:0 0 auto;aspect-ratio:auto}
+
+  /* Keep tr/td nodes for the existing click, ship and animation handlers. */
+  body #game_board_1,body #game_board_2{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));grid-template-rows:repeat(10,minmax(0,1fr));gap:3px;width:100%;height:auto;min-height:0;aspect-ratio:1;table-layout:auto;border-spacing:0;padding:6px}
+  body #game_board_1>tbody,body #game_board_2>tbody,body #game_board_1>tr,body #game_board_2>tr,body #game_board_1>tbody>tr,body #game_board_2>tbody>tr{display:contents}
+  body #game_board_1 td,body #game_board_2 td{display:block;width:auto;height:auto;min-width:0;min-height:0;padding:0;aspect-ratio:1;border-radius:3px}
+
+  body.battle-phase{display:flex;flex-direction:column;width:100%;height:auto;min-height:100%;overflow-y:auto;overflow-x:hidden;padding-bottom:20px;--side-w:100vw}
+  body.battle-phase>header{position:relative;inset:auto;order:0;flex:0 0 auto;width:100%;height:96px;min-height:96px;padding:58px 10px 10px}
+  body.battle-phase header h1{font-size:20px;margin:0}
+  body.battle-phase #center_control{position:relative;inset:auto;order:1;width:calc(100% - 24px);min-width:0;height:auto;max-height:none;margin:8px 12px 12px;padding:12px;display:flex;flex-direction:row;flex-wrap:wrap;gap:8px;flex:0 0 auto}
+  body.battle-phase .center-status{width:100%;font-size:12px}body.battle-phase .center-divider,body.battle-phase .center-wait-label{display:none}
+  body.battle-phase #center_control .center-identity{display:none}
+  body.battle-phase #center_control .score-board{display:flex;width:100%;height:auto;gap:8px;padding:0;margin:0;flex:0 0 auto}
+  body.battle-phase #center_control .score-side{display:flex;align-items:baseline;justify-content:center;gap:4px;flex:1;min-width:0;min-height:0;padding:4px}
+  body.battle-phase #center_control .score-label{font-size:10px;letter-spacing:0;max-width:45%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  body.battle-phase #center_control .score-value{font-size:20px;line-height:1}
+  body.battle-phase #center_control .score-total{font-size:8px;letter-spacing:0;white-space:nowrap}
+  body.battle-phase #center_control .center-btn-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;width:100%;height:auto;padding:0}
+  body.battle-phase #center_control .battle-action{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;width:auto;min-width:0;min-height:60px;padding:6px 3px}
+  body.battle-phase #center_control .action-icon{font-size:16px;line-height:1}
+  body.battle-phase #center_control .action-text{display:block;min-width:0}
+  body.battle-phase #center_control .action-title{font-size:9px;letter-spacing:0}
+  body.battle-phase #center_control .action-desc{display:none}
+  body.battle-phase #center_control .action-count{position:static;inset:auto;transform:none;font-size:9px;padding:0;border:0}
+  body.battle-phase #center_control .hud-legend{width:100%;justify-content:center;font-size:9px;margin:0;padding:0;gap:10px}
+  body.battle-phase>aside,body.battle-phase>main{position:relative;inset:auto;width:100%;height:auto;min-height:0;max-height:none;flex:0 0 auto;padding:12px;gap:8px;overflow:visible}
+  body.battle-phase>main{order:2}body.battle-phase>aside{order:3}
+  body.battle-phase[data-online-seat="0"]>aside,body.battle-phase[data-game-mode="duel"]:not([data-online-seat]).turn-p1>aside{order:2}
+  body.battle-phase[data-online-seat="0"]>main,body.battle-phase[data-game-mode="duel"]:not([data-online-seat]).turn-p1>main{order:3}
+  body.battle-phase .game_board_container{display:block;width:100%;height:auto;min-height:0;max-width:440px;aspect-ratio:auto;flex:0 0 auto;margin:0 auto 12px}
+  body.battle-phase aside h2,body.battle-phase main h2{font-size:18px;margin:0 0 12px;line-height:1.2}
+  body.battle-phase #legend{position:relative;inset:auto;order:4}body.battle-phase .nav-home-btn{position:absolute}
+
+  #difficulty_overlay,#connection_overlay{justify-content:flex-start;gap:14px;padding:64px 12px 24px;overflow-y:auto}
+  .diff-heading{font-size:26px;text-align:center;flex:0 0 auto}.diff-sub{font-size:12px;text-align:center;flex:0 0 auto;margin:0}
+  .diff-carousel{width:min(100%,400px);flex:0 0 auto}.diff-card{padding:16px;gap:10px;min-height:0}
+  .diff-emoji{font-size:58px}.diff-name{font-size:22px}.diff-desc{font-size:13px;line-height:1.4}
+  .diff-controls{gap:18px;flex:0 0 auto}.diff-arrow,.diff-start{min-width:44px;min-height:44px}.diff-start{font-size:14px;padding:10px 24px;flex:0 0 auto}
+  .ns-panel{width:calc(100% - 24px);padding:20px 12px}.ns-heading{font-size:24px}.ns-sub{font-size:11px}
+  .ns-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%}.ns-card{min-width:0;width:100%;padding:12px 8px}.ns-versus{display:none}
+  .ns-input{width:100%;min-height:44px}.ns-faction{font-size:8px}
+  .online-page{height:auto;min-height:100%;overflow-y:auto;overflow-x:hidden}.online-lobby{height:auto;min-height:100svh;padding:72px 14px 48px;gap:24px}
+  .online-lobby .game-logo{font-size:clamp(28px,9vw,64px)}.lobby-panel{max-width:100%;padding:22px 16px}
+  .ob-join-row{min-width:0;max-width:100%}.ob-input{min-width:0;width:100%}.online-page .hud-motto{display:none}
+}
+@media(min-width:650px) and (max-width:1000px){
+  body:is(.placing-player-1,.placing-player-2)>header{height:112px;min-height:112px}
+  body.placing-player-1>aside,body.placing-player-2>main{display:grid;grid-template-columns:minmax(160px,.65fr) minmax(240px,1fr);grid-template-areas:'ships board' 'buttons board';align-items:start;justify-content:center;max-width:900px;margin:0 auto}
+  body:is(.placing-player-1,.placing-player-2) .ship_container{grid-area:ships;align-self:start}body:is(.placing-player-1,.placing-player-2) .ship_container table{grid-template-columns:repeat(2,minmax(0,1fr))}
+  body:is(.placing-player-1,.placing-player-2) .button_container{grid-area:buttons;align-self:start}body:is(.placing-player-1,.placing-player-2) .game_board_container{grid-area:board}
+  body.battle-phase{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+  body.battle-phase>header,body.battle-phase #center_control,body.battle-phase #legend{grid-column:1 / -1}
+  body.battle-phase>main{grid-column:1;grid-row:3}body.battle-phase>aside{grid-column:2;grid-row:3}body.battle-phase .game_board_container{max-width:360px}
+  body.battle-phase[data-online-seat="0"]>aside,body.battle-phase[data-game-mode="duel"]:not([data-online-seat]).turn-p1>aside{grid-column:1}
+  body.battle-phase[data-online-seat="0"]>main,body.battle-phase[data-game-mode="duel"]:not([data-online-seat]).turn-p1>main{grid-column:2}
+}

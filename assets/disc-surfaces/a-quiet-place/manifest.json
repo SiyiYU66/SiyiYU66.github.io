@@ -1,0 +1,45 @@
+{
+  "projectId": "a-quiet-place",
+  "seed": 3124859456,
+  "size": 1024,
+  "ringPitchPixels": 8.5,
+  "grainCellPixels": 4,
+  "scratches": [
+    {
+      "radius": 0.9323953172301964,
+      "startDegrees": 247.3601872756962,
+      "lengthDegrees": 5.353083847406407
+    },
+    {
+      "radius": 0.9412633864466516,
+      "startDegrees": 242.22641002190358,
+      "lengthDegrees": 6.6485308904725695
+    }
+  ],
+  "creases": [
+    {
+      "angleDegrees": 296.8959055784201,
+      "startRadius": 0.8990331218864438,
+      "endRadius": 0.8194263263930246,
+      "bendRadians": -0.06209250579687638
+    },
+    {
+      "angleDegrees": 239.1064300685319,
+      "startRadius": 0.9341922761077527,
+      "endRadius": 0.749326851254176,
+      "bendRadians": 0.039512072948200125
+    },
+    {
+      "angleDegrees": 312.1026578672051,
+      "startRadius": 0.8896898195256455,
+      "endRadius": 0.7418295367048917,
+      "bendRadians": 0.053714005422965685
+    }
+  ],
+  "colorArtworkModified": false,
+  "maps": [
+    "normal.png",
+    "roughness.png",
+    "coat-roughness.png"
+  ]
+}

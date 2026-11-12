@@ -1,0 +1,4 @@
+Add the real CV PDF here as: siyi-yu-cv.pdf
+The View CV link will then open the real PDF in a new tab.
+For deployment, run npm run build and publish the updated Site.
+No placeholder or fabricated CV PDF has been generated.

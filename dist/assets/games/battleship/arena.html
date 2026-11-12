@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#040b13">
+  <title>Battleship — Listening Room</title>
+  <link rel="stylesheet" href="./arena.css?v=3">
+  <script type="module" src="./arena.js?v=4"></script>
+</head>
+<body>
+  <main class="arena-safe" aria-label="Battleship landscape game">
+    <div class="arena-fit">
+    <section class="arena-shell" aria-label="Game screen">
+      <header class="arena-bar">
+        <nav aria-label="Game controls">
+          <button id="arena-restart" type="button">↻ Restart</button>
+          <button id="arena-fullscreen" type="button" hidden>Full screen ↗</button>
+          <button id="arena-exit" type="button">Exit game ↗</button>
+        </nav>
+      </header>
+      <iframe id="battle-screen" name="battleship-screen" title="Battleship game" width="1280" height="720" allow="autoplay; fullscreen" sandbox="allow-scripts allow-same-origin allow-modals"></iframe>
+      <div id="arena-loading" role="status"><span></span>Preparing the battlefield…</div>
+    </section>
+    </div>
+  </main>
+  <section id="arena-rotate" role="dialog" aria-modal="true" aria-labelledby="rotate-title" hidden>
+    <div class="rotate-device" aria-hidden="true">↻</div>
+    <h1 id="rotate-title">Rotate your phone</h1>
+    <p>Battleship plays in landscape. Turn your phone sideways to start.</p>
+    <p class="rotate-help">If the screen stays locked, turn off Portrait Orientation Lock.</p>
+    <button id="rotate-back" type="button">Back to project</button>
+  </section>
+</body>
+</html>

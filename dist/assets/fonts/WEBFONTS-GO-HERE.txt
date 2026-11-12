@@ -1,0 +1,7 @@
+Optional licensed webfonts:
+  PPEiko-Light.woff2
+  PPNeueMontreal-Book.woff2
+
+Families, paths, weights and Canvas text are configured in dist/typography.js.
+Until supplied, the site uses bundled Instrument Serif and Mona Sans.
+Run npm run build before publishing after adding these files.

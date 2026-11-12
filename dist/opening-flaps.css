@@ -1,0 +1,145 @@
+@font-face{font-family:'Oswald Variable';src:url('./assets/fonts/oswald-latin-wght-normal.woff2') format('woff2');font-weight:200 700;font-style:normal;font-display:swap}
+.opening-flap-board {
+  --page: #000000;          /* the page */
+  --case: #171616;          /* the case around the tiles */
+  --tile-top: #2f2d2d;      /* a tile, upper half */
+  --tile-bottom: #222120;   /* a tile, lower half */
+  --letter: #fef6f4;        /* the letters at rest */
+  --lit: #ce4e00;           /* the letters of the other words */
+  --gap: calc(var(--w) * .08);               /* between two tiles */
+  --count: 8;               /* set by the script: how many tiles */
+}
+.opening-flap-board {
+  --w: min(100px, calc((100vw - 32px) / 10.12));
+  --seam: calc(var(--w) * .02);
+  --h: calc(var(--w) * 1.42);
+  display: inline-block;
+  padding: calc(var(--w) * .24);
+  border: 0;
+  border-radius: calc(var(--w) * .32);
+  background: linear-gradient(180deg, #1c1c1c, var(--case));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 24px 48px -24px rgba(255, 255, 255, 0.08);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.opening-flap-board:focus-visible {
+  outline: 2px solid var(--lit);
+  outline-offset: 5px;
+}
+
+.opening-flap-board .board__tiles {
+  display: flex;
+  gap: var(--gap);
+}
+
+/* ---------------------------------------------------------------- a tile */
+.opening-flap-board .tile {
+  position: relative;
+  width: var(--w);
+  height: var(--h);
+  perspective: calc(var(--h) * 4);
+}
+
+/* the two pins the flaps turn on, at the sides of the cut */
+.opening-flap-board .tile::before,
+.opening-flap-board .tile::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  width: calc(var(--w) * .06);
+  height: calc(var(--h) * 0.14);
+  margin-top: calc(var(--h) * -0.07);
+  border-radius: calc(var(--w) * .02);
+  background: #0b0b0b;
+}
+
+.opening-flap-board .tile::before {
+  left: 0;
+}
+
+.opening-flap-board .tile::after {
+  right: 0;
+}
+
+/* the four halves: the upper and the lower one that stay, and the two flaps that turn */
+.opening-flap-board .half,
+.opening-flap-board .flap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: calc(50% - var(--seam));
+  overflow: hidden;
+}
+
+.opening-flap-board .half--top,
+.opening-flap-board .flap--top {
+  top: 0;
+  border-radius: calc(var(--w)*.1) calc(var(--w)*.1) calc(var(--w)*.04) calc(var(--w)*.04);
+  background: linear-gradient(180deg, #303030, var(--tile-top));
+}
+
+.opening-flap-board .half--bottom,
+.opening-flap-board .flap--bottom {
+  bottom: 0;
+  border-radius: calc(var(--w)*.04) calc(var(--w)*.04) calc(var(--w)*.1) calc(var(--w)*.1);
+  background: linear-gradient(180deg, var(--tile-bottom), #191919);
+}
+
+.opening-flap-board .flap {
+  z-index: 2;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.opening-flap-board .flap--top {
+  transform-origin: 50% 100%;
+}
+
+.opening-flap-board .flap--bottom {
+  transform-origin: 50% 0%;
+}
+
+/* a letter is as tall as the whole tile: the upper halves show its top, the lower ones its bottom */
+.opening-flap-board .char {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: var(--h);
+  font-size: calc(var(--h) * 0.7);
+  font-weight: 600;
+  line-height: var(--h);
+  text-align: center;
+  color: var(--letter);
+}
+
+.opening-flap-board .half--bottom .char,
+.opening-flap-board .flap--bottom .char {
+  top: calc(var(--h) / -2 - var(--seam));
+}
+
+.opening-flap-board .char.is-lit {
+  color: var(--lit);
+}
+
+/* the shadow on a half or a flap while the flap above it turns */
+.opening-flap-board .shade {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.opening-flap-board{position:absolute;left:50%;top:30%;transform:translate(-50%,-50%);font-family:'Oswald Variable','Arial Narrow',sans-serif}
+.opening-flap-board.is-static{font-size:clamp(14px,4vw,26px);white-space:nowrap}
+
+.opening-flap-board{--count:9}

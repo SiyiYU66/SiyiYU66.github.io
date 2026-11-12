@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#171512">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('lr-theme')==='light'?'light':'dark';}catch{document.documentElement.dataset.theme='dark';}</script>
+  <meta name="description" content="Listening Room — Siyi Yu's collection of design projects and visual studies.">
+  <title>Listening Room — Project Archive</title>
+  <script>try{const q=new URLSearchParams(location.search),local=['127.0.0.1','localhost'].includes(location.hostname);if(!location.hash&&(!sessionStorage.getItem('lr-opening-seen')||local&&q.has('intro-review')||q.get('replay-opening')==='1')&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('opening-pending');}catch{}</script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath fill='%23111' fill-rule='evenodd' d='M20 1a19 19 0 1 0 0 38 19 19 0 1 0 0-38m0 15a4 4 0 1 1 0 8 4 4 0 1 1 0-8'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./opening-flaps.css">
+  <link rel="stylesheet" href="./detail-next.css">
+  <link rel="stylesheet" href="./project-case-study.css">
+  <link rel="stylesheet" href="./pid-control.css">
+  <link rel="stylesheet" href="./project-reveals.css">
+  <link rel="stylesheet" href="./theme.css">
+  <link rel="stylesheet" href="./game-player.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+</head>
+<body>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Switch to light mode" aria-pressed="false">Light mode ◑</button>
+  <div id="opening-preflight" aria-hidden="true"><div class="preflight-record"><i></i><b></b></div><div class="opening-flap-board"><div class="board__tiles"><span class="tile"><span class="half half--top"></span><span class="half half--bottom"></span></span><span class="tile"><span class="half half--top"></span><span class="half half--bottom"></span></span><span class="tile"><span class="half half--top"></span><span class="half half--bottom"></span></span><span class="tile"><span class="half half--top"></span><span class="half half--bottom"></span></span><span class="tile"><span class="half half--top"></span><span class="half half--bottom"></span></span><span class="tile"><span class="half half--top"></span><span class="half half--bottom"></span></span><span class="tile"><span class="half half--top"></span><span class="half half--bottom"></span></span><span class="tile"><span class="half half--top"></span><span class="half half--bottom"></span></span><span class="tile"><span class="half half--top"></span><span class="half half--bottom"></span></span></div></div></div>
+  <div id="detail" class="detail" role="region" aria-label="Project details" hidden>
+    <section id="reveal-stage" class="reveal-stage">
+      <div id="melt-stage" class="reveal-sticky">
+        <div class="project-still"><img id="hero-image" class="hero-image" src="./assets/between-spaces.svg" alt="Between Spaces concept artwork"><div class="image-caption"><span id="image-caption"></span><span id="image-id"></span></div></div>
+        <div id="info-cover" class="info-cover">
+          <div class="detail-title-mask"><h1 id="detail-title">Between Spaces</h1></div>
+          <p id="detail-credit" class="melt-note"></p>
+          <dl id="detail-fields" class="detail-fields"></dl>
+          <button id="read-story" class="read-story">Read the project story ↓</button>
+          <p id="detail-disclaimer" class="detail-disclaimer"></p>
+        </div>
+      </div>
+    </section>
+    <article id="project-view" class="project-story" aria-labelledby="story-title">
+      <div class="story-heading"><span class="micro">TRACK 01 / PROJECT STORY</span><h2 id="story-title"></h2><p id="project-lede"></p></div>
+      <div id="story-sections" class="story-sections"></div>
+      <div class="track-area"><button id="track-open" class="track"><span class="micro">01</span><span><strong id="track-title"></strong><small>Finding a place · Original ambient preview</small></span><span>↗</span></button><div class="player"><button id="play-button" aria-label="Play audio preview">▶</button><span id="player-status">Original ambient preview · Play to listen</span><span id="player-time">00:00 / 01:24</span><input id="seek" aria-label="Audio preview progress" type="range" min="0" max="84" step=".1" value="0"></div></div>
+    </article>
+    <section id="next-project-section" class="next-project" aria-label="Next project">
+      <div id="next-project-stage" class="next-project-stage">
+        <div class="next-project-rules" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div id="next-disc-stage" class="next-disc-stage" aria-hidden="true"><img id="next-disc" class="next-disc-fallback" alt=""></div>
+        <button id="next-project" class="next-project-link" aria-label="Open the next project">
+          <span id="next-name" class="next-project-title" role="heading" aria-level="2"></span>
+          <span class="next-project-caption">Next project <span aria-hidden="true">↗</span></span>
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <div id="scene" class="scene" data-galleria aria-label="Draggable 3D project disc collection">
+    <canvas class="disc-canvas" data-tela aria-hidden="true"></canvas>
+    <canvas class="marker-canvas" data-segno aria-hidden="true"></canvas>
+    <p class="waiting" data-attesa role="status">Loading the collection…</p>
+  </div>
+  <header class="navigation"><a class="wordmark" href="./" aria-label="Return to Listening Room">Listening Room</a><nav aria-label="Main navigation"><button id="nav-projects" class="category active" aria-pressed="true">Projects</button><button id="nav-about" class="category" aria-pressed="false">About Me</button><button id="index-toggle" aria-expanded="false" aria-controls="index-panel">Index ⌄</button></nav><button id="sound-toggle" aria-label="Play audio preview" aria-pressed="false">Sound <span id="sound-label">off</span></button></header>
+  <main id="room-ui" class="home-ui">
+    <section id="metadata" class="metadata" aria-live="polite">
+      <h1><span class="text-mask title-window"><span id="current-title" data-project-title>Between Spaces</span></span></h1>
+      <dl class="home-fields">
+        <div data-project-field="overview"><dt><span data-field-label>Overview</span></dt><dd class="text-mask"><span id="current-overview" data-field-value>A digital concept exploring everyday spaces</span></dd><span class="field-rule field-rule-top" data-field-rule aria-hidden="true"></span><span class="field-rule" data-field-rule aria-hidden="true"></span></div>
+        <div data-project-field="year"><dt><span data-field-label>Year</span></dt><dd class="text-mask"><span id="current-year" data-field-value>2026</span></dd><span class="field-rule" data-field-rule aria-hidden="true"></span></div>
+        <div data-project-field="category"><dt><span data-field-label>Discipline</span></dt><dd class="text-mask"><span id="current-category" data-field-value>Digital Product Design</span></dd><span class="field-rule" data-field-rule aria-hidden="true"></span></div>
+      </dl>
+    </section>
+    <button id="open-album" class="open-project" aria-label="Open the current project">Explore project ↗</button>
+      <p class="browse-note">Scroll or drag to explore.<br>Select a side disc. Click the centred disc to open.</p>
+    <div class="step-controls"><button id="previous" aria-label="Previous disc">←</button><span id="counter" class="micro">01 / 09</span><button id="next" aria-label="Next disc">→</button></div>
+  </main>
+  <main id="about-page" class="about-page" aria-label="About Me" hidden>
+    <section class="about-hero" aria-labelledby="about-name">
+      <div id="about-metadata" class="about-copy">
+        <h1 class="about-name"><span class="text-mask"><span id="about-name" data-titolo>SIYI YU</span></span></h1>
+        <p class="about-degree"><span class="text-mask"><span data-regia>MEng Design Engineering</span></span><span class="degree-dot"> · </span><span class="text-mask"><span data-anno>Imperial College London</span></span></p>
+        <p class="about-intro"><span class="text-mask"><span data-con>I’m a Design Engineering student at Imperial College London. I use simulation and testing to understand how designs perform, from battery cooling systems to energy-efficient vehicles.</span></span></p>
+        <div class="about-cv"><a id="view-cv" href="./assets/cv/siyi-yu-cv.pdf" target="_blank" rel="noopener">View CV <span>↗</span></a><span id="cv-availability" class="micro">PDF · COMING SOON</span></div>
+      </div>
+      <div class="about-disc-cell">
+        <div id="about-record" class="about-record" role="img" aria-label="Interactive 3D walnut turntable with a Siyi Yu picture disc">
+          <canvas class="turntable-canvas" aria-hidden="true"></canvas><p class="waiting" data-attesa role="status">Preparing the listening room…</p>
+        </div>
+        <div class="turntable-controls"><span class="micro">01 / PERSONAL RECORD</span><button id="portrait-play" class="portrait-play" aria-label="Play turntable" aria-pressed="false" disabled>▶ Play</button><p id="turntable-status" class="micro" role="status" aria-live="polite">Side A / A personal record</p></div>
+      </div>
+      <div class="about-hero-footer"><span class="micro" id="portrait-status">PORTRAIT / PLACEHOLDER</span><a class="micro" href="#education" id="about-scroll">SCROLL TO EXPLORE ↓</a></div>
+    </section>
+    <div class="about-history">
+      <section id="education" class="about-section" aria-labelledby="education-title"><p class="micro">01 / EDUCATION</p><div class="about-section-grid"><h2 id="education-title">Education</h2><div class="education-entry"><h3>Imperial College London</h3><p>MEng Design Engineering</p></div></div></section>
+      <section class="about-section" aria-labelledby="experience-title"><p class="micro">02 / SELECTED EXPERIENCE</p><div class="about-section-grid"><h2 id="experience-title">Selected<br>Experience</h2><div id="experience-list" class="experience-list"><div class="experience-row"><h3>Imperial Formula Racing</h3><p>Operations Lead</p></div><div class="experience-row"><h3>Imperial Eco-Marathon</h3><p>Engineer</p></div><div class="experience-row"><h3>FEA</h3><p>Undergraduate Teaching Assistant</p></div></div></div></section>
+      <footer class="about-footer"><span class="micro">SIYI YU / LISTENING ROOM</span><button id="about-back-projects">Back to Projects ↗</button></footer>
+    </div>
+  </main>
+  <dialog id="cv-dialog" class="cv-dialog" aria-labelledby="cv-dialog-title"><button id="cv-dialog-close" aria-label="Close CV notice">✕</button><span class="micro">SIYI YU / CURRICULUM VITAE</span><h2 id="cv-dialog-title">CV coming soon.</h2><p>The PDF hasn’t been added yet. Please check back for the full CV.</p><button id="cv-dialog-done">Back to About Me ↗</button></dialog>
+  <section id="index-panel" class="index-panel" aria-label="Project index" hidden><div class="index-label micro">THE COLLECTION <span>PROJECT / YEAR</span></div><div id="index-list"></div><p>Projects, engineering studies and design explorations.</p></section>
+  <button id="close-panel" class="back-home" hidden>← Back to collection</button>
+  <p id="scene-message" class="scene-message" role="status"></p>
+  <noscript>Please enable JavaScript to explore the 3D project collection.</noscript>
+  <script src="./vendor/gsap.min.js"></script>
+  <script src="./vendor/ScrollTrigger.min.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

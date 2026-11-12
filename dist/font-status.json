@@ -1,0 +1,10 @@
+{
+  "title": false,
+  "interface": false,
+  "label": false,
+  "privateEvaluation": {
+    "title": "./assets/fonts/private-evaluation/PPEiko-Medium.otf",
+    "interface": "./assets/fonts/private-evaluation/PPNeueMontrealText-Book.otf",
+    "label": "./assets/fonts/private-evaluation/PPMuseum-Regular.otf"
+  }
+}

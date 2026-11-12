@@ -1,0 +1,143 @@
+.detail { overscroll-behavior-y: none; }
+.detail.scroll-advance-entering { pointer-events: none; overflow-y: hidden; }
+
+.next-project {
+  height: 100%;
+  min-height: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  background: #211e19;
+}
+.next-project-stage {
+  --next-title-shift: 0px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.next-project-rules { position: absolute; inset: 0 6px; pointer-events: none; }
+.next-project-rules i {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--rule);
+  opacity: .60;
+  transition: transform .34s cubic-bezier(.48,.03,.3,1);
+}
+.next-project-rules i:nth-child(1) { top: 14%; transition-delay: .065s; }
+.next-project-rules i:nth-child(2) { top: 38%; opacity: .85; transition-delay: .04s; }
+.next-project-rules i:nth-child(3) { top: 62%; transition-delay: .02s; }
+.next-project-rules i:nth-child(4) { top: 86%; }
+.next-project-stage.is-leaving .next-project-rules i { transform: scaleX(0); }
+
+.next-disc-stage { position: absolute; inset: 0; z-index: 3; overflow: hidden; pointer-events: none; }
+.next-disc-stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.next-disc-stage .marker-canvas { z-index: 1; }
+.next-project .next-disc-fallback {
+  position: absolute;
+  top: 75.4%;
+  left: 50%;
+  width: min(58.8vw, 112svh);
+  height: auto;
+  max-width: none;
+  margin: 0;
+  transform: translateX(-50%) rotate(-16deg);
+}
+.next-project-stage.is-live .next-disc-fallback { display: none; }
+
+.next-project .next-project-link {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  cursor: pointer;
+  z-index: 2;
+  touch-action: pan-y pinch-zoom;
+}
+.next-project .next-project-link > span {
+  background: none;
+  border: 0;
+  padding: 0;
+  opacity: 1;
+  transform: none;
+  left: auto;
+  top: auto;
+}
+.next-project .next-project-link .next-project-title {
+  position: absolute;
+  inset: 0;
+  display: block;
+  font-family: var(--serif);
+  font-weight: var(--title-weight);
+  font-size: clamp(38px, 5vw, 88px);
+  line-height: 1.04;
+  letter-spacing: -.035em;
+  text-transform: uppercase;
+}
+.next-project-title-line {
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  bottom: 62%;
+  display: block;
+  overflow: hidden;
+  padding: .06em 0 .14em;
+}
+.next-project-title-line > span {
+  display: block;
+  transition: transform .28s cubic-bezier(.43,.05,.35,1), opacity .22s;
+}
+.next-project-title[data-split='true'] .next-project-title-line:first-child {
+  left: 7%;
+  right: 44%;
+  transform: translateX(calc(-1 * var(--next-title-shift)));
+}
+.next-project-title[data-split='true'] .next-project-title-line:nth-child(2) {
+  left: 49%;
+  right: 5%;
+  bottom: 38%;
+  transform: translateX(var(--next-title-shift));
+}
+.next-project-stage.is-leaving .next-project-title-line > span { opacity: 0; transform: translateY(-112%); }
+
+.next-project .next-project-link .next-project-caption {
+  position: absolute;
+  left: auto;
+  top: auto;
+  right: clamp(18px, 2.4vw, 34px);
+  bottom: clamp(22px, 5svh, 36px);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--label-font);
+  font-weight: var(--label-weight);
+  font-size: 8.2px;
+  line-height: 1.3;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  transition: opacity .24s;
+}
+.next-project-stage.is-leaving .next-project-link .next-project-caption { opacity: 0; }
+.next-project-caption > span { font: 22px Arial, sans-serif; transition: transform .25s; }
+.next-project-link:hover .next-project-caption > span { transform: translate(2px, -2px); }
+.next-project-link:focus-visible { outline: 1px solid var(--ink); outline-offset: -8px; }
+
+@media (max-width: 700px) {
+  .next-project .next-project-link .next-project-title { font-size: clamp(29px, 8.3vw, 55px); }
+  .next-project .next-disc-fallback { top: 83%; width: min(120vw, 112svh); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .next-project-rules i,
+  .next-project-title-line > span,
+  .next-project .next-project-link .next-project-caption,
+  .next-project-caption > span { transition: none; }
+}

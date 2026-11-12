@@ -1,0 +1,625 @@
+/* online.css — Phase 1 lobby styles */
+
+/* ── CSS-only background (no image — pure gradient naval aesthetic) ──────── */
+/* Scoped to online.html only. Overrides the transparent bg-cinematic default */
+.bg-cinematic {
+    background:
+        radial-gradient(ellipse 110% 55% at 50% -5%, rgba(8, 65, 130, 0.52), transparent 65%),
+        radial-gradient(ellipse 65% 40% at 10% 100%, rgba(4, 35, 80, 0.42), transparent 65%),
+        radial-gradient(ellipse 65% 40% at 90% 85%,  rgba(6, 45, 100, 0.35), transparent 65%),
+        linear-gradient(180deg, #020f1e 0%, #030d18 55%, #020a13 100%);
+}
+
+.online-lobby {
+    /* Content must stay above the fixed cinematic background even when
+       mobile rendering removes backdrop-filter's implicit stacking context. */
+    position: relative;
+    z-index: 3;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.5rem;
+    padding: clamp(6rem, 12vh, 9rem) 1.5rem 4rem;
+}
+
+.lobby-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    width: min(100%, 26rem);
+    background: rgba(4, 8, 18, 0.82);
+    border: 1px solid rgba(79, 227, 255, 0.22);
+    border-radius: 16px;
+    padding: 2.4rem 2rem;
+    box-sizing: border-box;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.55), 0 0 60px rgba(0, 100, 180, 0.08);
+    backdrop-filter: blur(8px);
+}
+
+/* display:flex above overrides the browser UA [hidden]{display:none} rule.
+   This selector wins with higher specificity (0,2,0,0 vs 0,1,0,0). */
+.lobby-panel[hidden] { display: none; }
+
+/* ── Buttons ──────────────────────────────────────────────────────────────── */
+
+.ob-btn {
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    padding: 0.7rem 1.8rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    width: 100%;
+}
+
+.ob-btn:active:not(:disabled) { transform: translateY(2px) scale(0.97); }
+.ob-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.ob-btn-primary {
+    background: linear-gradient(135deg, #e07840 0%, #b84a10 100%);
+    color: #fff;
+    box-shadow: 0 0 22px rgba(224, 120, 64, 0.35);
+}
+
+.ob-btn-primary:hover:not(:disabled) {
+    filter: brightness(1.15);
+    box-shadow: 0 0 32px rgba(224, 120, 64, 0.55);
+}
+
+.ob-btn-secondary {
+    background: linear-gradient(135deg, #2a6ea8 0%, #1050a0 100%);
+    color: #e8f4ff;
+    box-shadow: 0 0 22px rgba(40, 120, 200, 0.28);
+    width: auto;
+    white-space: nowrap;
+}
+
+.ob-btn-secondary:hover:not(:disabled) {
+    filter: brightness(1.15);
+    box-shadow: 0 0 32px rgba(40, 120, 200, 0.5);
+}
+
+.ob-btn-ghost {
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(160, 210, 240, 0.8);
+    border: 1px solid rgba(79, 227, 255, 0.2);
+    width: auto;
+    padding: 0.45rem 1.2rem;
+}
+
+.ob-btn-ghost:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.1);
+    color: #4fe3ff;
+}
+
+.ob-btn-small { font-size: 0.7rem; letter-spacing: 0.08em; }
+
+/* ── Join row ─────────────────────────────────────────────────────────────── */
+
+.ob-join-row {
+    display: flex;
+    gap: 0.6rem;
+    width: 100%;
+}
+
+.ob-input {
+    flex: 1;
+    min-width: 0;
+    background: rgba(10, 20, 40, 0.8);
+    border: 1px solid rgba(79, 227, 255, 0.3);
+    border-radius: 8px;
+    color: #4fe3ff;
+    font-family: "Orbitron", monospace;
+    font-size: max(16px, 0.95rem);
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    padding: 0.65rem 0.9rem;
+    outline: none;
+    text-transform: uppercase;
+    text-align: center;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ob-input:focus {
+    border-color: rgba(79, 227, 255, 0.7);
+    box-shadow: 0 0 16px rgba(79, 227, 255, 0.2);
+}
+
+.ob-input::placeholder { color: rgba(79, 227, 255, 0.3); }
+
+/* ── Divider ─────────────────────────────────────────────────────────────── */
+
+.ob-divider {
+    color: rgba(160, 200, 220, 0.4);
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+}
+
+/* ── Section label ───────────────────────────────────────────────────────── */
+
+.ob-label {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: rgba(160, 210, 240, 0.55);
+    margin: 0;
+}
+
+/* ── Code display ─────────────────────────────────────────────────────────── */
+
+.ob-code-display {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(10, 20, 40, 0.6);
+    border: 1px solid rgba(79, 227, 255, 0.35);
+    border-radius: 10px;
+    padding: 0.6rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.ob-code-display span {
+    font-family: "Orbitron", monospace;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 0.28em;
+    color: #4fe3ff;
+    text-shadow: 0 0 18px rgba(79, 227, 255, 0.5);
+}
+
+/* ── Status / hint ───────────────────────────────────────────────────────── */
+
+.ob-status-msg {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: rgba(200, 230, 245, 0.8);
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.ob-hint {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 0.72rem;
+    color: rgba(160, 200, 220, 0.45);
+    letter-spacing: 0.08em;
+    margin: 0;
+}
+
+/* ── Pulsing dot ─────────────────────────────────────────────────────────── */
+
+.ob-pulse {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4fe3ff;
+    flex-shrink: 0;
+    animation: ob-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes ob-pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 8px rgba(79, 227, 255, 0.7);
+    }
+    50% {
+        opacity: 0.35;
+        transform: scale(0.7);
+        box-shadow: none;
+    }
+}
+
+/* ── Error text ──────────────────────────────────────────────────────────── */
+
+.ob-error {
+    color: rgba(255, 100, 80, 0.9);
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    min-height: 1.2em;
+    margin: 0;
+    text-align: center;
+}
+
+.ob-error-big {
+    font-size: 0.88rem;
+    line-height: 1.75;
+}
+
+.ob-error-big code {
+    font-family: monospace;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+    color: #f0c060;
+}
+
+/* ── Ready / disconnected banner ─────────────────────────────────────────── */
+
+.ob-ready-banner {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #4fe3ff;
+    text-shadow: 0 0 18px rgba(79, 227, 255, 0.6);
+}
+
+.ob-ready-banner.ob-disconnected {
+    color: rgba(255, 120, 90, 0.9);
+    text-shadow: 0 0 18px rgba(255, 80, 60, 0.4);
+}
+
+.ob-ready-icon { font-size: 1.3rem; }
+
+/* ── Player list ─────────────────────────────────────────────────────────── */
+
+.ob-player-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.ob-player {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0.9rem;
+    border-radius: 8px;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.ob-faction-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.ob-p1 { color: rgba(255, 200, 140, 0.9); }
+.ob-p1 .ob-faction-dot {
+    background: #e07840;
+    box-shadow: 0 0 8px rgba(224, 120, 64, 0.7);
+}
+
+.ob-p2 { color: rgba(140, 210, 255, 0.9); }
+.ob-p2 .ob-faction-dot {
+    background: #40b8ff;
+    box-shadow: 0 0 8px rgba(64, 184, 255, 0.7);
+}
+
+/* ── Coming-soon note ────────────────────────────────────────────────────── */
+
+.ob-coming-soon {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 0.7rem;
+    color: rgba(160, 200, 220, 0.35);
+    letter-spacing: 0.08em;
+    text-align: center;
+    margin: 0;
+}
+
+/* ── Menu nav button — identical to Human_VS_Human.css / multiplayer.html ── */
+
+.nav-home-btn {
+    position: fixed;
+    top: 1rem;
+    left: 1.2rem;
+    z-index: 130000;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.38em 0.85em;
+    border: 2px solid rgba(79, 227, 255, 0.55);
+    border-radius: 10px;
+    background: rgba(4, 8, 18, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: #4fe3ff;
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(0.85rem, 1.1vw, 1.25rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    text-shadow: 0 0 18px rgba(79, 227, 255, 0.8);
+    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    animation: menu-btn-pulse 2.8s ease-in-out infinite;
+}
+
+.nav-home-btn:hover {
+    animation: none;
+    background: rgba(79, 227, 255, 0.14);
+    border-color: #4fe3ff;
+    color: #fff;
+    text-shadow: 0 0 28px rgba(79, 227, 255, 1), 0 0 60px rgba(79, 227, 255, 0.5);
+    box-shadow:
+        0 0 30px rgba(79, 227, 255, 0.55),
+        0 0 70px rgba(79, 227, 255, 0.25),
+        inset 0 0 18px rgba(79, 227, 255, 0.08);
+    transform: translateY(-2px) scale(1.04);
+}
+
+@keyframes menu-btn-pulse {
+    0%, 100% {
+        box-shadow:
+            0 0 14px rgba(79, 227, 255, 0.35),
+            0 0 36px rgba(79, 227, 255, 0.15),
+            inset 0 0 8px rgba(79, 227, 255, 0.04);
+        border-color: rgba(79, 227, 255, 0.45);
+    }
+    50% {
+        box-shadow:
+            0 0 32px rgba(79, 227, 255, 0.75),
+            0 0 80px rgba(79, 227, 255, 0.35),
+            inset 0 0 18px rgba(79, 227, 255, 0.10);
+        border-color: rgba(79, 227, 255, 0.95);
+    }
+}
+
+/* ── Naming panel: stacked full-width input ───────────────────────────────── */
+/* .ob-input normally lives in a flex-row (.ob-join-row) where flex:1 handles
+   width. In the naming panel it sits directly in the column flex .lobby-panel,
+   so we must declare width explicitly to match the button below it. */
+.ob-input-name {
+    width: 100%;
+    box-sizing: border-box;
+    flex: none;
+}
+
+/* ── Faction identity colours (applied by online.js on both_connected) ────── */
+
+.ob-faction-p1 {
+    color: #e07840;
+    text-shadow: 0 0 14px rgba(224, 120, 64, 0.55);
+    letter-spacing: 0.14em;
+}
+
+.ob-faction-p2 {
+    color: #3aaee0;
+    text-shadow: 0 0 14px rgba(58, 174, 224, 0.55);
+    letter-spacing: 0.14em;
+}
+
+/* ── Naming panel full-faction theming ────────────────────────────────────── */
+/* A single class on #panel-naming cascades to every child element so the
+   entire panel reads as one coherent faction identity. */
+
+/* ·· Orange faction (seat 0 / P1) ·· */
+#panel-naming.faction-p1 {
+    border-color: rgba(224, 120, 64, 0.35);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.55), 0 0 60px rgba(224, 120, 64, 0.10);
+}
+#panel-naming.faction-p1 .ob-ready-banner {
+    color: #e07840;
+    text-shadow: 0 0 20px rgba(224, 120, 64, 0.65);
+}
+#panel-naming.faction-p1 .ob-hint {
+    color: rgba(240, 160, 90, 0.55);
+}
+#panel-naming.faction-p1 .ob-input-name {
+    border-color: rgba(224, 120, 64, 0.45);
+    color: #f0a060;
+}
+#panel-naming.faction-p1 .ob-input-name:focus {
+    border-color: rgba(224, 120, 64, 0.9);
+    box-shadow: 0 0 16px rgba(224, 120, 64, 0.28);
+}
+#panel-naming.faction-p1 .ob-input-name::placeholder {
+    color: rgba(224, 120, 64, 0.35);
+}
+/* P1 READY button stays the default orange — no override needed */
+#panel-naming.faction-p1 #btn-ready {
+    box-shadow: 0 0 28px rgba(224, 120, 64, 0.45);
+}
+#panel-naming.faction-p1 #naming-status {
+    color: rgba(240, 160, 90, 0.5);
+}
+
+/* ·· Blue faction (seat 1 / P2) ·· */
+#panel-naming.faction-p2 {
+    border-color: rgba(58, 174, 224, 0.35);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.55), 0 0 60px rgba(58, 174, 224, 0.10);
+}
+#panel-naming.faction-p2 .ob-ready-banner {
+    color: #3aaee0;
+    text-shadow: 0 0 20px rgba(58, 174, 224, 0.65);
+}
+#panel-naming.faction-p2 .ob-hint {
+    color: rgba(100, 190, 240, 0.55);
+}
+#panel-naming.faction-p2 .ob-input-name {
+    border-color: rgba(58, 174, 224, 0.45);
+    color: #4fe3ff;
+}
+#panel-naming.faction-p2 .ob-input-name:focus {
+    border-color: rgba(58, 174, 224, 0.9);
+    box-shadow: 0 0 16px rgba(58, 174, 224, 0.28);
+}
+#panel-naming.faction-p2 .ob-input-name::placeholder {
+    color: rgba(79, 227, 255, 0.35);
+}
+#panel-naming.faction-p2 #btn-ready {
+    background: linear-gradient(135deg, #2a8ed0 0%, #1060b8 100%);
+    box-shadow: 0 0 28px rgba(40, 140, 220, 0.45);
+}
+#panel-naming.faction-p2 #btn-ready:hover:not(:disabled) {
+    filter: brightness(1.15);
+    box-shadow: 0 0 38px rgba(40, 140, 220, 0.65);
+}
+#panel-naming.faction-p2 #naming-status {
+    color: rgba(100, 190, 240, 0.5);
+}
+
+/* ── Name-input error state ───────────────────────────────────────────────── */
+
+.ob-input.ob-input-error {
+    border-color: rgba(255, 100, 80, 0.75);
+    box-shadow: 0 0 12px rgba(255, 80, 60, 0.25);
+}
+
+/* ── Online full-screen overlays (injected by OnlineGameController) ──────── */
+
+.online-waiting-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 200000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background:
+        radial-gradient(circle at 50% 38%, rgba(79, 227, 255, 0.09), transparent 58%),
+        linear-gradient(135deg, #030710, #091828 55%, #050e1a);
+    color: #c8e8ff;
+    font-family: "Orbitron", sans-serif;
+    text-align: center;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+/* Drifting particle field — mirrors .env-particles pattern */
+.ogc-particles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(1.5px 1.5px at 12% 78%, rgba(79, 227, 255, 0.45), transparent 60%),
+        radial-gradient(1px   1px   at 68% 52%, rgba(79, 227, 255, 0.30), transparent 60%),
+        radial-gradient(2px   2px   at 38% 22%, rgba(79, 227, 255, 0.25), transparent 60%),
+        radial-gradient(1.5px 1.5px at 85% 18%, rgba(79, 227, 255, 0.35), transparent 60%),
+        radial-gradient(1px   1px   at 52% 68%, rgba(79, 227, 255, 0.20), transparent 60%),
+        radial-gradient(2px   2px   at  7% 42%, rgba(79, 227, 255, 0.25), transparent 60%),
+        radial-gradient(1.5px 1.5px at 92% 65%, rgba(160, 220, 255, 0.20), transparent 60%),
+        radial-gradient(1px   1px   at 28% 90%, rgba(79, 227, 255, 0.18), transparent 60%);
+    background-size: 480px 480px;
+    background-repeat: repeat;
+    animation: ogc-particles-drift 32s linear infinite;
+}
+
+@keyframes ogc-particles-drift {
+    from { background-position: 0 0; }
+    to   { background-position: -72px -480px; }
+}
+
+/* ── Radar scope (Fleet Deployed waiting screen) ─────────────────────────── */
+
+.ogc-radar {
+    position: relative;
+    width: clamp(130px, 22vw, 190px);
+    aspect-ratio: 1;
+    border: 1.5px solid rgba(79, 227, 255, 0.45);
+    border-radius: 50%;
+    background:
+        repeating-radial-gradient(circle at 50% 50%,
+            transparent 0 24%,
+            rgba(79, 227, 255, 0.10) 25% 26%),
+        radial-gradient(circle, rgba(79, 227, 255, 0.05), transparent 70%);
+    overflow: hidden;
+    box-shadow:
+        0 0 32px rgba(79, 227, 255, 0.18),
+        inset 0 0 18px rgba(79, 227, 255, 0.04);
+}
+
+/* crosshair lines */
+.ogc-radar::before,
+.ogc-radar::after {
+    content: "";
+    position: absolute;
+    background: rgba(79, 227, 255, 0.22);
+}
+.ogc-radar::before { left: 50%; top: 0; bottom: 0; width: 1px; }
+.ogc-radar::after  { top: 50%; left: 0; right: 0; height: 1px; }
+
+/* rotating sweep — identical technique to .tac-radar-sweep */
+.ogc-radar-sweep {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, rgba(79, 227, 255, 0.55), transparent 30% 100%);
+    animation: ogc-radar-spin 3s linear infinite;
+}
+
+@keyframes ogc-radar-spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/* ── Text elements ───────────────────────────────────────────────────────── */
+
+.ogc-wait-title {
+    font-size: clamp(1.4rem, 4vw, 2.6rem);
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    color: #4fe3ff;
+    text-shadow: 0 0 28px rgba(79, 227, 255, 0.6);
+    position: relative; /* above .ogc-particles */
+}
+
+.ogc-wait-sub {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: clamp(0.78rem, 1.5vw, 1rem);
+    color: rgba(200, 230, 255, 0.65);
+    letter-spacing: 0.08em;
+    position: relative;
+}
+
+/* ── Combat-start variant (.ogc-combat-ready) ────────────────────────────── */
+
+.ogc-combat-ready .ogc-wait-title {
+    animation: ogc-title-in 0.5s cubic-bezier(0.2, 0, 0.3, 1) both;
+}
+
+.ogc-combat-sub {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: clamp(0.8rem, 2vw, 1.15rem);
+    color: rgba(79, 227, 255, 0.65);
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    position: relative;
+    animation: ogc-sub-in 0.5s 0.15s cubic-bezier(0.2, 0, 0.3, 1) both;
+}
+
+@keyframes ogc-title-in {
+    from { opacity: 0; transform: translateY(12px) scale(0.96); }
+    to   { opacity: 1; transform: none; }
+}
+
+@keyframes ogc-sub-in {
+    from { opacity: 0; letter-spacing: 0.4em; }
+    to   { opacity: 1; letter-spacing: 0.28em; }
+}
+
+/* fade-out triggered by JS after the hold duration */
+.ogc-fade-out {
+    animation: ogc-overlay-out 0.45s ease forwards;
+}
+
+@keyframes ogc-overlay-out {
+    from { opacity: 1; }
+    to   { opacity: 0; pointer-events: none; }
+}

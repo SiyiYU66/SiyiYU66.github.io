@@ -1,0 +1,42 @@
+/* Touch adapter: last in cascade, original desktop artwork and engine remain intact. */
+@media (max-width:780px) {
+html{-webkit-text-size-adjust:100%}body{max-width:100%;overflow-x:hidden}button,a,td{touch-action:manipulation}button,.nav-home-btn{min-height:44px}
+.deploy-keys,.deploy-tactical,.board-coords{display:none!important}
+body:is(.placing-player-1,.placing-player-2){--deploy-header-height:108px}
+body:is(.placing-player-1,.placing-player-2) header{padding:44px 12px 8px}
+body:is(.placing-player-1,.placing-player-2) header h1{font-size:18px;margin:0}
+body:is(.placing-player-1,.placing-player-2) #game_rules{font-size:11px;line-height:1.4}
+body.placing-player-1 aside,body.placing-player-2 main{padding:8px 12px 24px;display:flex;flex-direction:column;align-items:center;gap:8px;overflow-x:hidden}
+body:is(.placing-player-1,.placing-player-2) .ship_container{order:0;width:100%;padding:0;margin:0}
+body:is(.placing-player-1,.placing-player-2) .ship_container table{gap:5px;margin:0}
+body:is(.placing-player-1,.placing-player-2) .ship_container tr{gap:5px}
+body:is(.placing-player-1,.placing-player-2) .ship_container td{flex:1;padding:6px 3px;min-height:60px;gap:3px;border-radius:8px}
+body:is(.placing-player-1,.placing-player-2) .ship_container img{height:20px;max-width:75px}
+body:is(.placing-player-1,.placing-player-2) .ship-name{font-size:9px;letter-spacing:0}
+body:is(.placing-player-1,.placing-player-2) .ship-size-count{font-size:8px}
+body:is(.placing-player-1,.placing-player-2) .ship-size-pip{width:5px;height:5px}
+body:is(.placing-player-1,.placing-player-2) .button_container{order:1;width:100%;margin:0;min-height:44px;gap:8px;flex-wrap:wrap}
+body:is(.placing-player-1,.placing-player-2) .button_container button{font-size:11px;padding:9px 12px;min-height:44px}
+body:is(.placing-player-1,.placing-player-2) .game_board_container{order:2;width:100%;max-width:440px;margin:0;flex-shrink:0}
+body:is(.placing-player-1,.placing-player-2) .game_board_container table{width:100%}
+body:is(.placing-player-1,.placing-player-2) aside>h2,body:is(.placing-player-1,.placing-player-2) main>h2{display:none}
+body.battle-phase{--side-w:100vw;display:flex;flex-direction:column;overflow-y:auto;padding-bottom:20px}
+body.battle-phase header{position:relative;order:0;height:84px;min-height:84px;padding:42px 8px 6px}
+body.battle-phase header h1{font-size:18px;margin:0}
+body.battle-phase #center_control{position:relative;order:1;top:auto;bottom:auto;left:auto;width:calc(100% - 16px);margin:6px 8px 14px;max-height:none;flex-direction:row;flex-wrap:wrap;padding:12px;gap:8px}
+body.battle-phase .center-divider,body.battle-phase .center-wait-label{display:none}
+body.battle-phase .center-status{width:100%;font-size:12px}
+body.battle-phase aside,body.battle-phase main{position:relative;inset:auto;width:100%;min-height:0;padding:10px 14px 24px}
+body.battle-phase main{order:2}body.battle-phase aside{order:3}
+body.battle-phase .game_board_container{width:100%;max-width:440px;margin:0 auto}
+body.battle-phase aside h2,body.battle-phase main h2{font-size:18px;margin:4px 0 14px}
+body.battle-phase #legend{position:relative;order:4}
+.diff-heading{font-size:26px;text-align:center}.diff-sub{font-size:12px;text-align:center}
+.diff-nav-btn,.diff-start{min-width:44px;min-height:44px}#battle-briefing-close{min-width:44px;min-height:44px}
+}
+@media (max-width:780px){
+body:is(.placing-player-1,.placing-player-2){--deploy-header-height:132px}
+body:is(.placing-player-1,.placing-player-2) header{padding-top:62px}
+body.battle-phase header{height:102px;min-height:102px;padding-top:64px}
+}
+@media (max-width:780px){body.battle-phase .nav-home-btn{position:absolute;top:8px;left:12px}}

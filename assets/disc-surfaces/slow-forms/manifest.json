@@ -1,0 +1,45 @@
+{
+  "projectId": "slow-forms",
+  "seed": 2463662786,
+  "size": 1024,
+  "ringPitchPixels": 8.5,
+  "grainCellPixels": 4,
+  "scratches": [
+    {
+      "radius": 0.8817790808995694,
+      "startDegrees": 225.81453259273053,
+      "lengthDegrees": 11.186006530575543
+    },
+    {
+      "radius": 0.9162416555906929,
+      "startDegrees": 44.71764663267815,
+      "lengthDegrees": 8.204270658613979
+    }
+  ],
+  "creases": [
+    {
+      "angleDegrees": 318.96410639252724,
+      "startRadius": 0.887421503009711,
+      "endRadius": 0.7469655280097012,
+      "bendRadians": 0.01222984425949808
+    },
+    {
+      "angleDegrees": 162.47137891415045,
+      "startRadius": 0.8975826642642274,
+      "endRadius": 0.7578686529632299,
+      "bendRadians": 0.01199113007950052
+    },
+    {
+      "angleDegrees": 154.38148433996994,
+      "startRadius": 0.9352832845920404,
+      "endRadius": 0.790226898127137,
+      "bendRadians": -0.02269623448081952
+    }
+  ],
+  "colorArtworkModified": false,
+  "maps": [
+    "normal.png",
+    "roughness.png",
+    "coat-roughness.png"
+  ]
+}

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Battleship — Single Player</title>
+<script src="./stage-entry.js?v=3"></script>
+<link rel="stylesheet" href="Human_VS_Human.css?v=19">
+<link rel="stylesheet" href="Human_VS_BOT.css?v=18">
+<link rel="icon" href="./assets/ui/player1/battleship.png">
+<script type="module" src="Human_VS_BOT.js?v=19"></script>
+<link rel="stylesheet" href="./responsive.css?v=2">
+<link rel="stylesheet" href="./screen.css?v=1">
+<link rel="stylesheet" href="./mobile-render.css?v=2">
+</head>
+<body>
+
+<!-- Cinematic deploy-phase battlefield backdrop (visual only, CSS-driven) -->
+<div class="battlefield-env" aria-hidden="true">
+    <div class="env-ocean"></div>
+    <div class="env-silhouette env-silhouette-far"></div>
+    <div class="env-silhouette env-silhouette-near"></div>
+    <div class="env-fog env-fog-a"></div>
+    <div class="env-fog env-fog-b"></div>
+    <div class="env-particles"></div>
+    <div class="env-hud"></div>
+    <div class="env-scanline"></div>
+    <div class="env-vignette"></div>
+</div>
+
+<a href="./index.html" class="nav-home-btn" title="Return to Menu">&larr; MENU</a>
+
+<header>
+    <h1>
+        <img src="./assets/ui/player1/battleship.png" alt="">
+        Battleship
+        <img src="./assets/ui/player1/battleship.png" alt="">
+    </h1>
+    <div id="game_rules"></div>
+</header>
+
+<aside>
+    <h2>Your Water</h2>
+    <div class="game_board_container" id="game_container_1">
+        <table id="game_board_1" data-index="0"></table>
+    </div>
+    <div class="ship_container">
+        <table id="ships_1"></table>
+    </div>
+    <div id="button_container_1" class="button_container"></div>
+    <div class="deploy-keys" aria-hidden="true">
+        <div class="dk-title">Keyboard Controls</div>
+        <div class="dk-grid">
+            <div class="dk-row"><span class="dk-key">&larr; &uarr; &darr; &rarr;</span><span class="dk-desc">Move cursor</span></div>
+            <div class="dk-row"><span class="dk-key">&larr; edge</span><span class="dk-desc">Browse fleet</span></div>
+            <div class="dk-row"><span class="dk-key">R</span><span class="dk-desc">Rotate ship</span></div>
+            <div class="dk-row"><span class="dk-key">&crarr;</span><span class="dk-desc">Select / place</span></div>
+        </div>
+    </div>
+    <div class="deploy-tactical" aria-hidden="true">
+        <div class="tac-title">Tactical Data</div>
+        <div class="tac-block tac-block-fleet">
+            <div class="tac-label">Fleet</div>
+            <div class="tac-value tac-fleet-count">0 / 5</div>
+            <div class="tac-bar"><span class="tac-bar-fill"></span></div>
+        </div>
+        <div class="tac-block">
+            <div class="tac-label">Deployment</div>
+            <div class="tac-value tac-deploy-status">In Progress</div>
+        </div>
+        <div class="tac-block">
+            <div class="tac-label">Sea Conditions</div>
+            <div class="tac-lines">
+                <span>Wind: Low</span>
+                <span>Waves: Calm</span>
+            </div>
+        </div>
+        <div class="tac-block tac-block-scanner">
+            <div class="tac-label">Scanner Status</div>
+            <div class="tac-value tac-online">Online</div>
+            <div class="tac-radar"><span class="tac-radar-sweep"></span></div>
+        </div>
+    </div>
+</aside>
+
+<div id="center_control" class="center-control"></div>
+
+<main>
+    <h2>Bot's Water</h2>
+    <div class="game_board_container" id="game_container_2">
+        <table id="game_board_2" data-index="1"></table>
+    </div>
+</main>
+
+
+<div id="bot_deploy_banner" class="hidden">Bot is deploying its fleet…</div>
+
+<div id="difficulty_overlay">
+    <h1 class="diff-heading">Choose Your Battle</h1>
+    <div class="diff-sub">Drag or use the arrows to pick a difficulty</div>
+
+    <div class="diff-carousel" id="diff_carousel">
+        <div class="diff-track" id="diff_track">
+            <div class="diff-card diff-easy">
+                <div class="diff-emoji">🐟</div>
+                <div class="diff-name">Easy</div>
+                <div class="diff-desc">The bot fires blindly at random. A gentle warm-up.</div>
+            </div>
+            <div class="diff-card diff-normal">
+                <div class="diff-emoji">🎯</div>
+                <div class="diff-name">Normal</div>
+                <div class="diff-desc">The bot hunts around every hit to finish your ships.</div>
+            </div>
+            <div class="diff-card diff-hard">
+                <div class="diff-emoji">💀</div>
+                <div class="diff-name">Hard</div>
+                <div class="diff-desc">Ruthless targeting — the bot tracks lines and searches efficiently.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="diff-controls">
+        <button class="diff-arrow" id="diff_prev" aria-label="Previous difficulty">‹</button>
+        <div class="diff-dots" id="diff_dots"></div>
+        <button class="diff-arrow" id="diff_next" aria-label="Next difficulty">›</button>
+    </div>
+
+    <button class="diff-start save-turn-button is-ready" id="diff_start" disabled>Loading game…</button>
+</div>
+</body>
+</html>
+

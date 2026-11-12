@@ -1,0 +1,92 @@
+[
+  {
+    "source": "player1/battleship.png",
+    "web": "ui/player1/battleship.png",
+    "sourceWidth": 5760,
+    "sourceHeight": 3240,
+    "width": 768,
+    "height": 432,
+    "sourceSHA256": "9a527ed81c094f702ed3eb255ee6c03f7c24de25a28b0462b5655606ffdd8e3f"
+  },
+  {
+    "source": "player1/carrier.png",
+    "web": "ui/player1/carrier.png",
+    "sourceWidth": 5760,
+    "sourceHeight": 3240,
+    "width": 768,
+    "height": 432,
+    "sourceSHA256": "754a70de5e923aca361ba1c18c563db9ef260804be9655f7d87795b60277e3e4"
+  },
+  {
+    "source": "player1/cruiser.png",
+    "web": "ui/player1/cruiser.png",
+    "sourceWidth": 5760,
+    "sourceHeight": 3240,
+    "width": 768,
+    "height": 432,
+    "sourceSHA256": "d251d3d6eb553cfc518f9d5acfc3e7a962bfe4011ecce1409cd46aa31e2b9733"
+  },
+  {
+    "source": "player1/destroyer.png",
+    "web": "ui/player1/destroyer.png",
+    "sourceWidth": 5760,
+    "sourceHeight": 3240,
+    "width": 768,
+    "height": 432,
+    "sourceSHA256": "e94abb274eb9804c2455cfa55cc569821f904251c3525d4d2589fe3d5b55ee1a"
+  },
+  {
+    "source": "player1/submarine.png",
+    "web": "ui/player1/submarine.png",
+    "sourceWidth": 5760,
+    "sourceHeight": 3240,
+    "width": 768,
+    "height": 432,
+    "sourceSHA256": "d220c5e26f51f494c4cc7873b2e1c24d33ea3436581ee14e1c3790663a8f95cb"
+  },
+  {
+    "source": "player2/battleship.png",
+    "web": "ui/player2/battleship.png",
+    "sourceWidth": 5760,
+    "sourceHeight": 3240,
+    "width": 768,
+    "height": 432,
+    "sourceSHA256": "4c206861b67a8c7facbcf3b3b575d5b41b7256a7074ed4b0ef2b0bca28605531"
+  },
+  {
+    "source": "player2/carrier.png",
+    "web": "ui/player2/carrier.png",
+    "sourceWidth": 5760,
+    "sourceHeight": 3240,
+    "width": 768,
+    "height": 432,
+    "sourceSHA256": "454ef61c16d4ff27c8a1dddbdff979b784ecda8250ce11449d17424180966295"
+  },
+  {
+    "source": "player2/cruiser.png",
+    "web": "ui/player2/cruiser.png",
+    "sourceWidth": 5760,
+    "sourceHeight": 3240,
+    "width": 768,
+    "height": 432,
+    "sourceSHA256": "b517079e71162328dc8bbe8044b1474184d01d3db5eae51c91f8dff21cc6d4b7"
+  },
+  {
+    "source": "player2/destroyer.png",
+    "web": "ui/player2/destroyer.png",
+    "sourceWidth": 5760,
+    "sourceHeight": 3240,
+    "width": 768,
+    "height": 432,
+    "sourceSHA256": "3cdb5b736525d69d57a51ead571142e696b50596c8f0572b4011a7e7b05d0d67"
+  },
+  {
+    "source": "player2/submarine.png",
+    "web": "ui/player2/submarine.png",
+    "sourceWidth": 5760,
+    "sourceHeight": 3240,
+    "width": 768,
+    "height": 432,
+    "sourceSHA256": "f2fbda77b6ce6b8cd5af44f9420d0a344b25a2ba0fec71f5f37b0109812e2d05"
+  }
+]

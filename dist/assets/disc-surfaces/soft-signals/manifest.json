@@ -1,0 +1,45 @@
+{
+  "projectId": "soft-signals",
+  "seed": 3635362665,
+  "size": 1024,
+  "ringPitchPixels": 8.5,
+  "grainCellPixels": 4,
+  "scratches": [
+    {
+      "radius": 0.9111285202820512,
+      "startDegrees": 123.25314286921476,
+      "lengthDegrees": 5.551687000459819
+    },
+    {
+      "radius": 0.880412241886449,
+      "startDegrees": 76.42895111844022,
+      "lengthDegrees": 11.872919450771796
+    }
+  ],
+  "creases": [
+    {
+      "angleDegrees": 130.6005655877001,
+      "startRadius": 0.9246538590543512,
+      "endRadius": 0.7322213980681025,
+      "bendRadians": 0.021288920332552766
+    },
+    {
+      "angleDegrees": 265.3698089360703,
+      "startRadius": 0.9126121954197305,
+      "endRadius": 0.81837836070822,
+      "bendRadians": -0.025004855803185913
+    },
+    {
+      "angleDegrees": 166.17655672939492,
+      "startRadius": 0.9376034877213492,
+      "endRadius": 0.8045860838807543,
+      "bendRadians": -0.010532125517923464
+    }
+  ],
+  "colorArtworkModified": false,
+  "maps": [
+    "normal.png",
+    "roughness.png",
+    "coat-roughness.png"
+  ]
+}

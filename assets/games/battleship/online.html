@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Battleship — Online</title>
+<script src="./stage-entry.js?v=3"></script>
+<link rel="stylesheet" href="default.css">
+<link rel="stylesheet" href="online.css?v=2">
+<link rel="stylesheet" href="./responsive.css?v=2">
+<link rel="stylesheet" href="./screen.css?v=1">
+<link rel="stylesheet" href="./mobile-render.css?v=2">
+</head>
+<body class="online-page">
+
+<div class="bg-cinematic" aria-hidden="true">
+    <div class="bg-cinematic-vignette"></div>
+</div>
+<div class="bg-embers" aria-hidden="true">
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+</div>
+
+<b id="conn-status-hud" style="display:none" aria-hidden="true"></b>
+
+<a href="./index.html" class="nav-home-btn" title="Return to Menu">&larr; MENU</a>
+
+<main class="online-lobby">
+    <header class="logo-block">
+        <h1 class="game-logo" data-text="BATTLESHIP">BATTLESHIP</h1>
+        <p class="logo-sub">Online Multiplayer</p>
+    </header>
+
+    <!-- Panel: Lobby (initial) -->
+    <section id="panel-lobby" class="lobby-panel" aria-label="Lobby">
+        <p class="ob-hint">One room code. Play together on phone, tablet or computer.</p>
+        <button id="btn-create" class="ob-btn ob-btn-primary">
+            CREATE ROOM
+        </button>
+
+        <div class="ob-divider" aria-hidden="true">— OR —</div>
+
+        <div class="ob-join-row">
+            <input
+                id="input-code"
+                class="ob-input"
+                type="text"
+                maxlength="6"
+                placeholder="ROOM CODE"
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Room code"
+            >
+            <button id="btn-join" class="ob-btn ob-btn-secondary">JOIN</button>
+        </div>
+        <p id="join-error" class="ob-error" aria-live="polite"></p>
+
+    </section>
+
+    <!-- Panel: Waiting (host created room, waiting for opponent) -->
+    <section id="panel-waiting" class="lobby-panel" aria-label="Waiting for opponent" hidden>
+        <p class="ob-label">YOUR ROOM CODE</p>
+        <div class="ob-code-display">
+            <span id="display-code"></span>
+            <button id="btn-copy" class="ob-btn ob-btn-ghost ob-btn-small">COPY</button>
+        </div>
+        <p class="ob-status-msg">
+            <span class="ob-pulse" aria-hidden="true"></span>
+            Waiting for opponent to join...
+        </p>
+        <p class="ob-hint">Share this code with your friend.</p>
+        <button id="btn-cancel" class="ob-btn ob-btn-ghost ob-btn-small">CANCEL</button>
+    </section>
+
+    <!-- Panel: Naming (both connected — enter call sign) -->
+    <section id="panel-naming" class="lobby-panel" aria-label="Enter your call sign" hidden>
+        <div class="ob-ready-banner">
+            <span class="ob-ready-icon" aria-hidden="true">⚔</span>
+            OPPONENT CONNECTED
+        </div>
+        <p id="naming-faction" class="ob-label"></p>
+        <p class="ob-hint" style="margin-bottom:0.4rem">Enter your commander name:</p>
+        <input
+            id="input-name"
+            class="ob-input ob-input-name"
+            type="text"
+            maxlength="14"
+            placeholder="YOUR NAME"
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Your commander name"
+        >
+        <button id="btn-ready" class="ob-btn ob-btn-primary">READY</button>
+        <p id="naming-status" class="ob-hint" aria-live="polite" style="margin-top:0.6rem"></p>
+        <button id="btn-leave" class="ob-btn ob-btn-ghost ob-btn-small" style="margin-top:1rem">LEAVE ROOM</button>
+    </section>
+
+    <!-- Panel: Disconnected -->
+    <section id="panel-disconnected" class="lobby-panel" aria-label="Connection lost" hidden>
+        <div class="ob-ready-banner ob-disconnected">
+            <span class="ob-ready-icon" aria-hidden="true">⚠</span>
+            CONNECTION LOST
+        </div>
+        <p class="ob-status-msg">Your opponent disconnected.</p>
+        <button id="btn-retry" class="ob-btn ob-btn-primary">RETURN TO LOBBY</button>
+    </section>
+</main>
+
+<footer class="hud-strip hud-bottom">
+    <span class="hud-tag">ONLINE MULTIPLAYER</span>
+    <span class="hud-motto">CONNECT · DEPLOY · <b>DOMINATE</b></span>
+    <span class="hud-tag">ROOM-CODE MATCHMAKING</span>
+</footer>
+
+<script src="./room-client.js?v=2"></script>
+<script type="module" src="./online.js?v=2"></script>
+</body>
+</html>
+

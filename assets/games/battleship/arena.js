@@ -1,4 +1,4 @@
-import {fitArena, gameScreen, needsLandscape} from './arena-layout.js';
+import {fitArena, gameScreen, needsLandscape, shouldConfirmGameExit} from './arena-layout.js?v=2';
 import {createActionConfirmation} from './confirm-action.js';
 import {createDiagnostics} from './diagnostics.js';
 
@@ -99,6 +99,11 @@ fit();
 
 async function ask(action, title, message, confirmLabel) {
   if (confirmation.isOpen()) return false;
+  // Read the current child document at the instant of the action. Being on a
+  // solo-game URL alone does not mean the difficulty chooser has been left.
+  let protectProgress = false;
+  try { protectProgress = shouldConfirmGameExit(frame.contentWindow.location.pathname, frame.contentDocument.body?.className || ''); } catch {}
+  if (!protectProgress) return true;
   const previousFocus = document.activeElement;
   diagnostics.record('confirmation-request',{reason:action});
   fitted.inert = true;

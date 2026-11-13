@@ -12,9 +12,11 @@ import {DemoAudio} from './audio.js';
 import {loadTypography} from './typography.js';
 import {createProjectInfo} from './project-info.js';
 import {shouldPlayOpening} from './opening-motion.js';
+import {mountProfileDialog} from './profile-dialog.js';
 
 const $=id=>document.getElementById(id),gsap=window.gsap;
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+mountProfileDialog({trigger:$('profile-trigger'),dialog:$('profile-dialog'),closeButton:$('profile-close'),reducedMotion:reduced,onOpen:()=>toggleIndex(false)});
 const introReview=['127.0.0.1','localhost'].includes(location.hostname)&&new URLSearchParams(location.search).has('intro-review');
 const introReplay=new URLSearchParams(location.search).get('replay-opening')==='1';
 let seenOpening=false;try{seenOpening=!!sessionStorage.getItem('lr-opening-seen');}catch{}
@@ -176,7 +178,7 @@ function openAlbum(id=state.selectedId,pushHistory=true,scrollAdvance=false){
     .add(()=>{if(state.page==='detail'){root.hidden=true;root.classList.remove('project-transition-layer');detail.classList.remove('scroll-advance-entering');if(scrollAdvance)detail.scrollTo({top:0,behavior:'instant'});$('close-panel').focus({preventScroll:true});melting?.refresh();nextFooter?.activate();diagnostics();}});
   transition.eventCallback('onInterrupt',()=>{flip?.kill();detail.classList.remove('scroll-advance-entering');});
   if(pushHistory)history.pushState({projectId:id},'',`#project/${id}`);
-  document.title=`${byId.get(id).name} — Listening Room`;diagnostics();
+  document.title=`${byId.get(id).name} — Siyi Yu`;diagnostics();
 }
 function closeAlbum(changeHistory=true){
   if(state.page!=='detail')return;
@@ -197,7 +199,7 @@ function showProjects(changeHistory=true){
   row.select(state.selectedId,{immediate:true});row.activate();
   transition=gsap.fromTo([root,home],{opacity:0},{opacity:1,duration:reduced?0:.35,overwrite:true});
   if(changeHistory)history.replaceState(null,'',location.pathname+location.search);
-  document.title='Listening Room — Project Archive';$('open-album').focus({preventScroll:true});diagnostics();
+  document.title='Siyi Yu — Design Engineering Portfolio';$('open-album').focus({preventScroll:true});diagnostics();
 }
 function setFilter(filter){
   state.filter=filter;state.ids=projects.filter(p=>filter==='all'||p.demo).map(p=>p.id);
@@ -209,13 +211,12 @@ $('previous').addEventListener('click',()=>row?.step(-1));$('next').addEventList
 $('index-toggle').addEventListener('click',()=>toggleIndex());
 document.addEventListener('pointerdown',e=>{if(!$('index-panel').hidden&&!e.target.closest('#index-panel,#index-toggle'))toggleIndex(false);});
 $('nav-projects').addEventListener('click',()=>showProjects());
-document.querySelector('.wordmark').addEventListener('click',e=>{e.preventDefault();showProjects();});
 $('next-project').addEventListener('click',e=>{if(!nextFooter||nextFooter.canOpen(e))openAlbum($('next-project').dataset.projectId);});
 $('read-story').addEventListener('click',()=>{
   const destination=byId.get(detail.dataset.projectId)?.game?$('embedded-game'):$('project-view');
   detail.scrollTo({top:destination.offsetTop,behavior:reduced?'instant':'smooth'});
 });
-window.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!$('index-panel').hidden)toggleIndex(false);else if(state.page==='detail')closeAlbum();}});
+window.addEventListener('keydown',e=>{if($('profile-dialog').open)return;if(e.key==='Escape'){if(!$('index-panel').hidden)toggleIndex(false);else if(state.page==='detail')closeAlbum();}});
 window.addEventListener('popstate',()=>{row?.finishOpening?.();const id=location.hash.replace('#project/','');if(byId.has(id))openAlbum(id,false);else{showProjects(false);if(location.hash)history.replaceState(null,'',location.pathname+location.search);}});
 
 const time=seconds=>`${Math.floor(seconds/60).toString().padStart(2,'0')}:${Math.floor(seconds%60).toString().padStart(2,'0')}`;
@@ -232,7 +233,7 @@ window.addEventListener('pagehide',()=>{audio.pause();stopCaseStudy();nextFooter
 renderIndex();
 try{
   row=await createRowOfDiscs({root,info:$('metadata'),projects,cover:projectCover,coverReady:ensureProjectCover,prepareOpening:openingInProgress,initialId:openingInProgress?projects[0].id:byId.has(location.hash.replace('#project/',''))?location.hash.replace('#project/',''):remembered,reducedMotion:reduced,autoRotate:!surfaceReview&&!freezeReview,
-    canInteract:()=>!openingInProgress&&state.page==='home'&&$('index-panel').hidden,renderCard:p=>{if(!openingInProgress)projectInfo.show(p);},onChange:selectionChanged,onOpen:id=>openAlbum(id),onFrame:onRowFrame});
+    canInteract:()=>!openingInProgress&&state.page==='home'&&$('index-panel').hidden&&!$('profile-dialog').open,renderCard:p=>{if(!openingInProgress)projectInfo.show(p);},onChange:selectionChanged,onOpen:id=>openAlbum(id),onFrame:onRowFrame});
   nextFooter=row.createNextProjectFooter({section:$('next-project-section'),stage:$('next-project-stage'),host:$('next-disc-stage'),button:$('next-project'),scroller:detail,onAdvance:id=>openAlbum(id,true,true)});
   row.activate();diagnostics();
   row.ready.then(()=>preloadProjectCovers(projects)).then(ids=>{document.body.dataset.coverProjects=ids.filter(Boolean).join(',');});

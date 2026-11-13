@@ -20,7 +20,7 @@ export function mountGamePlayer(detail,project){
   const arena=make('section','game-arena');arena.setAttribute('aria-label','Play Battleship');
   arena.hidden=true;
   const frame=document.createElement('iframe');frame.title='Battleship playable game';frame.allow='fullscreen; autoplay';frame.allowFullscreen=true;frame.setAttribute('sandbox','allow-scripts allow-same-origin allow-modals');frame.src='about:blank';let loaded=false;
-  const gameUrl=new URL('./arena.html?release=20',new URL(project.game,location.href)).href;
+  const gameUrl=new URL('./arena.html?release=21',new URL(project.game,location.href)).href;
   const load=()=>{if(loaded)return;loaded=true;frame.src=gameUrl;};
   arena.append(frame);panel.append(intro,arena);panel.hidden=false;document.body.classList.add('game-open');
   const story=detail.querySelector('#project-view'),storyWasHidden=story.hidden;story.hidden=true;

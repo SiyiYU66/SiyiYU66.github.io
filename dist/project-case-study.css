@@ -46,6 +46,10 @@
 .case-figure--wide { grid-column: 1 / -1; justify-self: center; width: min(100%, 730px); }
 .case-figure-link { display: block; position: relative; border: 1px solid var(--rule); background: var(--paper); }
 .case-figure--floating .case-figure-link { border: 0; background: transparent; }
+/* A subpixel contour keeps dark logo linework visible without recolouring the
+   original coloured artwork or introducing an opaque presentation rectangle. */
+.case-figure--artwork img { filter: drop-shadow(0 0 .45px #ece5d8b0); }
+:root[data-theme="light"] .case-figure--artwork img { filter: none; }
 /* Alpha-only line drawings float on the page. Theme treatment changes the ink,
    never the product photographs, renders, packaging or original source pixels. */
 .case-figure--ink .case-figure-link { border: 0; background: transparent; }

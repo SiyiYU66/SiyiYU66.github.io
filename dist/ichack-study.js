@@ -2,6 +2,16 @@ const media = './assets/projects/ichack/';
 const figure = (file, width, height, caption, wide = false) => ({
   src: `${media}${file}`, width, height, caption, wide
 });
+// Monochrome SVGs sit on the same dark mat in either website theme; the SVG
+// ink no longer follows a conflicting operating-system colour preference.
+const darkFigure = (file, width, height, caption, wide = false) => ({
+  ...figure(file, width, height, caption, wide),
+  background: '#111c35', darkSurface: true, viewerSurface: 'navy'
+});
+const transparentFigure = (file, width, height, caption, wide = false) => ({
+  ...figure(file, width, height, caption, wide),
+  background: 'transparent', borderless: true, transparentArt: true
+});
 
 export const ichackHero = {
   hero: `${media}cover-1600.avif`,
@@ -36,7 +46,7 @@ export const ichackStudy = {
       title: 'One identity for a live weekend',
       intro: 'The system was designed for more than 900 attendees over a 48-hour event. Fantasy and fairytale became the shared theme, connecting digital communications with physical spaces and merchandise.',
       figures: [
-        figure('problem-themed.svg', 1067, 406, 'The event identity brief', true)
+        darkFigure('problem-dark.svg', 1067, 406, 'The event identity brief', true)
       ]
     },
     {
@@ -44,7 +54,7 @@ export const ichackStudy = {
       title: 'A bookish character, a flexible palette',
       intro: 'Junicode and Ysabeau established the typographic pairing, with a textured wordmark adding an older character. Three core colours identify the hackspaces, while a fourth covers the wider event. Additional shades extend the palette across applications.',
       figures: [
-        figure('fonts-v2-themed.svg', 509, 384, 'Junicode and Ysabeau type pairing'),
+        darkFigure('fonts-v2-dark.svg', 509, 384, 'Junicode and Ysabeau type pairing'),
         figure('colours-1.svg', 610, 260, 'Colour palette · Red and purple'),
         figure('colours-2.svg', 610, 259, 'Colour palette · Blue and green')
       ]
@@ -54,8 +64,8 @@ export const ichackStudy = {
       title: 'Biomes, roles and wearable graphics',
       intro: 'The existing logo was adapted with forest, mountain and underwater imagery. Two base shirt colours and larger graphics distinguish participants from event staff. Lanyards repeat each role’s colour and landscape, with an arched label linking them to the shirts.',
       figures: [
-        {...figure('logo-1600.avif', 1600, 517, 'Logo variants and fantasy environments', true), background: '#eeeae4'},
-        figure('tshirtgraphics-1600.avif', 1600, 1063, 'Front and back T-shirt graphics by event role', true),
+        transparentFigure('logo-1600.avif', 1600, 517, 'Logo variants and fantasy environments', true),
+        transparentFigure('tshirtgraphics-transparent.webp', 1600, 1063, 'Front and back T-shirt graphics by event role', true),
         figure('lanyards-1600.avif', 1600, 1110, 'Role-specific lanyard designs', true),
         figure('tshirts-photo-1-1600.avif', 1600, 1067, 'Printed T-shirts · Role graphics'),
         figure('tshirts-photo-2-1600.avif', 1600, 1067, 'Printed T-shirts · Logo graphics'),

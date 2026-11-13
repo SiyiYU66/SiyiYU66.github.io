@@ -52,21 +52,22 @@ function videoFigure({src,poster,width,height,caption},index){
   figure.append(frame,legend);return figure;
 }
 
-function galleryFigure({type, poster, src, smallSrc, width, height, caption, wide, maxWidth, background, borderless, inkDrawing, darkSurface, viewerSurface, page}, index) {
+function galleryFigure({type, poster, src, smallSrc, width, height, caption, wide, maxWidth, background, borderless, inkDrawing, transparentArt, darkSurface, viewerSurface, page}, index) {
   if(type==='video')return videoFigure({src,poster,width,height,caption},index);
   const figure = make('figure', wide ? 'case-figure case-figure--wide' : 'case-figure');
   if(borderless)figure.classList.add('case-figure--floating');
   if(inkDrawing)figure.classList.add('case-figure--ink');
+  if(transparentArt)figure.classList.add('case-figure--artwork');
   figure.style.setProperty('--figure-ratio', width / height);
   if(maxWidth)figure.style.maxWidth=`${maxWidth}px`;
   const link = externalLink(src, '', 'case-figure-link');
-  if (darkSurface || inkDrawing) {
+  if (darkSurface || inkDrawing || transparentArt) {
     const viewer = new URL('./image-viewer.html', location.href);
     viewer.searchParams.set('src', new URL(src, location.href).pathname);
     viewer.searchParams.set('caption', caption);
     if (viewerSurface === 'navy') viewer.searchParams.set('surface', 'navy');
-    if (inkDrawing) {
-      viewer.searchParams.set('drawing', 'ink');
+    if (inkDrawing || transparentArt) {
+      viewer.searchParams.set('drawing', inkDrawing ? 'ink' : 'artwork');
       viewer.searchParams.set('theme', document.documentElement.dataset.theme === 'light' ? 'light' : 'dark');
     }
     link.href = viewer.href;

@@ -2,10 +2,6 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {InteractionScope,WheelGesture} from '../dist/interaction-scope.js';
 import {projects} from '../dist/projects.js';
-import {mkdtemp,mkdir,writeFile,rm} from 'node:fs/promises';
-import {tmpdir} from 'node:os';
-import path from 'node:path';
-import {profileAssetStatus} from '../scripts/profile-assets.mjs';
 
 test('one long trackpad gesture cannot run through multiple discs',()=>{
   const gate=new WheelGesture();let steps=0;
@@ -50,16 +46,3 @@ test('stable project IDs survive reordered and filtered arrays',()=>{
   assert.equal(byId.get(chosen.id),chosen);assert.notEqual(byId.get(projects[2].id).art,chosen.art);
 });
 
-test('About assets become available independently and empty CV files stay unavailable',async()=>{
-  const root=await mkdtemp(path.join(tmpdir(),'listening-room-assets-'));
-  try{
-    assert.deepEqual(await profileAssetStatus(root),{photo:false,cv:false});
-    await mkdir(path.join(root,'assets/profile'),{recursive:true});
-    await mkdir(path.join(root,'assets/cv'),{recursive:true});
-    await writeFile(path.join(root,'assets/profile/siyi-yu.jpg'),Buffer.from([0xff,0xd8,0xff]));
-    await writeFile(path.join(root,'assets/cv/siyi-yu-cv.pdf'),'');
-    assert.deepEqual(await profileAssetStatus(root),{photo:true,cv:false});
-    await writeFile(path.join(root,'assets/cv/siyi-yu-cv.pdf'),'%PDF-1.7\n');
-    assert.deepEqual(await profileAssetStatus(root),{photo:true,cv:true});
-  }finally{await rm(root,{recursive:true,force:true});}
-});

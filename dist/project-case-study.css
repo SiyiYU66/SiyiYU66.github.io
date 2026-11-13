@@ -53,6 +53,7 @@
 :root[data-theme="light"] .case-figure--ink img { filter: brightness(0); }
 .case-figure img { display: block; width: 100%; height: auto; }
 .case-video-figure { width: min(100%, 730px, 72svh); }
+.case-video-figure--landscape { width: min(100%, 1120px); }
 .case-video-frame { background: #111c2a; }
 .case-video { display: block; width: 100%; height: auto; aspect-ratio: var(--figure-ratio); background: #111c2a; object-fit: contain; }
 .case-figure-expand { position: absolute; right: 0; bottom: 0; padding: 4px 8px; background: var(--paper); color: var(--ink); border: 1px solid var(--rule); border-right: 0; border-bottom: 0; font-size: 12px; }

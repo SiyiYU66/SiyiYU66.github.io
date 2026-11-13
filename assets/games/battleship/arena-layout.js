@@ -19,3 +19,10 @@ export function gameScreen(value) {
   const name = String(value || 'index').split('/').pop().replace(/\.html$/, '');
   return screens.has(name) ? name : 'index';
 }
+
+// Setup screens can leave immediately. Protect progress only after the actual
+// fleet-placement or battle UI has started, in both solo and multiplayer games.
+export function shouldConfirmGameExit(screen, phaseClasses = '') {
+  const playable = ['Human_VS_BOT', 'Human_VS_Human'].includes(gameScreen(screen));
+  return playable && /(?:^|\s)(?:placing-player-[12]|battle-phase)(?=\s|$)/.test(phaseClasses);
+}

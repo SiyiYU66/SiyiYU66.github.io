@@ -1,7 +1,7 @@
 import {albumArt} from './art.js';
 
 // All visual lookups use stable project IDs, including the second/third demos.
-const covers=new Map(),heroes=new Map(),thumbnails=new Map();
+const covers=new Map(),heroes=new Map(),thumbnails=new Map(),coverLoads=new Map();
 export function coverImagePlacement(width,height,size,crop={}){
   // Diagram/render covers fit within the circular print rather than losing
   // their outer silhouettes to the disc crop. Existing photo crops stay intact.
@@ -11,7 +11,11 @@ export function coverImagePlacement(width,height,size,crop={}){
   return {x:(size-w)*(crop.positionX??.5),y:(size-h)*(crop.positionY??.5),width:w,height:h};
 }
 export async function preloadProjectCovers(projects){
-  return Promise.all(projects.filter(project=>project.cover).map(async project=>{
+  return Promise.all(projects.filter(project=>project.cover).map(ensureProjectCover));
+}
+export function ensureProjectCover(project){
+  if(coverLoads.has(project.id))return coverLoads.get(project.id);
+  const pending=(async()=>{
     try{
       const image=new Image();image.src=project.cover;await image.decode();
       const canvas=document.createElement('canvas');canvas.width=canvas.height=1024;
@@ -21,7 +25,8 @@ export async function preloadProjectCovers(projects){
       context.drawImage(image,p.x,p.y,p.width,p.height);
       covers.set(project.id,canvas);return project.id;
     }catch(error){console.warn(`Project cover unavailable: ${project.id}`,error);return null;}
-  }));
+  })();
+  coverLoads.set(project.id,pending);return pending;
 }
 export function projectCover(project){
   if(!covers.has(project.id))covers.set(project.id,albumArt(project.art));

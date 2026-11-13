@@ -1,7 +1,7 @@
 // Opening-only picture disc. Replace this source image in assets/opening, then
 // run npm run build. The Projects and About Me artwork remain independent.
 export const openingArt={
-  image:'./assets/opening/siyi-yu-sketch.png',
+  image:'./assets/opening/siyi-yu-sketch.webp',
   radius:.86,
   crop:{zoom:1,positionX:.5,positionY:.5}
 };

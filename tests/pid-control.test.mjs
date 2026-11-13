@@ -29,9 +29,9 @@ function render(){
   return {host,dispose,restore(){dispose();if(previous)Object.defineProperty(globalThis,'document',previous);else delete globalThis.document;}};
 }
 
-test('Segway uses the transparent hardware artwork for its disc and keeps the robot hero',()=>{
+test('Segway keeps the hardware disc and uses the supplied tabletop photograph for its hero',()=>{
   assert.ok(segwayProject.cover.endsWith('/pybench.webp'));
-  assert.ok(segwayProject.hero.endsWith('/poster.webp'));
+  assert.ok(segwayProject.hero.endsWith('/balancing-tabletop.png'));
   assert.equal(segwayProject.coverInk,'#202320');
   const p=coverImagePlacement(1000,848,1024,segwayProject.coverCrop);
   assert.ok(Math.hypot(p.x-512,p.y-512)<512);

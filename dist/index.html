@@ -61,7 +61,7 @@
     <canvas class="marker-canvas" data-segno aria-hidden="true"></canvas>
     <p class="waiting" data-attesa role="status">Loading the collection…</p>
   </div>
-  <header class="navigation"><a class="wordmark" href="./" aria-label="Return to Listening Room">Listening Room</a><nav aria-label="Main navigation"><button id="nav-projects" class="category active" aria-pressed="true">Projects</button><button id="nav-about" class="category" aria-pressed="false">About Me</button><button id="index-toggle" aria-expanded="false" aria-controls="index-panel">Index ⌄</button></nav><button id="sound-toggle" aria-label="Play audio preview" aria-pressed="false">Sound <span id="sound-label">off</span></button></header>
+  <header class="navigation"><a class="wordmark" href="./" aria-label="Return to Listening Room">Listening Room</a><nav aria-label="Main navigation"><button id="nav-projects" class="category active" aria-pressed="true">Projects</button><button id="index-toggle" aria-expanded="false" aria-controls="index-panel">Index ⌄</button></nav><button id="sound-toggle" aria-label="Play audio preview" aria-pressed="false">Sound <span id="sound-label">off</span></button></header>
   <main id="room-ui" class="home-ui">
     <section id="metadata" class="metadata" aria-live="polite">
       <h1><span class="text-mask title-window"><span id="current-title" data-project-title>Between Spaces</span></span></h1>
@@ -75,29 +75,6 @@
       <p class="browse-note">Scroll or drag to explore.<br>Select a side disc. Click the centred disc to open.</p>
     <div class="step-controls"><button id="previous" aria-label="Previous disc">←</button><span id="counter" class="micro">01 / 09</span><button id="next" aria-label="Next disc">→</button></div>
   </main>
-  <main id="about-page" class="about-page" aria-label="About Me" hidden>
-    <section class="about-hero" aria-labelledby="about-name">
-      <div id="about-metadata" class="about-copy">
-        <h1 class="about-name"><span class="text-mask"><span id="about-name" data-titolo>SIYI YU</span></span></h1>
-        <p class="about-degree"><span class="text-mask"><span data-regia>MEng Design Engineering</span></span><span class="degree-dot"> · </span><span class="text-mask"><span data-anno>Imperial College London</span></span></p>
-        <p class="about-intro"><span class="text-mask"><span data-con>I’m a Design Engineering student at Imperial College London. I use simulation and testing to understand how designs perform, from battery cooling systems to energy-efficient vehicles.</span></span></p>
-        <div class="about-cv"><a id="view-cv" href="./assets/cv/siyi-yu-cv.pdf" target="_blank" rel="noopener">View CV <span>↗</span></a><span id="cv-availability" class="micro">PDF · COMING SOON</span></div>
-      </div>
-      <div class="about-disc-cell">
-        <div id="about-record" class="about-record" role="img" aria-label="Interactive 3D walnut turntable with a Siyi Yu picture disc">
-          <canvas class="turntable-canvas" aria-hidden="true"></canvas><p class="waiting" data-attesa role="status">Preparing the listening room…</p>
-        </div>
-        <div class="turntable-controls"><span class="micro">01 / PERSONAL RECORD</span><button id="portrait-play" class="portrait-play" aria-label="Play turntable" aria-pressed="false" disabled>▶ Play</button><p id="turntable-status" class="micro" role="status" aria-live="polite">Side A / A personal record</p></div>
-      </div>
-      <div class="about-hero-footer"><span class="micro" id="portrait-status">PORTRAIT / PLACEHOLDER</span><a class="micro" href="#education" id="about-scroll">SCROLL TO EXPLORE ↓</a></div>
-    </section>
-    <div class="about-history">
-      <section id="education" class="about-section" aria-labelledby="education-title"><p class="micro">01 / EDUCATION</p><div class="about-section-grid"><h2 id="education-title">Education</h2><div class="education-entry"><h3>Imperial College London</h3><p>MEng Design Engineering</p></div></div></section>
-      <section class="about-section" aria-labelledby="experience-title"><p class="micro">02 / SELECTED EXPERIENCE</p><div class="about-section-grid"><h2 id="experience-title">Selected<br>Experience</h2><div id="experience-list" class="experience-list"><div class="experience-row"><h3>Imperial Formula Racing</h3><p>Operations Lead</p></div><div class="experience-row"><h3>Imperial Eco-Marathon</h3><p>Engineer</p></div><div class="experience-row"><h3>FEA</h3><p>Undergraduate Teaching Assistant</p></div></div></div></section>
-      <footer class="about-footer"><span class="micro">SIYI YU / LISTENING ROOM</span><button id="about-back-projects">Back to Projects ↗</button></footer>
-    </div>
-  </main>
-  <dialog id="cv-dialog" class="cv-dialog" aria-labelledby="cv-dialog-title"><button id="cv-dialog-close" aria-label="Close CV notice">✕</button><span class="micro">SIYI YU / CURRICULUM VITAE</span><h2 id="cv-dialog-title">CV coming soon.</h2><p>The PDF hasn’t been added yet. Please check back for the full CV.</p><button id="cv-dialog-done">Back to About Me ↗</button></dialog>
   <section id="index-panel" class="index-panel" aria-label="Project index" hidden><div class="index-label micro">THE COLLECTION <span>PROJECT / YEAR</span></div><div id="index-list"></div><p>Projects, engineering studies and design explorations.</p></section>
   <button id="close-panel" class="back-home" hidden>← Back to collection</button>
   <p id="scene-message" class="scene-message" role="status"></p>

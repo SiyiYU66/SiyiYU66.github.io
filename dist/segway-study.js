@@ -7,7 +7,7 @@ export const segwayProject={
   year:'2026',category:'Robotics / Control Systems',role:'Embedded Software & Control',
   cover:media+'pybench.webp',coverInk:'#202320',
   coverCrop:{fit:'disc',zoom:.84,positionX:.5,positionY:.68,background:'#e8e8e4'},
-  hero:media+'poster.webp',heroAlt:'The two-wheeled PyBench robot balancing on a carpeted floor',
+  hero:media+'balancing-tabletop.png',heroAlt:'The two-wheeled PyBench robot balancing upright on a tabletop during a hands-on test',
   heroFit:'contain',heroBackground:'#141b21',
   overview:'A two-wheeled robot balancing itself with a 200 Hz PID loop',
   description:'A self-balancing robot built in MicroPython, combining IMU sensor fusion with closed-loop motor control.',

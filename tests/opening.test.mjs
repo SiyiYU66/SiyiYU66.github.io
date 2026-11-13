@@ -84,7 +84,7 @@ test('opening is first-session Projects only; deep routes bypass; reduced motion
   assert.equal(shouldPlayOpening(),true);
   assert.equal(shouldPlayOpening({seen:true}),false);
   assert.equal(shouldPlayOpening({reducedMotion:true}),true);
-  for(const hash of ['#about','#project/between-spaces','#project/common-ground']){
+  for(const hash of ['#removed-page','#project/between-spaces','#project/common-ground']){
     assert.equal(shouldPlayOpening({hash}),false);
     assert.equal(shouldPlayOpening({hash,review:true}),false);
   }

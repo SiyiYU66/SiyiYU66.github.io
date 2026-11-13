@@ -2,7 +2,6 @@ import http from 'node:http';
 import {attachBattleship} from './battleship-server.mjs';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import {profileAssetStatus} from './profile-assets.mjs';
 import {fontAssetStatus,personalFontStatus} from './font-assets.mjs';
 const root = path.resolve('dist');
 const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.svg': 'image/svg+xml', '.txt': 'text/plain', '.json': 'application/json', '.pdf': 'application/pdf', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.woff2': 'font/woff2' };
@@ -30,10 +29,6 @@ const server = http.createServer(async (req, res) => {
     if(pathname==='/font-status.json'){
       res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'});
       res.end(JSON.stringify({...await fontAssetStatus(root),personalPreview:await personalFontStatus()}));return;
-    }
-    if(pathname==='/asset-status.json'){
-      res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'});
-      res.end(JSON.stringify(await profileAssetStatus(root)));return;
     }
     if (pathname === '/__preview/mobile') {
       const body = await readFile(new URL('./mobile-preview.html', import.meta.url));

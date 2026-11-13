@@ -1,4 +1,4 @@
-import {cp,mkdir,readdir,readFile,writeFile} from 'node:fs/promises';
+import {cp,mkdir,readdir,readFile,writeFile,lstat,rm} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {build,transform} from 'esbuild';
 import path from 'node:path';
@@ -10,6 +10,12 @@ if(!process.argv.includes('--bundles-only')){
 await prepareWebAssets();
 await prepareVideoManifest();
 for(const directory of ['games','projects','disc-surfaces','opening'])await cp(path.join('assets',directory),path.join('dist/assets',directory),{recursive:true});
+// A fresh generated directory prevents removed pages or old chunks shipping.
+const client=path.resolve('dist/client');
+if(path.dirname(client)!==path.resolve('dist'))throw Error('Unexpected client output path.');
+const previous=await lstat(client).catch(error=>{if(error.code!=='ENOENT')throw error;return null;});
+if(previous?.isSymbolicLink())throw Error('Refusing to replace a linked client output.');
+if(previous)await rm(client,{recursive:true});
 await mkdir('dist/client',{recursive:true});
 for(const entry of await readdir('dist',{withFileTypes:true})){
   if(['client','server','.openai'].includes(entry.name))continue;
@@ -17,7 +23,7 @@ for(const entry of await readdir('dist',{withFileTypes:true})){
 }
 }
 // Bundle the existing modules without changing geometry, material constants,
-// motion curves or photographs. Lazy About Me becomes its own cached chunk.
+// motion curves or photographs.
 const result=await build({entryPoints:{app:'dist/app.js'},outdir:'dist/client/compiled',bundle:true,splitting:true,format:'esm',minify:true,target:'es2022',entryNames:'[name]-[hash]',chunkNames:'shared-[hash]',metafile:true,legalComments:'eof',alias:{three:path.resolve('dist/vendor/three.module.js')},external:['/__preview/*']});
 let html=await readFile('dist/index.html','utf8');
 const outputs=Object.entries(result.metafile.outputs);

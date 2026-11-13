@@ -1,5 +1,4 @@
 import { mkdir, copyFile, writeFile, stat, cp, unlink } from 'node:fs/promises';
-import {profileAssetStatus} from './profile-assets.mjs';
 import {fontAssetStatus} from './font-assets.mjs';
 import {fontConfig} from '../dist/typography.js';
 // Precomputed disc data maps are source assets. Builds copy, never regenerate.
@@ -29,7 +28,6 @@ await mkdir('dist/vendor/fonts',{recursive:true});
 await copyFile('node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-normal.woff2','dist/vendor/fonts/instrument-serif-latin-400-normal.woff2');
 await copyFile('node_modules/@fontsource-variable/mona-sans/files/mona-sans-latin-wght-normal.woff2','dist/vendor/fonts/mona-sans-latin-wght-normal.woff2');
 for(const [name,folder] of [['INSTRUMENT-SERIF','@fontsource/instrument-serif'],['MONA-SANS','@fontsource-variable/mona-sans']])await copyFile(`node_modules/${folder}/LICENSE`,`dist/vendor/fonts/${name}-LICENSE.txt`);
-await writeFile('dist/asset-status.json',JSON.stringify(await profileAssetStatus(),null,2));
 // Explicit owner-only evaluation build; never enabled by the normal/public build.
 const fontStatus=await fontAssetStatus();
 const evaluationFiles={title:'PPEiko-Medium.otf',interface:'PPNeueMontrealText-Book.otf',label:'PPMuseum-Regular.otf'};
@@ -43,7 +41,7 @@ for(const [role,name] of Object.entries(evaluationFiles)){
   }else{try{await unlink(output);}catch(e){if(e.code!=='ENOENT')throw e;}}
 }
 await writeFile('dist/font-status.json',JSON.stringify(fontStatus,null,2));
-console.log('Demo-matched Three.js, GSAP, RoomEnvironment, fonts and profile asset status bundled locally.');
+console.log('Demo-matched Three.js, GSAP, RoomEnvironment and fonts bundled locally.');
 
 await copyFile('assets/fonts/oswald-latin-wght-normal.woff2','dist/assets/fonts/oswald-latin-wght-normal.woff2');
 await mkdir('dist/licenses',{recursive:true});

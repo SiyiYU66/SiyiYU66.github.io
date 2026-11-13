@@ -19,9 +19,9 @@ import {createDetailNextProject} from '../detail-next-project.js';
 import {copyDiscRenderTree} from '../disc-render-copy.js';
 import {createDiscMarker} from '../disc-marker.js';
 
-export async function createRowOfDiscs({root,info,projects,cover,onOpen=()=>{},onChange=()=>{},onFrame=()=>{},canInteract=()=>true,initialId,reducedMotion,browsing=true,autoRotate=true,cardValues=null,renderCard=null}){
+export async function createRowOfDiscs({root,info,projects,cover,coverReady=()=>Promise.resolve(),prepareOpening=true,onOpen=()=>{},onChange=()=>{},onFrame=()=>{},canInteract=()=>true,initialId,reducedMotion,browsing=true,autoRotate=true,cardValues=null,renderCard=null}){
 const gsap=window.gsap;
-const openingArtwork=loadOpeningArt();
+const openingArtwork=prepareOpening?loadOpeningArt():Promise.resolve(null);
 const PASSO = discConfig.desktopSpacing;
 const CURVA = 0.12;        /* quanto la fila si allontana ai lati */
 const PICCOLI = 0.8;       /* quanto sono piccoli i dischi che non stanno davanti */
@@ -36,11 +36,10 @@ const RIDOTTO = reducedMotion ?? matchMedia('(prefers-reduced-motion: reduce)').
 const galleria=root;
 // Load once per model collection. Opening/closing details only pauses this row;
 // its project-keyed materials and texture instances remain untouched.
-const surfaceMaps=new Map((await Promise.all(projects.filter(project=>!project.portrait).map(async project=>{
-  try{return [project.id,await loadDiscSurface(project.id)];}
-  catch(error){console.warn(`Surface maps unavailable: ${project.id}. Using original printed material.`,error);return null;}
-}))).filter(Boolean));
-Object.assign(root.dataset,{surfaceProjectId:discSurfaceConfig.projectId,surfaceProjectIds:[...surfaceMaps.keys()].join(','),surfaceEnabled:String(surfaceMaps.size>0),surfaceMapLoads:String(surfaceMaps.size*3),surfaceBindings:JSON.stringify([...surfaceMaps].map(([id,maps])=>({id,textureId:maps.normal.uuid,url:maps.normal.image.src})))});
+const surfaceMaps=new Map(),assetTasks=new Map();
+let criticalReady=false,surfaceEnabled=true,pendingSelection=0;
+function surfaceDiagnostics(){Object.assign(root.dataset,{surfaceProjectId:discSurfaceConfig.projectId,surfaceProjectIds:[...surfaceMaps.keys()].join(','),surfaceEnabled:String(surfaceEnabled&&surfaceMaps.size>0),surfaceMapLoads:String(surfaceMaps.size*3),surfaceBindings:JSON.stringify([...surfaceMaps].map(([id,maps])=>({id,textureId:maps.normal.uuid,url:maps.normal.image.src})))});}
+surfaceDiagnostics();
 const tela=root.querySelector('[data-tela]');
 const segno=root.querySelector('[data-segno]');
 const sg=segno.getContext('2d');
@@ -131,7 +130,7 @@ function disco(f) {
   inclina.add(capovolgi);
   capovolgi.add(perno);
   const originalMaterial = new THREE.MeshPhysicalMaterial({
-    map: copertina(f), roughness: 0.45, metalness: 0.15, clearcoat: 0.6, clearcoatRoughness: 0.2, envMapIntensity: 0.55,
+    map: new THREE.Texture(), roughness: 0.45, metalness: 0.15, clearcoat: 0.6, clearcoatRoughness: 0.2, envMapIntensity: 0.55,
   });
   const maps=surfaceMaps.get(f.id);
   const surfaceMaterial=maps?applyDiscSurface(originalMaterial,maps):null;
@@ -147,7 +146,8 @@ function disco(f) {
     const hub=new THREE.Mesh(geoMozzo,matMozzo),ring=new THREE.Mesh(geoAnello,matAnello);
     hub.position.z=ring.position.z=z;perno.add(hub,ring);
   }
-  const disc={esterno,inclina,capovolgi,perno,shadow,fronte,originalMaterial,surfaceMaterial,pickMeshes:[...perno.children],girato:0,spinta:0,velSpinta:0,inX:0,inY:0,lift:0,liftVelocity:0,depth:0,depthVelocity:0};
+  esterno.visible=false;
+  const disc={ready:false,esterno,inclina,capovolgi,perno,shadow,fronte,originalMaterial,surfaceMaterial,pickMeshes:[...perno.children],girato:0,spinta:0,velSpinta:0,inX:0,inY:0,lift:0,liftVelocity:0,depth:0,depthVelocity:0};
   disc.pickMeshes.forEach(mesh=>{mesh.userData.disc=disc;});
   return disc;
 }
@@ -213,7 +213,11 @@ function scheda(i, immediate = false) {
 }
 
 
-function vai(i){meta=Math.max(0,Math.min(FILM.length-1,i));if(FILM[meta]?.id!==tapSelectedId)tapSelectedId=null;if(RIDOTTO)testa=meta;}
+function vai(i){
+  const target=Math.max(0,Math.min(FILM.length-1,i)),request=++pendingSelection;
+  const commit=()=>{if(request!==pendingSelection||destroyed)return;meta=target;if(FILM[meta]?.id!==tapSelectedId)tapSelectedId=null;if(RIDOTTO)testa=meta;};
+  if(models.get(FILM[target].id)?.ready)commit();else prepareProject(FILM[target]).then(commit);
+}
 let traccia = 0;
 let prossimoTremito = 0;
 const discMarker=createDiscMarker();
@@ -306,7 +310,7 @@ function fotogramma(t, dtMs) {
     fila.visible=frame.queueReveal(0)>0;
     dischi.forEach((disc,index)=>{
       const reveal=frame.queueReveal(index);
-      disc.esterno.visible=reveal>.00001;
+      disc.esterno.visible=disc.ready&&reveal>.00001;
       disc.esterno.position.y-=(1-reveal)*.20;
       disc.esterno.scale.multiplyScalar(reveal);
       if(index===0){
@@ -353,7 +357,7 @@ function onWheel(e){
   Object.assign(root.dataset,{wheelSteps:String(wheelSteps),wheelDelta:raw.toFixed(2),wheelTarget:String(meta)});
 }
 function onDown(e){
-  if(!canInteract()||e.button!==0||trascina)return;
+  if(!criticalReady||!canInteract()||e.button!==0||trascina)return;
   reviewSweep=null;root.dataset.reviewSweep='';
   const r=galleria.getBoundingClientRect();
   const centredIdAtPress=Math.abs(testa-meta)<.02&&Math.abs(vel)<.1?FILM[meta]?.id:null;
@@ -368,7 +372,10 @@ function onMove(e){
   if(!trascina||trascina.id!==e.pointerId)return;
   const dx=e.clientX-trascina.x0;
   if(Math.hypot(dx,e.clientY-trascina.y0)>6)trascina.mosso=true;
-  testa=Math.max(-.4,Math.min(FILM.length-.6,trascina.testa0-dx/pixelPerDisco()));
+  const wanted=Math.max(-.4,Math.min(FILM.length-.6,trascina.testa0-dx/pixelPerDisco()));
+  const wantedIndex=Math.max(0,Math.min(FILM.length-1,Math.round(wanted)));
+  if(!models.get(FILM[wantedIndex].id)?.ready){prepareProject(FILM[wantedIndex]);return;}
+  testa=wanted;
   const dtp=Math.max(4,e.timeStamp-trascina.ultimoT);
   trascina.v=(e.clientX-trascina.ultimoX)/dtp;trascina.ultimoX=e.clientX;trascina.ultimoT=e.timeStamp;
 }
@@ -417,6 +424,22 @@ function select(id,{immediate=false}={}){
   vai(index);if(immediate){testa=meta;vel=0;attivo=index;scheda(index,true);onChange(id);fotogramma(0,0);}return true;
 }
 const models=new Map();
+function prepareProject(project){
+  if(!project)return Promise.reject(new Error('Unknown project'));
+  if(assetTasks.has(project.id))return assetTasks.get(project.id);
+  const task=(async()=>{
+    const mapsPromise=project.portrait?Promise.resolve(null):loadDiscSurface(project.id).catch(error=>{console.warn(`Surface maps unavailable: ${project.id}. Using original printed material.`,error);return null;});
+    const [maps]=await Promise.all([mapsPromise,coverReady(project)]);
+    if(destroyed){maps?.dispose();return;}
+    const model=models.get(project.id),artwork=copertina(project);
+    model.originalMaterial.map.dispose();model.originalMaterial.map=artwork;model.originalMaterial.needsUpdate=true;
+    if(maps){surfaceMaps.set(project.id,maps);model.surfaceMaterial=addFilmGrain(applyDiscSurface(model.originalMaterial,maps));}
+    model.fronte.material=surfaceEnabled&&model.surfaceMaterial?model.surfaceMaterial:model.originalMaterial;
+    model.ready=true;model.esterno.visible=!opening||opening.done;
+    surfaceDiagnostics();
+  })();
+  assetTasks.set(project.id,task);return task;
+}
 renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1;
 const openingEnv=createNightEnvironment(renderer),env=createProjectsEnvironment(renderer);scena.environment=env;
 let studioEnv=null;
@@ -432,10 +455,21 @@ FILM.forEach(f=>{const d=disco(f);d.id=f.id;models.set(f.id,d);dischi.push(d);fi
 const observer=new ResizeObserver(()=>{if(enabled)misura();});observer.observe(galleria);
 misura();attivo=Math.max(0,FILM.findIndex(p=>p.id===initialId));
 meta=attivo;testa=initialId||RIDOTTO?attivo:-2.4;vel=0;scheda(attivo,true);onChange(FILM[attivo].id);
-root.querySelector('[data-attesa]').classList.add('via');root.querySelector('[data-attesa]').setAttribute('aria-hidden','true');
+// Only the active disc and its immediate neighbours are in the first view.
+const radius=1;
+const nearby=FILM.filter((_,index)=>Math.abs(index-attivo)<=radius);
+const ready=Promise.all(nearby.map(prepareProject)).then(()=>{
+  criticalReady=true;root.dataset.criticalReady='true';
+  root.querySelector('[data-attesa]').classList.add('via');root.querySelector('[data-attesa]').setAttribute('aria-hidden','true');
+  // First paint has priority. The remaining project-keyed maps use exactly the
+  // same finish, loaded in the background before their discs are exposed.
+  setTimeout(()=>{if(!destroyed)FILM.filter(project=>!assetTasks.has(project.id)).forEach(prepareProject);},120);
+});
 const introArtwork=await openingArtwork;
 return {
-  activate,deactivate,select,
+  activate,deactivate,select,ready,
+  isProjectReady:id=>!!models.get(id)?.ready,
+  ensureProjectReady:id=>prepareProject(allProjects.find(project=>project.id===id)),
   createNextProjectFooter(options){
     return createDetailNextProject({...options,homeRoot:root,renderer,canvas:tela,markerCanvas:segno,environment:openingEnv,gsap,reduced:RIDOTTO,
       copyProject(id){const model=models.get(id);return model?copyDiscRenderTree(model.perno):null;}});
@@ -451,13 +485,13 @@ return {
   playOpening({onHandoff=()=>{},onComplete=()=>{},review=false}={}){
     opening?.finish(true);select(FILM[0].id,{immediate:true});
     fila.visible=false;rotationRate=0;disposeRoomTheme.setEnvironment(openingEnv);dischi.forEach(d=>{d.perno.rotation.z=0;});
-    opening=createOpeningSequence({root,scene:scena,camera,review,artwork:introArtwork,projectCount:dischi.length,onGallery(){disposeRoomTheme.setEnvironment(env);},
+    opening=createOpeningSequence({root,scene:scena,camera,review,artwork:introArtwork,projectCount:dischi.length,isGalleryReady:()=>criticalReady,onGallery(){disposeRoomTheme.setEnvironment(env);},
       getDestination(){
         // Read the steady collection parent, not the temporarily scaled/turned
         // incoming mesh; otherwise its entrance would feed back into the exit.
         fila.updateWorldMatrix(true,true);
         return {position:fila.getWorldPosition(new THREE.Vector3()),quaternion:fila.getWorldQuaternion(new THREE.Quaternion()),scale:fila.getWorldScale(new THREE.Vector3()).x};
-      },onHandoff,onComplete(){disposeRoomTheme.setEnvironment(env);fila.visible=true;dischi.forEach(d=>{d.esterno.visible=true;d.esterno.rotation.x=d.esterno.rotation.y=0;});onComplete();}});
+      },onHandoff,onComplete(){disposeRoomTheme.setEnvironment(env);fila.visible=true;dischi.forEach(d=>{d.esterno.visible=d.ready;d.esterno.rotation.x=d.esterno.rotation.y=0;});onComplete();}});
   },
   setLightingStudy(mode){
     if(mode==='studio'&&!studioEnv){const pm=new THREE.PMREMGenerator(renderer),room=new RoomEnvironment();studioEnv=pm.fromScene(room,.04).texture;room.dispose();pm.dispose();}
@@ -466,6 +500,7 @@ return {
   },
   finishOpening(){opening?.finish(true);},
   setSurfaceEnabled(value){
+    surfaceEnabled=!!value;
     models.forEach(d=>{if(d.surfaceMaterial)d.fronte.material=value?d.surfaceMaterial:d.originalMaterial;});
     root.dataset.surfaceEnabled=String(!!value&&surfaceMaps.size>0);return surfaceMaps.size>0;
   },
@@ -481,7 +516,7 @@ return {
   setProjects(ids,preferredId){
     FILM=ids.map(id=>allProjects.find(p=>p.id===id)).filter(Boolean);
     models.forEach(d=>{d.esterno.visible=false;});dischi.length=0;
-    FILM.forEach(p=>{const d=models.get(p.id);d.esterno.visible=true;dischi.push(d);});
+    FILM.forEach(p=>{const d=models.get(p.id);d.esterno.visible=d.ready;dischi.push(d);});
     attivo=-1;select(FILM.some(p=>p.id===preferredId)?preferredId:FILM[0].id,{immediate:true});wheel.reset();
   },
   get selectedId(){return FILM[Math.max(0,attivo)]?.id;},

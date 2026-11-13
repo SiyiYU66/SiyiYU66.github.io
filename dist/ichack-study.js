@@ -64,7 +64,7 @@ export const ichackStudy = {
       title: 'Biomes, roles and wearable graphics',
       intro: 'The existing logo was adapted with forest, mountain and underwater imagery. Two base shirt colours and larger graphics distinguish participants from event staff. Lanyards repeat each role’s colour and landscape, with an arched label linking them to the shirts.',
       figures: [
-        transparentFigure('logo-1600.avif', 1600, 517, 'Logo variants and fantasy environments', true),
+        {...transparentFigure('logo-1600.avif', 1600, 517, 'Logo variants and fantasy environments', true), themeInkWidth: 33.4},
         transparentFigure('tshirtgraphics-transparent.webp', 1600, 1063, 'Front and back T-shirt graphics by event role', true),
         figure('lanyards-1600.avif', 1600, 1110, 'Role-specific lanyard designs', true),
         figure('tshirts-photo-1-1600.avif', 1600, 1067, 'Printed T-shirts · Role graphics'),

@@ -32,6 +32,11 @@ if (match) {
   image.alt = caption;
   image.src = source;
   image.hidden = false;
+  const inkWidth=Number(params.get('inkWidth'));
+  if(params.get('drawing')==='artwork'&&source==='/assets/projects/ichack/logo-1600.avif'&&inkWidth>0&&inkWidth<=100){
+    document.documentElement.style.setProperty('--art-ink-width',`${inkWidth}%`);
+    const ink=document.getElementById('ink-overlay');ink.src=source;ink.hidden=false;
+  }
   image.addEventListener('error', () => {image.hidden = true; document.getElementById('error').hidden = false;});
 } else document.getElementById('error').hidden = false;
 loadTypography();

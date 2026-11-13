@@ -15,5 +15,10 @@
     "ramda": "0.32.0",
     "socket.io": "4.8.1",
     "three": "0.178.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12",
+    "sharp": "0.35.0",
+    "wawoff2": "2.0.1"
   }
 }

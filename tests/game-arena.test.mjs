@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {fitArena, gameScreen, needsLandscape, GAME_WIDTH, GAME_HEIGHT} from '../assets/games/battleship/arena-layout.js';
+import {fitArena, gameScreen, needsLandscape, shouldConfirmGameExit, GAME_WIDTH, GAME_HEIGHT} from '../assets/games/battleship/arena-layout.js';
 
 test('narrow desktop windows stay upright while portrait touchscreens use landscape play', () => {
   assert.equal(needsLandscape(319,693,false),false);
@@ -42,4 +42,25 @@ test('direct links can only open a known local game screen', () => {
   assert.equal(gameScreen('https://example.com/other.html'),'index');
   assert.equal(gameScreen('online?token=untrusted'),'index');
   assert.equal(gameScreen(null),'index');
+});
+
+test('menus, difficulty selection, commander names and online lobby return without a confirmation', () => {
+  for (const screen of ['index', 'multiplayer', 'online']) {
+    assert.equal(shouldConfirmGameExit(screen, ''), false);
+    assert.equal(shouldConfirmGameExit(screen, 'online-page'), false);
+    assert.equal(shouldConfirmGameExit(screen, 'battle-phase'), false);
+  }
+  assert.equal(shouldConfirmGameExit('Human_VS_BOT', ''), false, 'difficulty chooser');
+  assert.equal(shouldConfirmGameExit('Human_VS_BOT', 'battle-initializing'), false, 'countdown before deployment');
+  assert.equal(shouldConfirmGameExit('Human_VS_Human', 'intro-phase battle-initializing'), false, 'commander-name setup');
+  assert.equal(shouldConfirmGameExit(null), false, 'unloaded child');
+});
+
+test('actual fleet placement and combat retain exit confirmation in solo and multiplayer play', () => {
+  for (const screen of ['Human_VS_BOT', '/assets/games/battleship/Human_VS_Human.html']) {
+    for (const phase of ['placing-player-1', 'placing-player-2', 'battle-phase', 'battle-phase turn-p1 board-locked', 'battle-phase bot-deploying']) {
+      assert.equal(shouldConfirmGameExit(screen, phase), true, `${screen}: ${phase}`);
+    }
+    assert.equal(shouldConfirmGameExit(screen, 'not-battle-phase'), false);
+  }
 });

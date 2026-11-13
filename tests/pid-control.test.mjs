@@ -42,7 +42,7 @@ test('Segway keeps the hardware disc and uses the supplied tabletop photograph f
   assert.equal(hardware.height,848);assert.equal(hardware.background,'transparent');assert.equal(hardware.borderless,true);
 });
 
-test('PID rendering keeps true gain subscripts, distinct excess effects and one native video',()=>{
+test('Segway presents distinct dance and balance evidence with inline, deferred video playback',()=>{
   const h=render();
   try{
     const nodes=descendants(h.host);
@@ -60,15 +60,21 @@ test('PID rendering keeps true gain subscripts, distinct excess effects and one 
     assert.ok(terms[1].textContent.includes('wind-up'));
     assert.ok(terms[2].textContent.includes('sensor noise'));
     const videos=nodes.filter(node=>node.tagName==='VIDEO');
-    assert.equal(videos.length,1);
-    assert.equal(videos[0].controls,true);assert.equal(videos[0].playsInline,true);assert.equal(videos[0].preload,'none');
-    assert.equal(videos[0].src,'/media/balancing-segway.mp4');
-    assert.equal(videos[0].autoplay,undefined);
+    assert.equal(videos.length,2);
+    for(const [index,video] of videos.entries()){
+      assert.equal(video.controls,true);assert.equal(video.playsInline,true);assert.equal(video.preload,'none');
+      assert.equal(video.autoplay,undefined);
+      assert.ok(video.src.endsWith(index===0?'/challenge-4-aespa.mp4':'/challenge-5-push.mp4'));
+      assert.equal(video.width/video.height,16/9);
+      const section=nodes.find(node=>hasClass(node,'case-chapter')&&descendants(node).includes(video));
+      assert.ok(section.textContent.includes(index===0?'Challenge 4 / Beat detection':'Challenge 5 / Self-balancing'));
+      if(index===0)assert.ok(section.textContent.includes('Stabilizers support the robot'));
+    }
+    assert.equal(nodes.filter(node=>hasClass(node,'case-video-figure--landscape')).length,2);
     const tuning=nodes.find(node=>hasClass(node,'pid-tuning'));
-    assert.ok(descendants(tuning).includes(videos[0]));
     assert.ok(tuning.textContent.includes('elastic cord'));
     assert.equal(h.host.querySelectorAll('img').length,1,'Only the genuine transparent PyBench image is illustrated');
     assert.ok(nodes.some(node=>hasClass(node,'case-figure--floating')));
-    h.dispose();assert.equal(videos[0].pauses,1);h.dispose();assert.equal(videos[0].pauses,1);
+    h.dispose();assert.ok(videos.every(video=>video.pauses===1));h.dispose();assert.ok(videos.every(video=>video.pauses===1));
   }finally{h.restore();}
 });

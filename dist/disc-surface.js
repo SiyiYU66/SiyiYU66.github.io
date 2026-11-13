@@ -11,8 +11,10 @@ export const discSurfaceConfig={
 };
 export function discSurfaceUrls(projectId){
   const path=discSurfaceConfig.basePath+encodeURIComponent(projectId)+'/';
-  return ['normal.png','roughness.png','coat-roughness.png'].map(name=>path+name);
+  return ['normal.webp','roughness.webp','coat-roughness.webp'].map(name=>path+name);
 }
+// The gallery memoizes requests for its lifetime. Do not share GPU textures
+// globally: a destroyed renderer must never hand disposed maps to a new one.
 export async function loadDiscSurface(projectId=discSurfaceConfig.projectId){
   const loader=new TextureLoader();
   const [normal,roughness,coatRoughness]=await Promise.all(discSurfaceUrls(projectId).map(url=>loader.loadAsync(url)));

@@ -1,0 +1,359 @@
+{
+  "maps": [
+    {
+      "source": "assets/disc-surfaces/a-quiet-place/normal.png",
+      "output": "assets/disc-surfaces/a-quiet-place/normal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 743154,
+      "bytesAfter": 522832,
+      "pixelSha256": "216fea8d7b66e8441b9ca408fd89e333dadb04aa815094482395879b637e4247",
+      "encodedSha256": "714134be6b7fdcd124769b114c879e0c287c433a3450a9dcf14279baff07c950",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/a-quiet-place/roughness.png",
+      "output": "assets/disc-surfaces/a-quiet-place/roughness.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 406556,
+      "bytesAfter": 344028,
+      "pixelSha256": "cd1339b5211bcc43fe8d74fbaa2526176ee0c381b881fe138e49998c00cf6958",
+      "encodedSha256": "7632deb37d77031ff8af8dbbeed82644320a37c17936d340fa1370f7e293f4c5",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/a-quiet-place/coat-roughness.png",
+      "output": "assets/disc-surfaces/a-quiet-place/coat-roughness.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 434336,
+      "bytesAfter": 370016,
+      "pixelSha256": "1f723f23489a9c0fb882852cf54e316393a069a4d9dc0dd25f7fac1814411503",
+      "encodedSha256": "beb4a9e643f9219e3154e8e8455a20f8f173c542395d1ff7a2fc2af9734225d1",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/balancing-segway/normal.png",
+      "output": "assets/disc-surfaces/balancing-segway/normal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 743954,
+      "bytesAfter": 522386,
+      "pixelSha256": "73b477bf3797ea5c4bd0e46811871544db316116b233e010db487f188a0c60d9",
+      "encodedSha256": "73c2d86c34389d592da619f7cf351f14c2e863905958fe01684db2143399b759",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/balancing-segway/roughness.png",
+      "output": "assets/disc-surfaces/balancing-segway/roughness.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 406714,
+      "bytesAfter": 344248,
+      "pixelSha256": "4b7b134d3249395739933800fc32986a7d90a4b7bf329e10e0285e21e668e1e4",
+      "encodedSha256": "c6e4e2a54fe2323e9d386eb2fb96be29391c6ebbdab299cbd51821a86ac7a828",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/balancing-segway/coat-roughness.png",
+      "output": "assets/disc-surfaces/balancing-segway/coat-roughness.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 434741,
+      "bytesAfter": 370268,
+      "pixelSha256": "aa8a882e23e1edf45ca4b31551e7442299278a67e995e00ae56b6fd4cbc6165e",
+      "encodedSha256": "4811a1f5acdc67208c50cc5f719722a1332ea532f0de0ac1d4a65006d9ad5827",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/battleship/normal.png",
+      "output": "assets/disc-surfaces/battleship/normal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 742839,
+      "bytesAfter": 521410,
+      "pixelSha256": "77d7fdae5e4a8f9b5da64fb97ee68c4b87c09f1725334c8799f10ffcf5f48919",
+      "encodedSha256": "84300082e7c68de6ca551f45e91c3cdda346a1fb3a3483480f3541e6815ee881",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/battleship/roughness.png",
+      "output": "assets/disc-surfaces/battleship/roughness.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 405928,
+      "bytesAfter": 343586,
+      "pixelSha256": "3b807dff882076f751f8459bb56de40e9a63c7a53ce971bf3e02eba1dc002b63",
+      "encodedSha256": "c43ccb0111899aaff95c12132ac36d5b7f9eec1d83ae198c32bb1738ee847b19",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/battleship/coat-roughness.png",
+      "output": "assets/disc-surfaces/battleship/coat-roughness.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 433933,
+      "bytesAfter": 370030,
+      "pixelSha256": "6938471e104747ac39c794b37a351a54dd17fbf642cb40fdba9081adc32174b9",
+      "encodedSha256": "a062c152b067eb23a32b2f858329281e0b3eacc0e4e4cc9b90991d535e06cc0f",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/between-spaces/normal.png",
+      "output": "assets/disc-surfaces/between-spaces/normal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 743071,
+      "bytesAfter": 522504,
+      "pixelSha256": "0b239faa5912f5fd8373865de2fcdd03d263667e6aded0375a8ee5702fd993a3",
+      "encodedSha256": "49233218ed3a8d8cc06bdbcd3a8958d01a811a9fcc4c0ff9e74906234ddbeafc",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/between-spaces/roughness.png",
+      "output": "assets/disc-surfaces/between-spaces/roughness.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 406572,
+      "bytesAfter": 343770,
+      "pixelSha256": "4495928a8116a47391d45cc9ed5429dda7c60856d8c7885417aee67542f950d8",
+      "encodedSha256": "6b0f3b3888553cae93c0e910dfe64e223d51545f41ec502ea7bde503b4a5ec9f",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/between-spaces/coat-roughness.png",
+      "output": "assets/disc-surfaces/between-spaces/coat-roughness.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 434376,
+      "bytesAfter": 369742,
+      "pixelSha256": "de51a00b7638c4e34aa0e855ace18578067d247f79f264b932ccc1fcde9e0461",
+      "encodedSha256": "b5718959c05834c91fd135d6c92e35d250073ab2340623502d91d15137e3144d",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/common-ground/normal.png",
+      "output": "assets/disc-surfaces/common-ground/normal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 742815,
+      "bytesAfter": 522072,
+      "pixelSha256": "e83130c714fd99f1c5e2b3fcf3f4be4177d57bb00d08bbd01385c743f2f52e99",
+      "encodedSha256": "d34c45d868196d1488150bb1df8e809530f2e6428107064e28b2e7a379bbea4d",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/common-ground/roughness.png",
+      "output": "assets/disc-surfaces/common-ground/roughness.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 405704,
+      "bytesAfter": 343412,
+      "pixelSha256": "8bd302f4ebed7cdb291c02bb35bb813a4e1d42eb72acc62ed21929932b4ce523",
+      "encodedSha256": "6e7b0ff23f38ddb55e7aefbf2ce8abe3bf23a2c31c7b7619e763e82bdbc33adf",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/common-ground/coat-roughness.png",
+      "output": "assets/disc-surfaces/common-ground/coat-roughness.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 433714,
+      "bytesAfter": 369568,
+      "pixelSha256": "8afbfc19087fb4b92eab6597ebf5fd6e75e7ffcbd3716d4b0dc7cc90add8dd29",
+      "encodedSha256": "89644c48028d0155759aecdc1ec590f59703068807bc884fa8571d7dd354d399",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/ichack/normal.png",
+      "output": "assets/disc-surfaces/ichack/normal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 742393,
+      "bytesAfter": 522390,
+      "pixelSha256": "aca4a9380cc9d756bc079b6b305bc32c1b1146d52e53dc761e82f62896a81a47",
+      "encodedSha256": "7ee85ea6adde3619f3d966b10d2a9725e18b461cce89e5f6cec5334473523c52",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/ichack/roughness.png",
+      "output": "assets/disc-surfaces/ichack/roughness.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 405807,
+      "bytesAfter": 342986,
+      "pixelSha256": "96bac381eeefc055dccbe1b902d806a692ef521afb1b4f6c5e1465481d7b8f75",
+      "encodedSha256": "399797e9bdbade31549a0e47af2605a2e162f9c7891f6a6127fcedae7c53acf6",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/ichack/coat-roughness.png",
+      "output": "assets/disc-surfaces/ichack/coat-roughness.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 433578,
+      "bytesAfter": 368870,
+      "pixelSha256": "cd5e697c399a18ce9b5353dd9e0024dc9bfd840be47494cd920823b1864ce04b",
+      "encodedSha256": "2aaf4f87b2194ab6eb1300dd16f0708ee02083503cb5887f5918a8bc678bbc13",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/in-motion/normal.png",
+      "output": "assets/disc-surfaces/in-motion/normal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 743814,
+      "bytesAfter": 523546,
+      "pixelSha256": "273a1bfe2f8b25fe5c12d3f71f76f950ba82a5fa1de063da704c3231ed552f21",
+      "encodedSha256": "db0f89c1c9531e9bc58e3432f860293bc565e7029fb2aa76de110dc61e9a9f87",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/in-motion/roughness.png",
+      "output": "assets/disc-surfaces/in-motion/roughness.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 406592,
+      "bytesAfter": 344164,
+      "pixelSha256": "14666bbc4c885b5e857f4406bb9ceae79c8e5a1b2b23c140bbbfa4a61d796e80",
+      "encodedSha256": "dbb25230ef98ea24ac37a03ee497515e3beda17841e882f83bc455b69cfef278",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/in-motion/coat-roughness.png",
+      "output": "assets/disc-surfaces/in-motion/coat-roughness.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 434409,
+      "bytesAfter": 370454,
+      "pixelSha256": "ee5a706c4df54980f88880be6d4c1f83c5cd6e8f50309f11f425ac6c3603d7d6",
+      "encodedSha256": "bb4620e5efa339c9e1754f1e497289b2d9e4c1d11724741072aa1f8074862749",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/slow-forms/normal.png",
+      "output": "assets/disc-surfaces/slow-forms/normal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 743138,
+      "bytesAfter": 522790,
+      "pixelSha256": "7d0c600027104f598f1365bf08ad02810f4880604597cd9396134fe0b2cbd6d3",
+      "encodedSha256": "931292f760fd6142e5e10b9288a20be1cc894d8f9aa3f33bef605fbca25f3371",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/slow-forms/roughness.png",
+      "output": "assets/disc-surfaces/slow-forms/roughness.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 407076,
+      "bytesAfter": 344484,
+      "pixelSha256": "6c7da2ca9ab5532d06e3e63a913fc57a360d8705177d86a8b2a4d7acf2818e4f",
+      "encodedSha256": "201abbd7d713db004e9618841ef27b6a2bd19793a73984bbdd007a23056a2185",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/slow-forms/coat-roughness.png",
+      "output": "assets/disc-surfaces/slow-forms/coat-roughness.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 434878,
+      "bytesAfter": 371330,
+      "pixelSha256": "5a20362f3d7f92c0e8911966cd4bd20444a98c3eac79ea611b6294110d978e6b",
+      "encodedSha256": "bb59760f849cd8642accd191ec546a0a10f9cca2b5ab1ec69b2a25b6daf85760",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/soft-signals/normal.png",
+      "output": "assets/disc-surfaces/soft-signals/normal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 743274,
+      "bytesAfter": 523442,
+      "pixelSha256": "0b616884f6f6e0d8242b084efe1ac1b2f73100362454444395b6a30c110f1d5f",
+      "encodedSha256": "3a896bf3e795d7a24a73c38ac2ec330a46bdc0e3cbc3d4d5001a2b44be52d6c7",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/soft-signals/roughness.png",
+      "output": "assets/disc-surfaces/soft-signals/roughness.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 406967,
+      "bytesAfter": 343804,
+      "pixelSha256": "99d3517f74f7aee4f0299d249603bbb0002518e840b31ad3e33902e39aadbeef",
+      "encodedSha256": "287bd5fd99ef5785a40b437c919b0e2df3e6b6726e57f3879d90bc55a9adb22f",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/disc-surfaces/soft-signals/coat-roughness.png",
+      "output": "assets/disc-surfaces/soft-signals/coat-roughness.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytesBefore": 434861,
+      "bytesAfter": 370114,
+      "pixelSha256": "8d3079ff2e40c5507d18064b1393c55b40ffd60fc9ea1bc9aeb762b41626fac9",
+      "encodedSha256": "a3d8752a4af6b0bafd46a62869883883230ab3aa08f7b8de2e69c876ae03a0f3",
+      "pixelsIdentical": true
+    }
+  ],
+  "images": [
+    {
+      "source": "assets/opening/siyi-yu-sketch.png",
+      "output": "assets/opening/siyi-yu-sketch.webp",
+      "width": 887,
+      "height": 940,
+      "bytesBefore": 1393476,
+      "bytesAfter": 755744,
+      "pixelSha256": "295873b6152f5b813877cb5d63228fd04a269dd03ce2051cc5d462c0b39cfb33",
+      "encodedSha256": "9326fc030ee8300bc6a41064d23311064a1e77d6442b13f4882405b3737371cb",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/projects/slow-forms/cover.png",
+      "output": "assets/projects/slow-forms/cover.webp",
+      "width": 830,
+      "height": 751,
+      "bytesBefore": 181245,
+      "bytesAfter": 86248,
+      "pixelSha256": "5e33f45def4296c6a1a2a6f5e3eb614ace11b817fd2885620d7568301a135dfe",
+      "encodedSha256": "575566eb03241e207b8cf54c8238a8e776478b87d20c592f046f28a139de3838",
+      "pixelsIdentical": true
+    },
+    {
+      "source": "assets/projects/a-quiet-place/cover.png",
+      "output": "assets/projects/a-quiet-place/cover.webp",
+      "width": 1562,
+      "height": 1140,
+      "bytesBefore": 588005,
+      "bytesAfter": 295882,
+      "pixelSha256": "9d62c7e529a1c7bca76b369b7ef2c54098cdae0a37c63cd9ad3097ddf5ada7a6",
+      "encodedSha256": "5343072cf180b925b39ce95e0bfde5e467657bc3de3e61e9861d4b9056417d94",
+      "pixelsIdentical": true
+    }
+  ],
+  "fonts": [
+    {
+      "name": "PPEiko-Medium",
+      "bytesBefore": 190108,
+      "bytesAfter": 112016,
+      "outlinesAndMetricsIdentical": true,
+      "encodedSha256": "a5587019ac00a63af8dbb59a7418137bc0ec48445968e1d67aa07548c8927af4"
+    },
+    {
+      "name": "PPNeueMontrealText-Book",
+      "bytesBefore": 201240,
+      "bytesAfter": 87684,
+      "outlinesAndMetricsIdentical": true,
+      "encodedSha256": "ff47299de4dd547c3fb4d2d9cdc120aa7bb30736a287e314f69f15da1ec1494f"
+    },
+    {
+      "name": "PPMuseum-Regular",
+      "bytesBefore": 95112,
+      "bytesAfter": 52976,
+      "outlinesAndMetricsIdentical": true,
+      "encodedSha256": "736891a05bbe425faa81e93fc9e1e64d7733872cf25cd07e902b5fa22ebe1e09"
+    }
+  ]
+}

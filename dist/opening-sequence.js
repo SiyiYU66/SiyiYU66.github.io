@@ -6,7 +6,7 @@ import {addFilmGrain,createLocalGlow} from './night-room.js';
 import {sampleOpeningHandoff,createOpeningDiscPose} from './opening-handoff.js';
 
 // Uses the Projects renderer, camera and environment. No second WebGL context.
-export function createOpeningSequence({root,scene,camera,artwork,getDestination,projectCount=1,onGallery=()=>{},onHandoff,onComplete,review=false}){
+export function createOpeningSequence({root,scene,camera,artwork,getDestination,projectCount=1,isGalleryReady=()=>true,onGallery=()=>{},onHandoff,onComplete,review=false}){
   const overlay=document.createElement('div');overlay.className='opening-overlay';
   overlay.setAttribute('role','dialog');overlay.setAttribute('aria-label','Siyi Yu — Listening Room opening');
   overlay.setAttribute('aria-modal','true');
@@ -14,8 +14,8 @@ export function createOpeningSequence({root,scene,camera,artwork,getDestination,
   overlay.innerHTML='<span class="opening-caption">LISTENING ROOM</span><svg class="opening-score" aria-hidden="true"></svg><span class="opening-a11y">SIYI YU</span><button class="opening-skip">Skip intro ↗</button>';
   root.append(overlay);
   const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let handoffStart=null,heldSpin=0;
-  const flaps=createOpeningFlaps(overlay,{reduced,review,onComplete(){if(handoffStart!==null)return;heldSpin=spin.rotation.z;handoffStart=performance.now();}});
+  let handoffStart=null,heldSpin=0,handoffRequested=false;
+  const flaps=createOpeningFlaps(overlay,{reduced,review,onComplete(){handoffRequested=true;}});
   overlay.querySelector('.opening-score').remove();
   const group=new THREE.Group(),spin=new THREE.Group();group.add(spin);scene.add(group);
   const texture=new THREE.CanvasTexture(artwork);texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=8;
@@ -67,6 +67,7 @@ export function createOpeningSequence({root,scene,camera,artwork,getDestination,
   overlay.focus({preventScroll:true});
   function update(){
     if(done)return {handoff:1,queueReveal:()=>1,complete:true};
+    if(handoffRequested&&handoffStart===null&&isGalleryReady()){heldSpin=spin.rotation.z;handoffStart=performance.now();}
     layout=openingLayout(root.clientWidth,root.clientHeight);
     const time=(performance.now()-start)/1000;
     const elapsed=handoffStart===null?0:(performance.now()-handoffStart)/1000;

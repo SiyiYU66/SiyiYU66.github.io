@@ -5,11 +5,10 @@ mountThemeToggle();
 import {createRowOfDiscs} from './animorio/row-of-discs.js';
 import {createMeltingSheet} from './animorio/melting-sheet.js';
 import {projectOpeningTiming} from './project-transition.js';
-import {projectCover,projectHero,discThumbnail,preloadProjectCovers} from './project-media.js';
+import {projectCover,projectHero,discThumbnail,preloadProjectCovers,ensureProjectCover} from './project-media.js';
 import {renderProjectCaseStudy} from './project-case-study.js';
 import {mountProjectReveals} from './project-reveals.js';
 import {DemoAudio} from './audio.js';
-import {createAboutPage} from './about.js';
 import {loadTypography} from './typography.js';
 import {createProjectInfo} from './project-info.js';
 import {shouldPlayOpening} from './opening-motion.js';
@@ -31,8 +30,10 @@ const skipPendingOpening=e=>{
 };
 window.addEventListener('click',skipPendingOpening,true);window.addEventListener('keydown',skipPendingOpening,true);
 const surfaceReview=['127.0.0.1','localhost'].includes(location.hostname)&&new URLSearchParams(location.search).has('surface-review');
+const freezeReview=['127.0.0.1','localhost'].includes(location.hostname)&&new URLSearchParams(location.search).has('freeze-disc');
+// Only the opening's fonts are required before the shared renderer starts.
+// Project photographs and maps prepare together, in visible-first order.
 await loadTypography();
-document.body.dataset.coverProjects=(await preloadProjectCovers(projects)).filter(Boolean).join(',');
 const projectInfo=createProjectInfo({root:$('metadata'),gsap,reducedMotion:reduced});
 const byId=new Map(projects.map(p=>[p.id,p]));
 const legacy=Math.round(Number(sessionStorage.getItem('lr-position')||0));
@@ -41,6 +42,7 @@ const state={page:'home',selectedId:byId.has(remembered)?remembered:projects[0].
 const root=$('scene'),detail=$('detail'),home=$('room-ui');
 const aboutPage=$('about-page');
 let row=null,melting=null,transition=null,about=null,aboutPromise=null,nextFooter=null,disposeCaseStudy=null,disposeProjectReveals=null;
+let openRequest=0;
 let standaloneGameLaunched=false;
 window.addEventListener('listening-room:standalone-game',()=>{
   standaloneGameLaunched=true;
@@ -63,6 +65,7 @@ function diagnostics(){
 }
 function selectionChanged(id){
   const p=byId.get(id);if(!p)return;
+  if(state.selectedId!==id)openRequest++;
   state.selectedId=id;
   if(!openingInProgress)projectInfo.show(p);
   $('open-album').setAttribute('aria-label',`Open ${p.name}`);
@@ -103,7 +106,10 @@ function showNextProject(next){
   const button = $('next-project');
   button.dataset.projectId = next.id;
   button.setAttribute('aria-label', `Open next project: ${next.name}`);
-  nextFooter?.setProject(next.id);
+  if(!row?.isProjectReady||row.isProjectReady(next.id))nextFooter?.setProject(next.id);
+  else row.ensureProjectReady(next.id).then(()=>{
+    if(button.dataset.projectId===next.id)nextFooter?.setProject(next.id);
+  });
 }
 
 function fillDetail(id){
@@ -138,6 +144,8 @@ function fillDetail(id){
 // passes a stable project ID; array positions never identify detail content.
 function openAlbum(id=state.selectedId,pushHistory=true,scrollAdvance=false){
   if(!byId.has(id)||!row)return;
+  const request=++openRequest;
+  if(row.isProjectReady&&!row.isProjectReady(id)){const page=state.page;row.ensureProjectReady(id).then(()=>{if(request===openRequest&&state.page===page)openAlbum(id,pushHistory,scrollAdvance);});return;}
   if(state.page==='detail'&&detail.dataset.projectId===id)return;
   const fromGallery=state.page==='home';
   const footerSource=state.page==='detail'&&!scrollAdvance?nextFooter?.transitionSource(id):null;
@@ -182,6 +190,7 @@ function updateNavigation(){
   $('nav-about').classList.toggle('active',isAbout);$('nav-about').setAttribute('aria-pressed',String(isAbout));
 }
 function showProjects(changeHistory=true){
+  openRequest++;
   if(state.page==='home')return;
   stopCaseStudy();
   nextFooter?.deactivate();
@@ -202,6 +211,7 @@ function showProjects(changeHistory=true){
   document.title='Listening Room — Project Archive';$('open-album').focus({preventScroll:true});diagnostics();
 }
 async function showAbout(pushHistory=true){
+  openRequest++;
   if(state.page==='about'){aboutPage.scrollTo({top:0,behavior:reduced?'instant':'smooth'});return;}
   stopCaseStudy();
   nextFooter?.deactivate();transition?.kill();melting?.destroy();melting=null;row?.deactivate();audio.pause();
@@ -217,7 +227,7 @@ async function showAbout(pushHistory=true){
   if(pushHistory)history.pushState({page:'about'},'','#about');
   document.title='About SIYI YU — Listening Room';diagnostics();
   try{
-    aboutPromise??=createAboutPage({canInteract:()=>state.page==='about'&&$('index-panel').hidden,onFrame:()=>diagnostics(),reducedMotion:reduced});
+    aboutPromise??=import('./about.js').then(({createAboutPage})=>createAboutPage({canInteract:()=>state.page==='about'&&$('index-panel').hidden,onFrame:()=>diagnostics(),reducedMotion:reduced}));
     about=await aboutPromise;
     if(state.page!=='about'){about.deactivate();return;}
     about.activate();diagnostics();
@@ -257,10 +267,11 @@ window.addEventListener('pagehide',()=>{audio.pause();stopCaseStudy();nextFooter
 
 renderIndex();
 try{
-  row=await createRowOfDiscs({root,info:$('metadata'),projects,cover:projectCover,initialId:openingInProgress?projects[0].id:remembered,reducedMotion:reduced,autoRotate:!surfaceReview,
+  row=await createRowOfDiscs({root,info:$('metadata'),projects,cover:projectCover,coverReady:ensureProjectCover,prepareOpening:openingInProgress,initialId:openingInProgress?projects[0].id:byId.has(location.hash.replace('#project/',''))?location.hash.replace('#project/',''):remembered,reducedMotion:reduced,autoRotate:!surfaceReview&&!freezeReview,
     canInteract:()=>!openingInProgress&&state.page==='home'&&$('index-panel').hidden,renderCard:p=>{if(!openingInProgress)projectInfo.show(p);},onChange:selectionChanged,onOpen:id=>openAlbum(id),onFrame:onRowFrame});
   nextFooter=row.createNextProjectFooter({section:$('next-project-section'),stage:$('next-project-stage'),host:$('next-disc-stage'),button:$('next-project'),scroller:detail,onAdvance:id=>openAlbum(id,true,true)});
   row.activate();diagnostics();
+  row.ready.then(()=>preloadProjectCovers(projects)).then(ids=>{document.body.dataset.coverProjects=ids.filter(Boolean).join(',');});
   const beginOpening=()=>{
     openingInProgress=true;
     try{sessionStorage.setItem('lr-opening-seen','1');}catch{}
@@ -292,4 +303,4 @@ try{
 }
 const initial=location.hash.replace('#project/','');
 window.removeEventListener('click',skipPendingOpening,true);window.removeEventListener('keydown',skipPendingOpening,true);
-if(location.hash==='#about')showAbout(false);else if(byId.has(initial))openAlbum(initial,false);
+if(location.hash==='#about')showAbout(false);else if(byId.has(initial)){await row.ready;openAlbum(initial,false);}

@@ -22,11 +22,11 @@ export function canvasFont(size,weight=400,role='interface'){
 }
 export async function loadTypography(){
   let status={title:false,interface:false,label:false};
-  try{const response=await fetch('./font-status.json',{cache:'no-store'});if(response.ok)status={...status,...await response.json()};}catch{}
+  try{const response=await fetch('./font-status.json');if(response.ok)status={...status,...await response.json()};}catch{}
   const available=[fontConfig.titleFallback,fontConfig.interfaceFallback];
   const roles=['title','interface','label'];
   const localPreview=status.personalPreview&&['127.0.0.1','localhost','[::1]'].includes(location.hostname);
-  const candidates=Object.fromEntries(roles.map(role=>[role,status[role]?fontConfig[role]:localPreview&&status.personalPreview[role]?previewFonts[role]:status.privateEvaluation?.[role]?{...previewFonts[role],file:status.privateEvaluation[role]}:fontConfig[fontConfig[role].fallback]]));
+  const candidates=Object.fromEntries(roles.map(role=>[role,status[role]?fontConfig[role]:localPreview&&status.personalPreview[role]?previewFonts[role]:status.privateEvaluation?.[role]?{...previewFonts[role],file:status.privateEvaluation[role],format:status.privateEvaluation[role].endsWith('.woff2')?'woff2':'opentype'}:fontConfig[fontConfig[role].fallback]]));
   for(const candidate of Object.values(candidates))if(!available.includes(candidate))available.push(candidate);
   const style=document.createElement('style');style.id='listening-room-fonts';
   style.textContent=available.map(f=>`@font-face{font-family:"${f.family}";src:url("${f.file}") format("${f.format||'woff2'}");font-style:normal;font-weight:${f.weight};font-display:swap}`).join('\n');

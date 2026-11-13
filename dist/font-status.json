@@ -3,8 +3,8 @@
   "interface": false,
   "label": false,
   "privateEvaluation": {
-    "title": "./assets/fonts/private-evaluation/PPEiko-Medium.otf",
-    "interface": "./assets/fonts/private-evaluation/PPNeueMontrealText-Book.otf",
-    "label": "./assets/fonts/private-evaluation/PPMuseum-Regular.otf"
+    "title": "./assets/fonts/private-evaluation/PPEiko-Medium.woff2",
+    "interface": "./assets/fonts/private-evaluation/PPNeueMontrealText-Book.woff2",
+    "label": "./assets/fonts/private-evaluation/PPMuseum-Regular.woff2"
   }
 }

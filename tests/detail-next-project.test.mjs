@@ -63,8 +63,8 @@ test('equal-distance slow and fast gestures advance at the same distance, regard
   const options={eligible:true,height:720,source:'wheel'};
   const swipe=interval=>{
     const gate=new NextProjectGesture();
-    const samples=Array.from({length:12},(_,i)=>gate.feed(43,i*interval,options));
-    assert.deepEqual(samples.map(result=>result.triggered),[...Array(11).fill(false),true]);
+    const samples=Array.from({length:10},(_,i)=>gate.feed(43,i*interval,options));
+    assert.deepEqual(samples.map(result=>result.triggered),[...Array(9).fill(false),true]);
     assert.equal(samples.at(-1).charge,1);
     assert.equal(gate.feed(100,12*interval,options).triggered,false);
     return samples;
@@ -73,13 +73,23 @@ test('equal-distance slow and fast gestures advance at the same distance, regard
   assert.deepEqual(fast.map(result=>result.charge),slow.map(result=>result.charge));
   assert.ok(fast[6].speed>slow[6].speed);
   const coalesced=new NextProjectGesture();
-  assert.equal(coalesced.feed(516,0,options).triggered,true);
+  assert.equal(coalesced.feed(430,0,options).triggered,true);
+});
+
+test('next-project travel is exactly 20% lower across short, desktop and tall viewports',()=>{
+  for(const height of [390,720,844,1200])for(const source of ['wheel','touch']){
+    const options={eligible:true,height,source},gate=new NextProjectGesture();
+    const previous=Math.max(345,Math.min(680,height*.7)),required=previous*.8;
+    if(source==='touch')gate.begin(true);
+    assert.equal(gate.feed(required-.5,0,options).triggered,false);
+    assert.equal(gate.feed(.5,32,options).triggered,true);
+  }
 });
 
 test('fast short pulses, separate strokes and the decaying tail cannot fill the dial',()=>{
   const options={eligible:true,height:720,source:'wheel'};
   const brief=new NextProjectGesture();
-  [150,150,150].forEach((delta,i)=>assert.equal(brief.feed(delta,i*12,options).triggered,false));
+  [120,120,120].forEach((delta,i)=>assert.equal(brief.feed(delta,i*12,options).triggered,false));
   const separated=new NextProjectGesture();
   for(const start of [0,320]){
     [100,100,100].forEach((delta,i)=>assert.equal(separated.feed(delta,start+i*24,options).triggered,false));
@@ -94,15 +104,15 @@ test('incoming reading inertia is ineligible and a renewed intentional swipe can
   const options={eligible:true,height:720,source:'wheel'},gate=new NextProjectGesture();
   assert.equal(gate.feed(120,0,{...options,eligible:false}).triggered,false);
   Array(11).fill(80).forEach((delta,i)=>assert.equal(gate.feed(delta,34+i*34,options).charge,0));
-  Array(7).fill(80).forEach((delta,i)=>assert.equal(gate.feed(delta,570+i*34,options).triggered,i===6));
+  Array(6).fill(80).forEach((delta,i)=>assert.equal(gate.feed(delta,570+i*34,options).triggered,i===5));
   const renewed=new NextProjectGesture();
   [[70,0],[50,30],[20,80],[8,110]].forEach(([d,t])=>assert.equal(renewed.feed(d,t,options).triggered,false));
-  Array(7).fill(80).forEach((delta,i)=>assert.equal(renewed.feed(delta,150+i*34,options).triggered,i===6));
+  Array(6).fill(80).forEach((delta,i)=>assert.equal(renewed.feed(delta,150+i*34,options).triggered,i===5));
 });
 
 test('passive touch can start after a stationary hold and complete a deliberate swipe',()=>{
   const gate=new NextProjectGesture(),options={eligible:true,height:720,source:'touch'};
-  gate.begin(true);Array(11).fill(49).forEach((delta,i)=>assert.equal(gate.feed(delta,200+i*34,options).triggered,i===10));
+  gate.begin(true);Array(9).fill(49).forEach((delta,i)=>assert.equal(gate.feed(delta,200+i*34,options).triggered,i===8));
 });
 
 test('a single ink stroke grows from the left over the cap and retracts along the same curve',()=>{

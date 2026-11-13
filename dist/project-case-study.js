@@ -38,6 +38,7 @@ function resultsTable({caption, columns, rows}) {
 
 function videoFigure({src,poster,width,height,caption},index){
   const figure=make('figure','case-figure case-figure--wide case-video-figure');
+  if(width>height)figure.classList.add('case-video-figure--landscape');
   figure.style.setProperty('--figure-ratio',width/height);
   const frame=make('div','case-figure-link case-video-frame');
   const video=make('video','case-video');

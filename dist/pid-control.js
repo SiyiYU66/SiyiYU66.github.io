@@ -46,7 +46,9 @@ export function renderPIDControl({terms,tuning,video},renderFigure){
   const study=make('aside','pid-tuning');study.setAttribute('aria-label','Testing and tuning');
   const copy=make('div','pid-tuning-copy');
   copy.append(make('span','case-label','Testing & tuning'),make('h4','pid-tuning-title',tuning.title),make('p','pid-tuning-intro',tuning.text));
-  study.append(copy,renderFigure(video),make('p','pid-rate-note',tuning.rateNote));
+  study.append(copy);
+  if(video)study.append(renderFigure(video));
+  study.append(make('p','pid-rate-note',tuning.rateNote));
   layout.append(cards,study);root.append(layout);
   return root;
 }

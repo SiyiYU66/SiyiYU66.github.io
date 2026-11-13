@@ -123,7 +123,9 @@ export class NextProjectGesture {
     if (!this.allowed || !eligible || this.tail) return noPressure;
 
     this.total += distance;
-    const travel = clamp(height * .70, 345, 680);
+    // Reduce the complete viewport-adjusted distance budget by 20% on every device.
+    // Input speed still changes rotation only; it does not decide navigation.
+    const travel = clamp(height * .70, 345, 680) * .8;
     const charge = clamp(this.total / travel);
     this.fired = charge === 1;
     return {charge, distance, speed: distance / interval, triggered: this.fired};

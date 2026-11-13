@@ -51,7 +51,7 @@ export function createProjectsEnvironment(renderer){
   pmrem.dispose();panel.geometry.dispose();material.dispose();map.dispose();
   const environment=target.texture;environment.dispose=()=>target.dispose();return environment;
 }
-export function createNightEnvironment(renderer,{turntable=false}={}){
+export function createNightEnvironment(renderer){
   const room=new THREE.Scene();room.background=new THREE.Color('#181511');
   const canvas=document.createElement('canvas');canvas.width=256;canvas.height=128;
   const c=canvas.getContext('2d');c.scale(1,.5);
@@ -61,10 +61,8 @@ export function createNightEnvironment(renderer,{turntable=false}={}){
   const map=new THREE.CanvasTexture(canvas);map.colorSpace=THREE.SRGBColorSpace;
   const mat=new THREE.MeshBasicMaterial({map,color:new THREE.Color(2.9,2.9,2.9),side:THREE.DoubleSide});
   const panel=new THREE.Mesh(new THREE.PlaneGeometry(2.1,1.35),mat);
-  // Each camera sees the same small lampshade reflection from its own angle.
-  // The opening mirror vector at the stylus points just right of the camera;
-  // the horizontal platter reflects the lamp behind the raised About camera.
-  panel.position.set(...(turntable?[-2.4,4.5,-3.5]:[1.1,.28,4.2]));panel.lookAt(0,0,0);room.add(panel);
+  // The opening mirror vector at the stylus points just right of the camera.
+  panel.position.set(1.1,.28,4.2);panel.lookAt(0,0,0);room.add(panel);
   const pmrem=new THREE.PMREMGenerator(renderer),target=pmrem.fromScene(room,.035);
   const environment=target.texture;pmrem.dispose();panel.geometry.dispose();mat.dispose();map.dispose();
   // PMREM render target owns its GPU storage; callers already dispose texture.

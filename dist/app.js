@@ -40,8 +40,7 @@ const legacy=Math.round(Number(sessionStorage.getItem('lr-position')||0));
 const remembered=sessionStorage.getItem('lr-selected-project')||projects[legacy]?.id;
 const state={page:'home',selectedId:byId.has(remembered)?remembered:projects[0].id,filter:'all',ids:projects.map(p=>p.id)};
 const root=$('scene'),detail=$('detail'),home=$('room-ui');
-const aboutPage=$('about-page');
-let row=null,melting=null,transition=null,about=null,aboutPromise=null,nextFooter=null,disposeCaseStudy=null,disposeProjectReveals=null;
+let row=null,melting=null,transition=null,nextFooter=null,disposeCaseStudy=null,disposeProjectReveals=null;
 let openRequest=0;
 let standaloneGameLaunched=false;
 window.addEventListener('listening-room:standalone-game',()=>{
@@ -60,8 +59,8 @@ function stopCaseStudy(){
 let disposeGame=null;
 
 function diagnostics(){
-  const r=row?.diagnostics,m=melting?.diagnostics,a=about?.diagnostics;
-  Object.assign(document.body.dataset,{page:state.page,currentProject:state.selectedId,rowEnabled:String(!!r?.enabled),rowListeners:String(r?.listeners||0),meltListeners:String(m?.listeners||0),meltTrigger:String(!!m?.trigger),scrollTriggers:String(window.ScrollTrigger?.getAll().length||0),browsePosition:(r?.position||0).toFixed(4),reveal:(m?.progress||0).toFixed(3),aboutListeners:String(a?.listeners||0),aboutPlaying:String(!!a?.playing),aboutAngle:(a?.angle||0).toFixed(5),aboutRotationRate:(a?.rotationRate||0).toFixed(5),photoAvailable:String(!!a?.photoAvailable),cvAvailable:String(!!a?.cvAvailable)});
+  const r=row?.diagnostics,m=melting?.diagnostics;
+  Object.assign(document.body.dataset,{page:state.page,currentProject:state.selectedId,rowEnabled:String(!!r?.enabled),rowListeners:String(r?.listeners||0),meltListeners:String(m?.listeners||0),meltTrigger:String(!!m?.trigger),scrollTriggers:String(window.ScrollTrigger?.getAll().length||0),browsePosition:(r?.position||0).toFixed(4),reveal:(m?.progress||0).toFixed(3)});
 }
 function selectionChanged(id){
   const p=byId.get(id);if(!p)return;
@@ -150,12 +149,11 @@ function openAlbum(id=state.selectedId,pushHistory=true,scrollAdvance=false){
   const fromGallery=state.page==='home';
   const footerSource=state.page==='detail'&&!scrollAdvance?nextFooter?.transitionSource(id):null;
   nextFooter?.deactivate();
-  transition?.kill();melting?.destroy();melting=null;about?.deactivate();aboutPage.hidden=true;document.body.classList.remove('about-open');row.deactivate();
+  transition?.kill();melting?.destroy();melting=null;row.deactivate();
   // Deep links also centre their project, so returning restores the opened disc.
   // A regular gallery click is already centred by the select-then-open rule.
   if(!fromGallery||state.selectedId!==id)row.select(id,{immediate:true});
   state.page='detail';toggleIndex(false);fillDetail(id);
-  updateNavigation();
   detail.hidden=false;detail.classList.toggle('scroll-advance-entering',scrollAdvance);detail.scrollTo({top:0,behavior:'instant'});home.inert=true;document.body.classList.add('detail-open');$('close-panel').hidden=false;
   const carryDisc=fromGallery||footerSource;
   if(carryDisc){root.hidden=false;gsap.set(root,{opacity:1});}
@@ -184,11 +182,6 @@ function closeAlbum(changeHistory=true){
   if(state.page!=='detail')return;
   showProjects(changeHistory);
 }
-function updateNavigation(){
-  const isAbout=state.page==='about';
-  $('nav-projects').classList.toggle('active',!isAbout);$('nav-projects').setAttribute('aria-pressed',String(!isAbout));
-  $('nav-about').classList.toggle('active',isAbout);$('nav-about').setAttribute('aria-pressed',String(isAbout));
-}
 function showProjects(changeHistory=true){
   openRequest++;
   if(state.page==='home')return;
@@ -197,41 +190,14 @@ function showProjects(changeHistory=true){
   transition?.kill();melting?.destroy();melting=null;
   detail.classList.remove('scroll-advance-entering');
   root.classList.remove('project-transition-layer');
-  about?.deactivate();aboutPage.inert=true;
   state.page='home';detail.hidden=true;detail.scrollTo({top:0,behavior:'instant'});root.hidden=false;home.hidden=false;home.inert=false;
-  document.body.classList.remove('detail-open','about-open');$('close-panel').hidden=true;
+  document.body.classList.remove('detail-open');$('close-panel').hidden=true;
   gsap.set(detail,{opacity:1});gsap.set([root,home],{opacity:1});
   if(!state.ids.includes(state.selectedId))setFilter('all');
   row.select(state.selectedId,{immediate:true});row.activate();
-  updateNavigation();
-  transition=gsap.timeline().to(aboutPage,{opacity:0,duration:reduced?0:.35,overwrite:true},0)
-    .fromTo([root,home],{opacity:0},{opacity:1,duration:reduced?0:.35,overwrite:true},0)
-    .add(()=>{if(state.page==='home')aboutPage.hidden=true;});
+  transition=gsap.fromTo([root,home],{opacity:0},{opacity:1,duration:reduced?0:.35,overwrite:true});
   if(changeHistory)history.replaceState(null,'',location.pathname+location.search);
   document.title='Listening Room — Project Archive';$('open-album').focus({preventScroll:true});diagnostics();
-}
-async function showAbout(pushHistory=true){
-  openRequest++;
-  if(state.page==='about'){aboutPage.scrollTo({top:0,behavior:reduced?'instant':'smooth'});return;}
-  stopCaseStudy();
-  nextFooter?.deactivate();transition?.kill();melting?.destroy();melting=null;row?.deactivate();audio.pause();
-  detail.classList.remove('scroll-advance-entering');
-  root.classList.remove('project-transition-layer');
-  state.page='about';toggleIndex(false);detail.hidden=true;root.hidden=true;home.hidden=true;home.inert=true;
-  document.body.classList.remove('detail-open');document.body.classList.add('about-open');$('close-panel').hidden=true;
-  aboutPage.hidden=false;aboutPage.inert=false;aboutPage.scrollTo({top:0,behavior:'instant'});updateNavigation();
-  // Keep the introduction and CV visible from the first About frame. Only the
-  // turntable visual fades; its own mechanical entrance is independent.
-  gsap.set(aboutPage,{opacity:1});
-  transition=gsap.fromTo(aboutPage.querySelector('.about-disc-cell'),{opacity:0},{opacity:1,duration:reduced?0:.3,overwrite:true});
-  if(pushHistory)history.pushState({page:'about'},'','#about');
-  document.title='About SIYI YU — Listening Room';diagnostics();
-  try{
-    aboutPromise??=import('./about.js').then(({createAboutPage})=>createAboutPage({canInteract:()=>state.page==='about'&&$('index-panel').hidden,onFrame:()=>diagnostics(),reducedMotion:reduced}));
-    about=await aboutPromise;
-    if(state.page!=='about'){about.deactivate();return;}
-    about.activate();diagnostics();
-  }catch(error){console.error('Turntable unavailable:',error);$('portrait-play').disabled=true;$('about-record').querySelector('[data-attesa]').textContent='Turntable preview unavailable. The profile and CV remain available.';}
 }
 function setFilter(filter){
   state.filter=filter;state.ids=projects.filter(p=>filter==='all'||p.demo).map(p=>p.id);
@@ -242,9 +208,7 @@ $('open-album').addEventListener('click',()=>openAlbum());$('close-panel').addEv
 $('previous').addEventListener('click',()=>row?.step(-1));$('next').addEventListener('click',()=>row?.step(1));
 $('index-toggle').addEventListener('click',()=>toggleIndex());
 document.addEventListener('pointerdown',e=>{if(!$('index-panel').hidden&&!e.target.closest('#index-panel,#index-toggle'))toggleIndex(false);});
-$('nav-projects').addEventListener('click',()=>showProjects());$('nav-about').addEventListener('click',()=>showAbout());
-$('about-back-projects').addEventListener('click',()=>showProjects());
-$('about-scroll').addEventListener('click',e=>{e.preventDefault();aboutPage.scrollTo({top:$('education').offsetTop,behavior:reduced?'instant':'smooth'});});
+$('nav-projects').addEventListener('click',()=>showProjects());
 document.querySelector('.wordmark').addEventListener('click',e=>{e.preventDefault();showProjects();});
 $('next-project').addEventListener('click',e=>{if(!nextFooter||nextFooter.canOpen(e))openAlbum($('next-project').dataset.projectId);});
 $('read-story').addEventListener('click',()=>{
@@ -252,7 +216,7 @@ $('read-story').addEventListener('click',()=>{
   detail.scrollTo({top:destination.offsetTop,behavior:reduced?'instant':'smooth'});
 });
 window.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!$('index-panel').hidden)toggleIndex(false);else if(state.page==='detail')closeAlbum();}});
-window.addEventListener('popstate',()=>{row?.finishOpening?.();const id=location.hash.replace('#project/','');if(location.hash==='#about')showAbout(false);else if(byId.has(id))openAlbum(id,false);else showProjects(false);});
+window.addEventListener('popstate',()=>{row?.finishOpening?.();const id=location.hash.replace('#project/','');if(byId.has(id))openAlbum(id,false);else{showProjects(false);if(location.hash)history.replaceState(null,'',location.pathname+location.search);}});
 
 const time=seconds=>`${Math.floor(seconds/60).toString().padStart(2,'0')}:${Math.floor(seconds%60).toString().padStart(2,'0')}`;
 const audio=new DemoAudio(({playing,loading,position,duration,error})=>{
@@ -263,7 +227,7 @@ const audio=new DemoAudio(({playing,loading,position,duration,error})=>{
 });
 for(const id of ['play-button','sound-toggle','track-open'])$(id).addEventListener('click',()=>audio.toggle());
 $('seek').addEventListener('input',e=>audio.seek(Number(e.target.value)));
-window.addEventListener('pagehide',()=>{audio.pause();stopCaseStudy();nextFooter?.deactivate();row?.finishOpening?.();row?.deactivate();melting?.destroy();about?.deactivate();});
+window.addEventListener('pagehide',()=>{audio.pause();stopCaseStudy();nextFooter?.deactivate();row?.finishOpening?.();row?.deactivate();melting?.destroy();});
 
 renderIndex();
 try{
@@ -303,4 +267,4 @@ try{
 }
 const initial=location.hash.replace('#project/','');
 window.removeEventListener('click',skipPendingOpening,true);window.removeEventListener('keydown',skipPendingOpening,true);
-if(location.hash==='#about')showAbout(false);else if(byId.has(initial)){await row.ready;openAlbum(initial,false);}
+if(byId.has(initial)){await row.ready;openAlbum(initial,false);}else if(location.hash)history.replaceState(null,'',location.pathname+location.search);

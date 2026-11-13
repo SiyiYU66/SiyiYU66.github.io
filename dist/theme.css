@@ -2,7 +2,7 @@
 .theme-toggle{position:fixed;right:22px;top:62px;z-index:40;padding:8px 10px;border:1px solid var(--rule);background:var(--paper);color:var(--ink);font:10px var(--sans);border-radius:2px}
 :root[data-theme="light"] .scene{background:radial-gradient(ellipse at 72% 67%,#fff8,transparent 75%),var(--paper)}
 :root[data-theme="light"] .opening-overlay{color:var(--ink)}
-:root[data-theme="light"] .index-panel,:root[data-theme="light"] .cv-dialog,:root[data-theme="light"] .next-project{background:var(--paper)}
+:root[data-theme="light"] .index-panel,:root[data-theme="light"] .next-project{background:var(--paper)}
 :root[data-theme="light"] .index-row:hover{background:#e3e3e0}
 :root[data-theme="light"] .index-row.selected{color:#080808}
 :root[data-theme="light"] .reveal-sticky{background:#e8e8e5}

@@ -1,9 +1,11 @@
 /* One portrait asset, cropped with CSS; opening artwork is reused from cache. */
 .profile-trigger{width:44px;height:44px;flex:none;display:grid;place-items:center;margin-block:-8px;border-radius:50%;touch-action:manipulation}
-.profile-portrait{display:block;position:relative;width:40px;aspect-ratio:1;overflow:hidden;border-radius:50%;background:#f6f3ec;border:1px solid #a69c8c;box-shadow:0 0 0 3px #171512;transition:transform .25s ease,box-shadow .25s ease}
-.profile-portrait img{position:absolute;display:block;width:175%;max-width:none;height:auto;left:-37.5%;top:-4%;filter:contrast(1.16) brightness(.96)}
+.profile-portrait{display:block;position:relative;width:40px;aspect-ratio:1;overflow:hidden;isolation:isolate;border-radius:50%;background:var(--paper);border:1px solid var(--rule);box-shadow:0 0 0 3px #171512;transition:transform .25s ease,box-shadow .25s ease}
+/* Dark-room pencil negative: paper disappears into the surface, light strokes remain. */
+.profile-portrait img{position:absolute;display:block;width:175%;max-width:none;height:auto;left:-37.5%;top:-4%;filter:grayscale(1) invert(1) contrast(1.2) brightness(1.3) sepia(.22);mix-blend-mode:screen;opacity:.92}
 .profile-trigger:hover .profile-portrait,.profile-trigger[aria-expanded="true"] .profile-portrait{transform:rotate(-5deg) scale(1.06);box-shadow:0 0 0 3px #171512,0 0 0 4px var(--rule)}
 :root[data-theme="light"] .profile-portrait{border-color:#7d7d75;box-shadow:0 0 0 3px #f2f2f2}
+:root[data-theme="light"] .profile-portrait img{filter:contrast(1.16) brightness(.96);mix-blend-mode:normal;opacity:1}
 :root[data-theme="light"] .profile-trigger:hover .profile-portrait,:root[data-theme="light"] .profile-trigger[aria-expanded="true"] .profile-portrait{box-shadow:0 0 0 3px #f2f2f2,0 0 0 4px var(--rule)}
 .profile-dialog{width:min(700px,calc(100vw - 40px));max-width:none;max-height:calc(100svh - 40px);margin:auto;padding:0;overflow:auto;overscroll-behavior:contain;border:1px solid var(--rule);background:var(--reading);color:var(--ink);box-shadow:0 24px 100px #0005;scrollbar-width:thin;color-scheme:inherit}
 .profile-dialog::backdrop{background:#0b0907b8}

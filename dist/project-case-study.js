@@ -52,22 +52,27 @@ function videoFigure({src,poster,width,height,caption},index){
   figure.append(frame,legend);return figure;
 }
 
-function galleryFigure({type, poster, src, smallSrc, width, height, caption, wide, maxWidth, background, borderless, inkDrawing, darkSurface, viewerSurface, page}, index) {
+function galleryFigure({type, poster, src, smallSrc, width, height, caption, wide, maxWidth, background, borderless, inkDrawing, transparentArt, themeInkWidth, darkSurface, viewerSurface, page}, index) {
   if(type==='video')return videoFigure({src,poster,width,height,caption},index);
   const figure = make('figure', wide ? 'case-figure case-figure--wide' : 'case-figure');
   if(borderless)figure.classList.add('case-figure--floating');
   if(inkDrawing)figure.classList.add('case-figure--ink');
+  if(transparentArt)figure.classList.add('case-figure--artwork');
+  const inkWidth = Number(themeInkWidth);
+  const hasThemeInk = transparentArt && inkWidth > 0 && inkWidth <= 100;
+  if(hasThemeInk)figure.style.setProperty('--art-ink-width',`${inkWidth}%`);
   figure.style.setProperty('--figure-ratio', width / height);
   if(maxWidth)figure.style.maxWidth=`${maxWidth}px`;
   const link = externalLink(src, '', 'case-figure-link');
-  if (darkSurface || inkDrawing) {
+  if (darkSurface || inkDrawing || transparentArt) {
     const viewer = new URL('./image-viewer.html', location.href);
     viewer.searchParams.set('src', new URL(src, location.href).pathname);
     viewer.searchParams.set('caption', caption);
     if (viewerSurface === 'navy') viewer.searchParams.set('surface', 'navy');
-    if (inkDrawing) {
-      viewer.searchParams.set('drawing', 'ink');
+    if (inkDrawing || transparentArt) {
+      viewer.searchParams.set('drawing', inkDrawing ? 'ink' : 'artwork');
       viewer.searchParams.set('theme', document.documentElement.dataset.theme === 'light' ? 'light' : 'dark');
+      if(hasThemeInk)viewer.searchParams.set('inkWidth',String(inkWidth));
     }
     link.href = viewer.href;
   }
@@ -91,6 +96,11 @@ function galleryFigure({type, poster, src, smallSrc, width, height, caption, wid
     picture.append(mobile, img);
     link.append(picture, expand);
   } else link.append(img, expand);
+  if(hasThemeInk){
+    const ink = img.cloneNode();
+    ink.className='case-artwork-ink';ink.alt='';ink.setAttribute('aria-hidden','true');
+    link.append(ink);
+  }
   const legend = make('figcaption');
   legend.append(make('span', 'case-label', `${page ? 'Page' : 'Fig.'} ${String(page || index).padStart(2, '0')}`), make('span', '', page ? 'Engineering report' : caption));
   figure.append(link, legend);

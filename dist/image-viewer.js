@@ -1,7 +1,7 @@
 import {loadTypography} from './typography.js';
 
 const params = new URLSearchParams(location.search);
-if (params.get('drawing') === 'ink') {
+if (['ink', 'artwork'].includes(params.get('drawing'))) {
   let theme = params.get('theme') === 'light' ? 'light' : 'dark';
   // A figure may have been rendered before the visitor changed room themes.
   // Read the current preference when opening it, including cloned reel items.
@@ -9,7 +9,7 @@ if (params.get('drawing') === 'ink') {
     const saved = localStorage.getItem('lr-theme');
     if (saved === 'light' || saved === 'dark') theme = saved;
   } catch {}
-  document.documentElement.dataset.drawing = 'ink';
+  document.documentElement.dataset.drawing = params.get('drawing');
   document.documentElement.dataset.theme = theme;
   document.querySelector('meta[name="theme-color"]').content = theme === 'light' ? '#f2f2f2' : '#171512';
 }
@@ -19,7 +19,8 @@ if (params.get('surface') === 'navy') {
 }
 const source = params.get('src') || '';
 // Only existing same-origin project media can be displayed here.
-const match = /^\/assets\/projects\/([a-z0-9-]+)\/(?:study|report)\/[a-z0-9-]+\.(?:png|webp)$/.exec(source);
+const match = /^\/assets\/projects\/([a-z0-9-]+)\/(?:study|report)\/[a-z0-9-]+\.(?:png|webp)$/.exec(source)
+  || /^\/assets\/projects\/(ichack)\/(?:problem-dark\.svg|fonts-v2-dark\.svg|logo-1600\.avif|tshirtgraphics-transparent\.webp)$/.exec(source);
 if (match) {
   const caption = params.get('caption') || 'Engineering image';
   const image = document.getElementById('image');
@@ -31,6 +32,11 @@ if (match) {
   image.alt = caption;
   image.src = source;
   image.hidden = false;
+  const inkWidth=Number(params.get('inkWidth'));
+  if(params.get('drawing')==='artwork'&&source==='/assets/projects/ichack/logo-1600.avif'&&inkWidth>0&&inkWidth<=100){
+    document.documentElement.style.setProperty('--art-ink-width',`${inkWidth}%`);
+    const ink=document.getElementById('ink-overlay');ink.src=source;ink.hidden=false;
+  }
   image.addEventListener('error', () => {image.hidden = true; document.getElementById('error').hidden = false;});
 } else document.getElementById('error').hidden = false;
 loadTypography();

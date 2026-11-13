@@ -8,10 +8,10 @@ import {sampleOpeningHandoff,createOpeningDiscPose} from './opening-handoff.js';
 // Uses the Projects renderer, camera and environment. No second WebGL context.
 export function createOpeningSequence({root,scene,camera,artwork,getDestination,projectCount=1,isGalleryReady=()=>true,onGallery=()=>{},onHandoff,onComplete,review=false}){
   const overlay=document.createElement('div');overlay.className='opening-overlay';
-  overlay.setAttribute('role','dialog');overlay.setAttribute('aria-label','Siyi Yu — Listening Room opening');
+  overlay.setAttribute('role','dialog');overlay.setAttribute('aria-label','Siyi Yu — Portfolio opening');
   overlay.setAttribute('aria-modal','true');
   overlay.tabIndex=-1;
-  overlay.innerHTML='<span class="opening-caption">LISTENING ROOM</span><svg class="opening-score" aria-hidden="true"></svg><span class="opening-a11y">SIYI YU</span><button class="opening-skip">Skip intro ↗</button>';
+  overlay.innerHTML='<svg class="opening-score" aria-hidden="true"></svg><span class="opening-a11y">SIYI YU</span><button class="opening-skip">Skip intro ↗</button>';
   root.append(overlay);
   const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
   let handoffStart=null,heldSpin=0,handoffRequested=false;
@@ -94,7 +94,6 @@ export function createOpeningSequence({root,scene,camera,artwork,getDestination,
     arm.visible=s.armOpacity>.001;
     pulse.visible=false;
     flaps.element.style.opacity=String(s.boardOpacity);
-    overlay.querySelector('.opening-caption').style.opacity=String(s.boardOpacity);
     Object.assign(document.body.dataset,{openingPhase:s.phase,openingTime:time.toFixed(3),openingName:flaps.element.dataset.settled||'',openingHandoff:elapsed.toFixed(3),openingDiscScale:s.scale.toFixed(4)});
     if(s.galleryReady&&!galleryStarted){galleryStarted=true;if(lamp)lamp.color.copy(lampColor);onGallery();}
     if(s.informationReady&&!handed){handed=true;onHandoff();}
